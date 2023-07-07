@@ -1,27 +1,34 @@
 {
-  "name": "panda-playgroup.co.uk",
-  "private": true,
-  "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "check-types": "tsc --noEmit"
-  },
-  "dependencies": {
-    "gatsby": "^5.11.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^17.6.6",
-    "@commitlint/config-conventional": "^17.6.6",
-    "@types/node": "^20.3.3",
-    "@types/react": "^18.2.14",
-    "@types/react-dom": "^18.2.6",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.2.3",
-    "typescript": "5.1.6"
-  }
+    "name": "panda-playgroup.co.uk",
+    "private": true,
+    "scripts": {
+        "develop": "gatsby develop",
+        "start": "gatsby develop",
+        "build": "gatsby build",
+        "serve": "gatsby serve",
+        "clean": "gatsby clean",
+        "format": "prettier --write .",
+        "check-format": "prettier --check .",
+        "check-types": "tsc --noEmit",
+        "check": "npm run check-format && npm run check-types",
+        "fc": "npm run fix-lint && npm run format && npm run check",
+        "bs": "npm run build && npm run serve",
+        "prepare": "husky install"
+    },
+    "dependencies": {
+        "gatsby": "^5.11.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^17.6.6",
+        "@commitlint/config-conventional": "^17.6.6",
+        "@types/node": "^18.6.1",
+        "@types/react": "^18.2.14",
+        "@types/react-dom": "^18.2.6",
+        "husky": "^8.0.3",
+        "lint-staged": "^13.2.3",
+        "prettier": "^3.0.0",
+        "typescript": "5.1.6"
+    }
 }
