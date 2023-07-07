@@ -1,4 +1,4 @@
-name: type checking
+name: check-types
 
 on:
   workflow_dispatch:
