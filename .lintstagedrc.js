@@ -1,4 +1,5 @@
 module.exports = {
-    "*.(js|jsx|ts|tsx|md|json|yml)": "prettier --write",
-    "src/**/*.(ts|tsx|noop)": () => "tsc --noEmit",
+    "*.(json|md|yml)": "prettier --write",
+    "*.(js|jsx|ts|tsx)": ["eslint --fix", "prettier --write"],
+    "*.(ts|tsx)": () => "tsc --noEmit",
 };
