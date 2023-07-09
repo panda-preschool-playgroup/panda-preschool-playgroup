@@ -1,5 +1,4 @@
-import * as React from "react";
-import type { HeadFC, PageProps } from "gatsby";
+import { type FC } from "react";
 
 const pageStyles = {
     color: "#232129",
@@ -136,7 +135,7 @@ const links = [
     },
 ];
 
-const IndexPage: React.FC<PageProps> = () => {
+const IndexPage: FC = () => {
     return (
         <main style={pageStyles}>
             <h1 style={headingStyles}>
@@ -189,4 +188,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Home Page</title>;
+export const Head = () => <title>Home Page</title>;

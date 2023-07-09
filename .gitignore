@@ -18,6 +18,7 @@ node_modules/
 # Gatsby files
 .cache/
 public
+gatsby-types.d.ts
 
 # IDE files
 .vscode
