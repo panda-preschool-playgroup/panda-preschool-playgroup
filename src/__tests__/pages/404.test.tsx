@@ -1,5 +1,9 @@
 import { render } from "@testing-library/react";
 import NotFoundPage, { Head } from "../../pages/404";
+import Seo from "../../components/seo";
+
+jest.mock("../../components/seo");
+const mockSeo = jest.mocked(Seo);
 
 describe("not found", () => {
     it("renders", () => {
@@ -10,9 +14,11 @@ describe("not found", () => {
 });
 
 describe("head", () => {
-    it("renders", () => {
-        const { asFragment } = render(<Head />);
+    it("renders seo with a page title", () => {
+        render(<Head />);
 
-        expect(asFragment()).toMatchSnapshot();
+        expect(mockSeo).toHaveBeenCalled();
+
+        expect(mockSeo.mock.calls[0][0].pageTitle).toEqual("Not found");
     });
 });

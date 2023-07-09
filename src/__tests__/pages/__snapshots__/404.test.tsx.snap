@@ -1,13 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`head renders 1`] = `
-<DocumentFragment>
-  <title>
-    Not found
-  </title>
-</DocumentFragment>
-`;
-
 exports[`not found renders 1`] = `
 <DocumentFragment>
   <main
@@ -22,7 +14,6 @@ exports[`not found renders 1`] = `
       style="margin-bottom: 48px;"
     >
       Sorry 😔, we couldn’t find what you were looking for.
-      <br />
       <br />
       <a
         aria-current="page"

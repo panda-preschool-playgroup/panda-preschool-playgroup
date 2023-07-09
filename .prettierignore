@@ -20,6 +20,9 @@ node_modules/
 public
 gatsby-types.d.ts
 
+# Lighthouse files
+.lighthouseci
+
 # IDE files
 .vscode
 
