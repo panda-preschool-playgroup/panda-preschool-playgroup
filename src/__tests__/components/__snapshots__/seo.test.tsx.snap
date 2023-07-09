@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`seo renders 1`] = `
+<DocumentFragment>
+  <title>
+    Test Title
+  </title>
+  <meta
+    content="Test Description"
+    name="description"
+  />
+</DocumentFragment>
+`;
+
+exports[`seo renders with a page title 1`] = `
+<DocumentFragment>
+  <title>
+    Test Page Title | Test Title
+  </title>
+  <meta
+    content="Test Description"
+    name="description"
+  />
+</DocumentFragment>
+`;

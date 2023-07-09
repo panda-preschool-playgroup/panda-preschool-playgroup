@@ -9,7 +9,7 @@ const Seo = ({ pageTitle }: SeoProps) => {
 
     return (
         <>
-            <title>{pageTitle ? `${pageTitle} - ${siteMetadata.title}` : siteMetadata.title}</title>
+            <title>{pageTitle ? `${pageTitle} | ${siteMetadata.title}` : siteMetadata.title}</title>
             <meta name="description" content={siteMetadata.description} />
         </>
     );

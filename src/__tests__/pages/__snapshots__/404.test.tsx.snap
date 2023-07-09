@@ -15,7 +15,6 @@ exports[`not found renders 1`] = `
     >
       Sorry 😔, we couldn’t find what you were looking for.
       <br />
-      <br />
       <a
         aria-current="page"
         class=""
