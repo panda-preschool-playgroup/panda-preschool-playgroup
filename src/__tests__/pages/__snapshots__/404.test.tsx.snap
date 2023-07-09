@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`head renders 1`] = `
+<DocumentFragment>
+  <title>
+    Not found
+  </title>
+</DocumentFragment>
+`;
+
+exports[`not found renders 1`] = `
+<DocumentFragment>
+  <main
+    style="color: rgb(35, 33, 41); padding: 96px; font-family: -apple-system, Roboto, sans-serif, serif;"
+  >
+    <h1
+      style="margin-top: 0px; margin-bottom: 64px; max-width: 320px;"
+    >
+      Page not found
+    </h1>
+    <p
+      style="margin-bottom: 48px;"
+    >
+      Sorry 😔, we couldn’t find what you were looking for.
+      <br />
+      <br />
+      <a
+        aria-current="page"
+        class=""
+        href="/"
+      >
+        Go home
+      </a>
+      .
+    </p>
+  </main>
+</DocumentFragment>
+`;

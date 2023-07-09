@@ -5,7 +5,9 @@ const config: GatsbyConfig = {
         title: "Panda Pre-School Playgroup",
         siteUrl: "https://www.pandaplaygroup.co.uk",
     },
-    graphqlTypegen: true,
+    graphqlTypegen: {
+        typesOutputPath: "src/types/gatsby-types.d.ts",
+    },
     plugins: [],
 };
 
