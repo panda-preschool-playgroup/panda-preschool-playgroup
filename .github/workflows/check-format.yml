@@ -1,4 +1,4 @@
-name: check-format
+name: code formatting
 
 on:
   workflow_dispatch:
