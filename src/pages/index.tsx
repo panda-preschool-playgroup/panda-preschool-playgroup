@@ -1,4 +1,5 @@
 import { type FC } from "react";
+import Seo from "../components/seo";
 
 const pageStyles = {
     color: "#232129",
@@ -188,4 +189,4 @@ const IndexPage: FC = () => {
 
 export default IndexPage;
 
-export const Head = () => <title>Home Page</title>;
+export const Head = () => <Seo />;

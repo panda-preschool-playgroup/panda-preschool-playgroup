@@ -1,13 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`head renders 1`] = `
-<DocumentFragment>
-  <title>
-    Home Page
-  </title>
-</DocumentFragment>
-`;
-
 exports[`index renders 1`] = `
 <DocumentFragment>
   <main

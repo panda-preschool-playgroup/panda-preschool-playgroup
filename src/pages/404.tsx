@@ -1,5 +1,6 @@
 import { type FC } from "react";
 import { Link } from "gatsby";
+import Seo from "../components/seo";
 
 const pageStyles = {
     color: "#232129",
@@ -46,4 +47,4 @@ const NotFoundPage: FC = () => {
 
 export default NotFoundPage;
 
-export const Head = () => <title>Not found</title>;
+export const Head = () => <Seo pageTitle="Not found" />;
