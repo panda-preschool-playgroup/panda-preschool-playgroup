@@ -2,7 +2,6 @@
     "name": "panda-playgroup.co.uk",
     "private": true,
     "scripts": {
-        "develop": "gatsby develop",
         "start": "gatsby develop",
         "build": "gatsby build",
         "serve": "gatsby serve",
@@ -13,8 +12,8 @@
         "fix-lint": "eslint . --fix",
         "check-types": "tsc",
         "test": "jest",
-        "check": "npm run lint && npm run check-format && npm run check-types && npm run test",
         "perf": "lhci autorun",
+        "check": "npm run lint && npm run check-format && npm run check-types && npm run test",
         "fc": "npm run fix-lint && npm run format && npm run check-types && npm run test",
         "bs": "npm run build && npm run serve",
         "prepare": "husky install"
@@ -22,6 +21,9 @@
     "dependencies": {
         "gatsby": "^5.11.0",
         "gatsby-plugin-html-attributes": "^1.0.5",
+        "gatsby-plugin-image": "^3.11.0",
+        "gatsby-plugin-sharp": "^5.11.0",
+        "gatsby-transformer-sharp": "^5.11.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     },
