@@ -21,6 +21,23 @@ const config: GatsbyConfig = {
                 lang: "en",
             },
         },
+        {
+            resolve: "gatsby-plugin-manifest",
+            options: {
+                name: "Panda Pre-School Playgroup",
+                short_name: "Panda Playgroup",
+                icon: "src/images/icon.png",
+                icon_options: {
+                    purpose: "any maskable",
+                },
+                start_url: "/",
+                background_color: "#fdfdfd",
+                theme_color: "#6ccb55",
+                display: "standalone",
+                cache_busting_mode: "none",
+            },
+        },
+        "gatsby-plugin-offline",
     ],
 };
 
