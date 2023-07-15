@@ -1,8 +1,8 @@
 import { render } from "@testing-library/react";
-import NotFoundPage, { Head } from "../../pages/404";
-import Seo from "../../components/seo";
+import NotFoundPage, { Head } from "@/pages/404";
+import Seo from "@/components/seo";
 
-jest.mock("../../components/seo");
+jest.mock("@/components/seo");
 const mockSeo = jest.mocked(Seo);
 
 describe("not found", () => {

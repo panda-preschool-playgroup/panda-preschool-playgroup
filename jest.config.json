@@ -4,5 +4,12 @@
     "setupFilesAfterEnv": ["<rootDir>/src/__tests__/setup-jest.ts"],
     "collectCoverage": true,
     "collectCoverageFrom": ["<rootDir>/src/**"],
-    "coveragePathIgnorePatterns": [".*__snapshots__/.*"]
+    "coveragePathIgnorePatterns": [".*__snapshots__/.*"],
+    "moduleNameMapper": {
+        "@/components/(.*)": "<rootDir>/src/components/$1",
+        "@/hooks/(.*)": "<rootDir>/src/hooks/$1",
+        "@/pages/(.*)": "<rootDir>/src/pages/$1",
+        "@/types/(.*)": "<rootDir>/src/types/$1",
+        "@/test/(.*)": "<rootDir>/src/__tests__/$1"
+    }
 }
