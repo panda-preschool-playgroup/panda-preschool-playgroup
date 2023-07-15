@@ -1,7 +1,7 @@
 import { type FC } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import Seo from "@/components/seo";
-import { Alert, Dropdown } from "flowbite-react";
+import { Alert, Carousel, Dropdown } from "flowbite-react";
 
 const pageStyles = {
     color: "#232129",
@@ -159,6 +159,15 @@ const IndexPage: FC = () => {
                     <Dropdown.Item>Flowbite Components</Dropdown.Item>
                 </Dropdown>
             </p>
+            <div style={{ height: 250, width: 550, ...paragraphStyles }}>
+                <Carousel>
+                    <img alt="..." src="https://flowbite.com/docs/images/carousel/carousel-1.svg" />
+                    <img alt="..." src="https://flowbite.com/docs/images/carousel/carousel-2.svg" />
+                    <img alt="..." src="https://flowbite.com/docs/images/carousel/carousel-3.svg" />
+                    <img alt="..." src="https://flowbite.com/docs/images/carousel/carousel-4.svg" />
+                    <img alt="..." src="https://flowbite.com/docs/images/carousel/carousel-5.svg" />
+                </Carousel>
+            </div>
             <ul style={doclistStyles}>
                 {docLinks.map((doc) => (
                     <li key={doc.url} style={docLinkStyle}>
