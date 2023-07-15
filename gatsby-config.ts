@@ -12,6 +12,9 @@ const config: GatsbyConfig = {
     },
     plugins: [
         "gatsby-plugin-tsconfig-paths",
+        "gatsby-plugin-image",
+        "gatsby-plugin-sharp",
+        "gatsby-transformer-sharp",
         {
             resolve: "gatsby-plugin-html-attributes",
             options: {
