@@ -19,6 +19,8 @@
         "prepare": "husky install"
     },
     "dependencies": {
+        "flowbite": "^1.7.0",
+        "flowbite-react": "^0.4.11",
         "gatsby": "^5.11.0",
         "gatsby-plugin-html-attributes": "^1.0.5",
         "gatsby-plugin-image": "^3.11.0",

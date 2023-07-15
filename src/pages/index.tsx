@@ -1,6 +1,7 @@
 import { type FC } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import Seo from "@/components/seo";
+import { Alert, Dropdown } from "flowbite-react";
 
 const pageStyles = {
     color: "#232129",
@@ -147,6 +148,16 @@ const IndexPage: FC = () => {
             </h1>
             <p style={paragraphStyles}>
                 Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this page update in real-time. 😎
+            </p>
+            <p style={paragraphStyles}>
+                <Alert color="info">This is a Flowbite alert.</Alert>
+            </p>
+            <p style={paragraphStyles}>
+                <Dropdown label="Dropdown button" dismissOnClick={false}>
+                    <Dropdown.Item>Gatsby JS</Dropdown.Item>
+                    <Dropdown.Item>Tailwind CSS</Dropdown.Item>
+                    <Dropdown.Item>Flowbite Components</Dropdown.Item>
+                </Dropdown>
             </p>
             <ul style={doclistStyles}>
                 {docLinks.map((doc) => (
