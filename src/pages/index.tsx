@@ -149,9 +149,9 @@ const IndexPage: FC = () => {
             <p style={paragraphStyles}>
                 Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this page update in real-time. 😎
             </p>
-            <p style={paragraphStyles}>
+            <div style={paragraphStyles}>
                 <Alert color="info">This is a Flowbite alert.</Alert>
-            </p>
+            </div>
             <p style={paragraphStyles}>
                 <Dropdown label="Dropdown button" dismissOnClick={false}>
                     <Dropdown.Item>Gatsby JS</Dropdown.Item>
@@ -159,14 +159,16 @@ const IndexPage: FC = () => {
                     <Dropdown.Item>Flowbite Components</Dropdown.Item>
                 </Dropdown>
             </p>
-            <div style={{ height: 250, width: 550, ...paragraphStyles }}>
-                <Carousel>
-                    <img alt="..." src="https://flowbite.com/docs/images/carousel/carousel-1.svg" />
-                    <img alt="..." src="https://flowbite.com/docs/images/carousel/carousel-2.svg" />
-                    <img alt="..." src="https://flowbite.com/docs/images/carousel/carousel-3.svg" />
-                    <img alt="..." src="https://flowbite.com/docs/images/carousel/carousel-4.svg" />
-                    <img alt="..." src="https://flowbite.com/docs/images/carousel/carousel-5.svg" />
-                </Carousel>
+            <div>
+                <div className="h-72 sm:w-4/5 lg:w-2/5" style={paragraphStyles}>
+                    <Carousel indicators={false}>
+                        <img alt="..." src="https://flowbite.com/docs/images/carousel/carousel-1.svg" />
+                        <img alt="..." src="https://flowbite.com/docs/images/carousel/carousel-2.svg" />
+                        <img alt="..." src="https://flowbite.com/docs/images/carousel/carousel-3.svg" />
+                        <img alt="..." src="https://flowbite.com/docs/images/carousel/carousel-4.svg" />
+                        <img alt="..." src="https://flowbite.com/docs/images/carousel/carousel-5.svg" />
+                    </Carousel>
+                </div>
             </div>
             <ul style={doclistStyles}>
                 {docLinks.map((doc) => (
