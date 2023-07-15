@@ -1,8 +1,8 @@
 import { render } from "@testing-library/react";
-import IndexPage, { Head } from "../../pages";
-import Seo from "../../components/seo";
+import IndexPage, { Head } from "@/pages/index";
+import Seo from "@/components/seo";
 
-jest.mock("../../components/seo");
+jest.mock("@/components/seo");
 const mockSeo = jest.mocked(Seo);
 
 describe("index", () => {

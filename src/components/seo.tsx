@@ -1,4 +1,4 @@
-import { useSiteMetadata } from "../hooks/use-site-metadata";
+import { useSiteMetadata } from "@/hooks/use-site-metadata";
 
 interface SeoProps {
     pageTitle?: string;
