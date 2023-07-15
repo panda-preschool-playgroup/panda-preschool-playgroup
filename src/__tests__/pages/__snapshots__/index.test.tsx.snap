@@ -6,6 +6,7 @@ exports[`index renders 1`] = `
     style="color: rgb(35, 33, 41); padding: 96px; font-family: -apple-system, Roboto, sans-serif, serif;"
   >
     <h1
+      class="text-blue-600"
       style="margin-top: 0px; margin-bottom: 64px; max-width: 320px;"
     >
       Congratulations

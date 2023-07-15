@@ -140,7 +140,7 @@ const links = [
 const IndexPage: FC = () => {
     return (
         <main style={pageStyles}>
-            <h1 style={headingStyles}>
+            <h1 style={headingStyles} className="text-blue-600">
                 Congratulations
                 <br />
                 <span style={headingAccentStyles}>— you just made a Gatsby site! 🎉🎉🎉</span>
