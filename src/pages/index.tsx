@@ -1,6 +1,7 @@
 import { type FC } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import Seo from "@/components/seo";
+import { Alert, Carousel, Dropdown } from "flowbite-react";
 
 const pageStyles = {
     color: "#232129",
@@ -140,7 +141,7 @@ const links = [
 const IndexPage: FC = () => {
     return (
         <main style={pageStyles}>
-            <h1 style={headingStyles}>
+            <h1 style={headingStyles} className="text-blue-600">
                 Congratulations
                 <br />
                 <span style={headingAccentStyles}>— you just made a Gatsby site! 🎉🎉🎉</span>
@@ -148,6 +149,27 @@ const IndexPage: FC = () => {
             <p style={paragraphStyles}>
                 Edit <code style={codeStyles}>src/pages/index.tsx</code> to see this page update in real-time. 😎
             </p>
+            <div style={paragraphStyles}>
+                <Alert color="info">This is a Flowbite alert.</Alert>
+            </div>
+            <p style={paragraphStyles}>
+                <Dropdown label="Dropdown button" dismissOnClick={false}>
+                    <Dropdown.Item>Gatsby JS</Dropdown.Item>
+                    <Dropdown.Item>Tailwind CSS</Dropdown.Item>
+                    <Dropdown.Item>Flowbite Components</Dropdown.Item>
+                </Dropdown>
+            </p>
+            <div>
+                <div className="h-72 sm:w-4/5 lg:w-2/5" style={paragraphStyles}>
+                    <Carousel indicators={false}>
+                        <img alt="..." src="https://flowbite.com/docs/images/carousel/carousel-1.svg" />
+                        <img alt="..." src="https://flowbite.com/docs/images/carousel/carousel-2.svg" />
+                        <img alt="..." src="https://flowbite.com/docs/images/carousel/carousel-3.svg" />
+                        <img alt="..." src="https://flowbite.com/docs/images/carousel/carousel-4.svg" />
+                        <img alt="..." src="https://flowbite.com/docs/images/carousel/carousel-5.svg" />
+                    </Carousel>
+                </div>
+            </div>
             <ul style={doclistStyles}>
                 {docLinks.map((doc) => (
                     <li key={doc.url} style={docLinkStyle}>
