@@ -11,6 +11,7 @@ const config: GatsbyConfig = {
         typesOutputPath: "src/types/gatsby-types.d.ts",
     },
     plugins: [
+        "gatsby-plugin-tsconfig-paths",
         {
             resolve: "gatsby-plugin-html-attributes",
             options: {
