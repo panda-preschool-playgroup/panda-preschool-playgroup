@@ -6,15 +6,26 @@ jest.mock("@/hooks/use-site-metadata", () => ({
 }));
 
 describe("seo", () => {
-    it("renders", () => {
-        const { asFragment } = render(<Seo />);
+    it("renders the default page title", () => {
+        render(<Seo />);
 
-        expect(asFragment()).toMatchSnapshot();
+        expect(document.title).toEqual("Test Title");
     });
 
-    it("renders with a page title", () => {
-        const { asFragment } = render(<Seo pageTitle="Test Page Title" />);
+    it("renders with a custom page title", () => {
+        render(<Seo pageTitle="Test Page Title" />);
 
-        expect(asFragment()).toMatchSnapshot();
+        expect(document.title).toEqual("Test Page Title | Test Title");
+    });
+
+    it("sets the metadata description", () => {
+        render(<Seo pageTitle="Test Page Title" />);
+
+        const metadata = document.getElementsByTagName("meta");
+
+        expect(metadata).toHaveLength(1);
+
+        expect(metadata[0].getAttribute("name")).toEqual("description");
+        expect(metadata[0].getAttribute("content")).toEqual("Test Description");
     });
 });
