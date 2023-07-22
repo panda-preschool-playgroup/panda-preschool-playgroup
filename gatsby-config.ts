@@ -39,7 +39,7 @@ const config: GatsbyConfig = {
             options: {
                 name: "Panda Pre-School Playgroup",
                 short_name: "Panda Playgroup",
-                icon: "src/images/icon.png",
+                icon: "src/images/logo.png",
                 icon_options: {
                     purpose: "any maskable",
                 },
