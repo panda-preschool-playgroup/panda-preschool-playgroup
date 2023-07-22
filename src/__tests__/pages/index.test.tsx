@@ -1,15 +1,31 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import IndexPage, { Head } from "@/pages/index";
 import Seo from "@/components/seo";
+import Navbar from "@/components/navbar";
 
 jest.mock("@/components/seo");
 const mockSeo = jest.mocked(Seo);
 
+jest.mock("@/components/navbar");
+const mockNavbar = jest.mocked(Navbar);
+
+beforeEach(() => {
+    jest.clearAllMocks();
+});
+
 describe("index", () => {
     it("renders", () => {
-        const { asFragment } = render(<IndexPage />);
+        render(<IndexPage />);
 
-        expect(asFragment()).toMatchSnapshot();
+        const main = screen.queryByRole("main");
+
+        expect(main).toBeInTheDocument();
+    });
+
+    it("renders the navbar", () => {
+        render(<IndexPage />);
+
+        expect(mockNavbar).toHaveBeenCalled();
     });
 });
 
