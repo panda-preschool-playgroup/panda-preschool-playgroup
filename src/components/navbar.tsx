@@ -6,7 +6,7 @@ const Navigation: FC = () => {
     return (
         <Navbar
             fluid
-            className="bg-yellow-dark h-42"
+            className="bg-yellow-light h-42"
             theme={{ inner: { base: "mx-3 flex flex-wrap items-center justify-between gap-y-5" } }}
         >
             <Navbar.Brand>
