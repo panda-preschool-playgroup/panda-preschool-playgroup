@@ -4,39 +4,49 @@ import { FC } from "react";
 
 const Navigation: FC = () => {
     return (
-        <Navbar fluid className="bg-yellow-dark h-42">
+        <Navbar
+            fluid
+            className="bg-yellow-dark h-42"
+            theme={{ inner: { base: "mx-3 flex flex-wrap items-center justify-between gap-y-5" } }}
+        >
             <Navbar.Brand>
                 <StaticImage
                     src="../images/logo.png"
                     alt="Panda Pre-School Playgroup Logo"
-                    className="w-16 md:w-32 mr-12"
+                    width={125}
+                    height={125}
+                    className=" mr-12"
                 />
-                <span className="md:text-4xl font-kg-second-chances">PANDA PRE-SCHOOL PLAYGROUP</span>
+                <span className="text-2xl md:text-3xl font-kg-second-chances">PANDA PRE-SCHOOL PLAYGROUP</span>
             </Navbar.Brand>
-            <div className="flex md:order-2 font-kg-neatly-printed">
+            <div className="flex md:order-2 w-full md:w-auto justify-between font-kg-neatly-printed">
                 <Button size="xl" className="bg-green-dark">
-                    <p className="text-2xl font-bold text-white">APPLY</p>
+                    <span className="text-2xl font-bold text-white">APPLY</span>
                 </Button>
                 <Navbar.Toggle />
             </div>
-            <Navbar.Collapse className="font-kg-neatly-printed">
-                <Navbar.Link active href="#" className="text-3xl font-bold">
-                    Home
-                </Navbar.Link>
-                <Navbar.Link href="#" className="text-3xl font-bold">
-                    Our setting
-                </Navbar.Link>
-                <Navbar.Link href="#" className="text-3xl font-bold">
-                    Sessions
-                </Navbar.Link>
-                <Navbar.Link href="#" className="text-3xl font-bold">
-                    About us
-                </Navbar.Link>
-                <Navbar.Link href="#" className="text-3xl font-bold">
-                    Funding
-                </Navbar.Link>
+            <Navbar.Collapse className="font-kg-neatly-printed mx-2">
+                <Link active text="Home" href="#" />
+                <Link text="Our setting" href="#" />
+                <Link text="Sessions" href="#" />
+                <Link text="About us" href="#" />
+                <Link text="Funding" href="#" />
             </Navbar.Collapse>
         </Navbar>
+    );
+};
+
+interface LinkProps {
+    text: string;
+    href: string;
+    active?: boolean;
+}
+
+const Link: FC<LinkProps> = ({ text, href, active }: LinkProps) => {
+    return (
+        <Navbar.Link {...(active && { active })} href={href} className="text-3xl font-bold">
+            {text}
+        </Navbar.Link>
     );
 };
 

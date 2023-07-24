@@ -8,12 +8,12 @@ const config: Config = {
             colors: {
                 green: {
                     DEFAULT: "#77cf5f",
-                    dark: "#449E57",
+                    dark: "#449e57",
                 },
                 blue: "#3489d9",
                 yellow: {
                     DEFAULT: "#fbd40a",
-                    dark: "#FFB427",
+                    dark: "#ffb427",
                 },
             },
         },
