@@ -1,4 +1,5 @@
-import { Button, Navbar } from "flowbite-react";
+import { Link } from "gatsby";
+import { Navbar } from "flowbite-react";
 import { StaticImage } from "gatsby-plugin-image";
 import { FC } from "react";
 
@@ -20,31 +21,35 @@ const Navigation: FC = () => {
                 <span className="text-2xl md:text-3xl font-kg-second-chances">PANDA PRE-SCHOOL PLAYGROUP</span>
             </Navbar.Brand>
             <div className="flex md:order-2 w-full md:w-auto justify-between font-kg-neatly-printed">
-                <Button size="xl" className="bg-green-dark">
-                    <span className="text-2xl font-bold text-white">APPLY</span>
-                </Button>
-                <Navbar.Toggle />
+                <Link to="#" className="text-white bg-cyan hover:bg-cyan-dark font-bold text-2xl rounded-lg px-8 py-4">
+                    APPLY
+                </Link>
+                <Navbar.Toggle className="hover:bg-cyan-dark hover:text-white" />
             </div>
             <Navbar.Collapse className="font-kg-neatly-printed mx-2">
-                <Link active text="Home" href="#" />
-                <Link text="Our setting" href="#" />
-                <Link text="Sessions" href="#" />
-                <Link text="About us" href="#" />
-                <Link text="Funding" href="#" />
+                <NavbarLink active text="Home" href="#" />
+                <NavbarLink text="Our setting" href="#" />
+                <NavbarLink text="Sessions" href="#" />
+                <NavbarLink text="About us" href="#" />
+                <NavbarLink text="Funding" href="#" />
             </Navbar.Collapse>
         </Navbar>
     );
 };
 
-interface LinkProps {
+interface NavbarLinkProps {
     text: string;
     href: string;
     active?: boolean;
 }
 
-const Link: FC<LinkProps> = ({ text, href, active }: LinkProps) => {
+const NavbarLink: FC<NavbarLinkProps> = ({ text, href, active }: NavbarLinkProps) => {
+    let classes =
+        "text-3xl font-bold md:hover:bg-transparent md:hover:text-cyan-dark hover:bg-cyan-dark hover:text-white";
+    if (active) classes += " md:text-cyan md:bg-transparent bg-cyan text-white";
+
     return (
-        <Navbar.Link {...(active && { active })} href={href} className="text-3xl font-bold">
+        <Navbar.Link href={href} className={classes}>
             {text}
         </Navbar.Link>
     );
