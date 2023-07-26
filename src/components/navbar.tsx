@@ -26,7 +26,7 @@ const Navigation: FC = () => {
                 </Link>
                 <Navbar.Toggle
                     theme={{
-                        base: "inline-flex items-center rounded-lg p-2 text-gray-500 focus:text-gray-600 hover:text-gray-600 text-sm focus:outline-none md:hidden hover:bg-transparent",
+                        base: "inline-flex items-center text-gray-500 focus:text-gray-600 hover:text-gray-600 text-sm md:hidden",
                     }}
                 />
             </div>
@@ -37,7 +37,11 @@ const Navigation: FC = () => {
                 <Dropdown
                     inline
                     className="width-full"
-                    label={<NavbarLink text="Funding" href="#" focusable={false} />}
+                    label={
+                        <li className="text-left w-full md:w-auto">
+                            <p className="text-3xl font-bold md:border-0 py-2 pr-4 pl-3 md:p-0 border-b">Funding</p>
+                        </li>
+                    }
                 >
                     <Dropdown.Item className="text-3xl">
                         <Link to="#">Earnings</Link>
@@ -54,18 +58,17 @@ interface NavbarLinkProps {
     text: string;
     href: string;
     active?: boolean;
-    focusable?: boolean;
 }
 
-const NavbarLink: FC<NavbarLinkProps> = ({ text, href, active, focusable }: NavbarLinkProps) => {
+const NavbarLink: FC<NavbarLinkProps> = ({ text, href, active }: NavbarLinkProps) => {
     let classes =
-        "block py-2 pr-4 pl-3 md:p-0 border-b border-gray-100 md:border-0 text-3xl font-bold hover:bg-transparent hover:text-cyan-dark";
+        "block py-2 pr-4 pl-3 md:p-0 border-b md:border-0 text-3xl font-bold hover:bg-transparent hover:text-cyan-dark";
 
     if (active) classes += " text-cyan";
 
     return (
         <li className="text-left w-full md:w-auto">
-            <Link to={href} {...(focusable === false && { tabIndex: -1 })} className={classes}>
+            <Link to={href} className={classes}>
                 {text}
             </Link>
         </li>
