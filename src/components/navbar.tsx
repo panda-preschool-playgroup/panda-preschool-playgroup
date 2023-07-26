@@ -1,5 +1,5 @@
 import { Link } from "gatsby";
-import { Navbar } from "flowbite-react";
+import { Dropdown, Navbar } from "flowbite-react";
 import { StaticImage } from "gatsby-plugin-image";
 import { FC } from "react";
 
@@ -21,17 +21,30 @@ const Navigation: FC = () => {
                 <span className="text-2xl md:text-3xl font-kg-second-chances">PANDA PRE-SCHOOL PLAYGROUP</span>
             </Navbar.Brand>
             <div className="flex md:order-2 w-full md:w-auto justify-between font-kg-neatly-printed">
-                <Link to="#" className="text-white bg-cyan hover:bg-cyan-dark font-bold text-2xl rounded-lg px-8 py-4">
-                    APPLY
+                <Link to="#" className="text-white bg-cyan hover:bg-cyan-dark font-bold text-2xl rounded-lg px-6 py-4">
+                    ADMISSIONS
                 </Link>
-                <Navbar.Toggle className="hover:bg-cyan-dark hover:text-white" />
+                <Navbar.Toggle
+                    theme={{
+                        base: "inline-flex items-center rounded-lg p-2 text-gray-500 focus:text-gray-600 hover:text-gray-600 text-sm focus:outline-none md:hidden hover:bg-transparent",
+                    }}
+                />
             </div>
             <Navbar.Collapse className="font-kg-neatly-printed mx-2">
-                <NavbarLink active text="Home" href="#" />
+                <NavbarLink text="About us" href="#" />
                 <NavbarLink text="Our setting" href="#" />
                 <NavbarLink text="Sessions" href="#" />
-                <NavbarLink text="About us" href="#" />
-                <NavbarLink text="Funding" href="#" />
+                <Dropdown
+                    inline
+                    className="width-full"
+                    label={<NavbarLink text="Funding" href="#" focusable={false} />}
+                >
+                    <Dropdown.Item className="text-3xl">
+                        <Link to="#">Earnings</Link>
+                    </Dropdown.Item>
+                    <Dropdown.Item className="text-3xl">Settings</Dropdown.Item>
+                    <Dropdown.Item className="text-3xl">Earnings</Dropdown.Item>
+                </Dropdown>
             </Navbar.Collapse>
         </Navbar>
     );
@@ -41,17 +54,21 @@ interface NavbarLinkProps {
     text: string;
     href: string;
     active?: boolean;
+    focusable?: boolean;
 }
 
-const NavbarLink: FC<NavbarLinkProps> = ({ text, href, active }: NavbarLinkProps) => {
+const NavbarLink: FC<NavbarLinkProps> = ({ text, href, active, focusable }: NavbarLinkProps) => {
     let classes =
-        "text-3xl font-bold md:hover:bg-transparent md:hover:text-cyan-dark hover:bg-cyan-dark hover:text-white";
-    if (active) classes += " md:text-cyan md:bg-transparent bg-cyan text-white";
+        "block py-2 pr-4 pl-3 md:p-0 border-b border-gray-100 md:border-0 text-3xl font-bold hover:bg-transparent hover:text-cyan-dark";
+
+    if (active) classes += " text-cyan";
 
     return (
-        <Navbar.Link href={href} className={classes}>
-            {text}
-        </Navbar.Link>
+        <li className="text-left w-full md:w-auto">
+            <Link to={href} {...(focusable === false && { tabIndex: -1 })} className={classes}>
+                {text}
+            </Link>
+        </li>
     );
 };
 
