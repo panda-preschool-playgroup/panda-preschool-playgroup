@@ -22,7 +22,7 @@ const Navigation: FC = () => {
                     <span className="text-2xl md:text-3xl font-kg-second-chances">PANDA PRE-SCHOOL PLAYGROUP</span>
                 </Link>
             </Navbar.Brand>
-            <Navbar.Collapse className="font-kg-neatly-printed mx-2 order-1">
+            <Navbar.Collapse className="order-1">
                 <NavbarLink text="About us" href="#" />
                 <NavbarLink text="Our setting" href="#" />
                 <NavbarLink text="Sessions" href="#" />
@@ -31,21 +31,21 @@ const Navigation: FC = () => {
                     className="width-full"
                     label={
                         <li className="text-left w-full md:w-auto">
-                            <p className="text-3xl font-bold md:border-0 py-2 pr-4 pl-3 md:p-0 border-b hover:text-cyan-dark">
+                            <p className="text-xl font-bold md:border-0 py-2 pr-4 pl-3 md:p-0 border-b hover:text-cyan-dark">
                                 Funding
                             </p>
                         </li>
                     }
                 >
-                    <Dropdown.Item className="text-3xl">
+                    <Dropdown.Item className="text-xl">
                         <Link to="#">Earnings</Link>
                     </Dropdown.Item>
-                    <Dropdown.Item className="text-3xl">Settings</Dropdown.Item>
-                    <Dropdown.Item className="text-3xl">Earnings</Dropdown.Item>
+                    <Dropdown.Item className="text-xl">Settings</Dropdown.Item>
+                    <Dropdown.Item className="text-xl">Earnings</Dropdown.Item>
                 </Dropdown>
             </Navbar.Collapse>
-            <div className="flex md:order-2 w-full md:w-auto justify-between font-kg-neatly-printed">
-                <Link to="#" className="text-white bg-cyan hover:bg-cyan-dark font-bold text-2xl rounded-lg px-6 py-4">
+            <div className="flex md:order-2 w-full md:w-auto justify-between">
+                <Link to="#" className="text-white bg-cyan hover:bg-cyan-dark font-bold text-lg rounded-lg px-6 py-4">
                     ADMISSIONS
                 </Link>
                 <Navbar.Toggle
@@ -66,7 +66,7 @@ interface NavbarLinkProps {
 
 const NavbarLink: FC<NavbarLinkProps> = ({ text, href, active }: NavbarLinkProps) => {
     let classes =
-        "block py-2 pr-4 pl-3 md:p-0 border-b md:border-0 text-3xl font-bold hover:bg-transparent hover:text-cyan-dark";
+        "block py-2 pr-4 pl-3 md:p-0 border-b md:border-0 text-xl font-bold hover:bg-transparent hover:text-cyan-dark";
 
     if (active) classes += " text-cyan";
 

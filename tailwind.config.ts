@@ -23,7 +23,7 @@ const config: Config = {
         },
         fontFamily: {
             "kg-second-chances": ['"KG Second Chances"'],
-            "kg-neatly-printed": ['"KG Neatly Printed"'],
+            quicksand: ['"Quicksand"'],
         },
     },
     plugins: [],

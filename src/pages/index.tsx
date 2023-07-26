@@ -4,7 +4,7 @@ import Navigation from "@/components/navbar";
 
 const IndexPage: FC = () => {
     return (
-        <main className="text-slate-700">
+        <main className="text-slate-700 font-quicksand">
             <Navigation />
         </main>
     );

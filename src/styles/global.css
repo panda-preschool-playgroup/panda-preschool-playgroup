@@ -9,8 +9,8 @@
         src: url(/fonts/kg-second-chances.woff2) format("woff2");
     }
     @font-face {
-        font-family: KG Neatly Printed;
+        font-family: Quicksand;
         font-weight: 400;
-        src: url(/fonts/kg-neatly-printed.woff2) format("woff2");
+        src: url(/fonts/quicksand.woff2) format("woff2");
     }
 }
