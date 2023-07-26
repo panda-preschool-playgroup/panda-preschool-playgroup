@@ -11,26 +11,18 @@ const Navigation: FC = () => {
             theme={{ inner: { base: "mx-3 flex flex-wrap items-center justify-between gap-y-5" } }}
         >
             <Navbar.Brand>
-                <StaticImage
-                    src="../images/logo.png"
-                    alt="Panda Pre-School Playgroup Logo"
-                    width={125}
-                    height={125}
-                    className=" mr-12"
-                />
-                <span className="text-2xl md:text-3xl font-kg-second-chances">PANDA PRE-SCHOOL PLAYGROUP</span>
-            </Navbar.Brand>
-            <div className="flex md:order-2 w-full md:w-auto justify-between font-kg-neatly-printed">
-                <Link to="#" className="text-white bg-cyan hover:bg-cyan-dark font-bold text-2xl rounded-lg px-6 py-4">
-                    ADMISSIONS
+                <Link to="/" className="flex w-full items-center">
+                    <StaticImage
+                        src="../images/logo.png"
+                        alt="Panda Pre-School Playgroup Logo"
+                        width={125}
+                        height={125}
+                        className=" mr-12"
+                    />
+                    <span className="text-2xl md:text-3xl font-kg-second-chances">PANDA PRE-SCHOOL PLAYGROUP</span>
                 </Link>
-                <Navbar.Toggle
-                    theme={{
-                        base: "inline-flex items-center text-gray-500 focus:text-gray-600 hover:text-gray-600 text-sm md:hidden",
-                    }}
-                />
-            </div>
-            <Navbar.Collapse className="font-kg-neatly-printed mx-2">
+            </Navbar.Brand>
+            <Navbar.Collapse className="font-kg-neatly-printed mx-2 order-1">
                 <NavbarLink text="About us" href="#" />
                 <NavbarLink text="Our setting" href="#" />
                 <NavbarLink text="Sessions" href="#" />
@@ -39,7 +31,9 @@ const Navigation: FC = () => {
                     className="width-full"
                     label={
                         <li className="text-left w-full md:w-auto">
-                            <p className="text-3xl font-bold md:border-0 py-2 pr-4 pl-3 md:p-0 border-b">Funding</p>
+                            <p className="text-3xl font-bold md:border-0 py-2 pr-4 pl-3 md:p-0 border-b hover:text-cyan-dark">
+                                Funding
+                            </p>
                         </li>
                     }
                 >
@@ -50,6 +44,16 @@ const Navigation: FC = () => {
                     <Dropdown.Item className="text-3xl">Earnings</Dropdown.Item>
                 </Dropdown>
             </Navbar.Collapse>
+            <div className="flex md:order-2 w-full md:w-auto justify-between font-kg-neatly-printed">
+                <Link to="#" className="text-white bg-cyan hover:bg-cyan-dark font-bold text-2xl rounded-lg px-6 py-4">
+                    ADMISSIONS
+                </Link>
+                <Navbar.Toggle
+                    theme={{
+                        base: "inline-flex items-center text-gray-500 focus:text-gray-600 hover:text-gray-600 text-sm md:hidden",
+                    }}
+                />
+            </div>
         </Navbar>
     );
 };
