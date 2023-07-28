@@ -3,7 +3,6 @@ import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { Navbar } from "flowbite-react";
 import NavigationSection from "@/components/common/navigation/navigation-section";
-import NavigationItem from "@/components/common/navigation/navigation-item";
 
 interface NavigationProps {
     activeSection?: string;
@@ -63,7 +62,7 @@ const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => 
                     ]}
                     activeSection={activeSection}
                 />
-                <NavigationItem text="Contact" href="#" activeSection={activeSection} />
+                <NavigationSection title="Contact" href="#" activeSection={activeSection} />
             </Navbar.Collapse>
             <div className="flex md:order-2 w-full md:w-auto justify-between">
                 <Link to="#" className="text-white bg-cyan hover:bg-cyan-dark font-bold text-lg rounded-lg px-6 py-4">
