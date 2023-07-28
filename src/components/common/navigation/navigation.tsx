@@ -13,13 +13,12 @@ const Navigation: FC = () => {
             theme={{ inner: { base: "mx-3 flex flex-wrap items-center justify-between gap-y-5 gap-x-5" } }}
         >
             <Navbar.Brand>
-                <Link to="/" className="flex w-full items-center">
+                <Link to="/" className="flex w-full items-center gap-x-10">
                     <StaticImage
                         src="../../../images/logo.png"
                         alt="Panda Pre-School Playgroup Logo"
                         width={125}
                         height={125}
-                        className=" mr-12"
                     />
                     <span className="text-2xl md:text-3xl font-kg-second-chances">PANDA PRE-SCHOOL PLAYGROUP</span>
                 </Link>
