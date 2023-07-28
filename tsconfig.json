@@ -19,5 +19,6 @@
             "@/test/*": ["src/__tests__/*"]
         }
     },
-    "include": ["./src/**/*", "./gatsby-node.ts", "./gatsby-config.ts", "./plugins/**/*"]
+    "include": ["./src/**/*", "./gatsby-node.ts", "./gatsby-config.ts", "./plugins/**/*"],
+    "exclude": ["cypress"]
 }

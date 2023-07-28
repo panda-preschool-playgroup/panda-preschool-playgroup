@@ -1,0 +1,13 @@
+{
+    "extends": "@tsconfig/cypress/tsconfig.json",
+    "compilerOptions": {
+        "types": ["node", "cypress", "@testing-library/cypress"],
+        "strict": true,
+        "noEmit": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/support/*": ["support/*"]
+        }
+    },
+    "include": ["**/*.ts"]
+}
