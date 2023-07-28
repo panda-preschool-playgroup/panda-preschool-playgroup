@@ -1,6 +1,6 @@
 import { type FC } from "react";
 import Seo from "@/components/seo";
-import Navigation from "@/components/navbar";
+import Navigation from "@/components/common/navbar/navbar";
 
 const IndexPage: FC = () => {
     return (
