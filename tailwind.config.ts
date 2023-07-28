@@ -10,14 +10,17 @@ const config: Config = {
                     DEFAULT: "#77cf5f",
                     dark: "#449e57",
                 },
-                blue: { DEFAULT: "#3187d7", dark: "#276cac" },
+                blue: {
+                    DEFAULT: "#3187d7",
+                    dark: "#276cac",
+                },
                 yellow: {
                     light: "#ffd85a",
                     DEFAULT: "#fbd40a",
                 },
                 cyan: {
-                    DEFAULT: "#078d82",
-                    dark: "#166a77",
+                    DEFAULT: "#2d7985",
+                    dark: "#145f6b",
                 },
             },
         },

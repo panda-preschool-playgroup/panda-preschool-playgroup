@@ -15,16 +15,14 @@ const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => 
             className="bg-yellow-light h-42"
             theme={{ inner: { base: "mx-3 flex flex-wrap items-center justify-between gap-y-5 gap-x-5" } }}
         >
-            <Navbar.Brand>
-                <Link to="/" className="flex w-full items-center gap-x-10">
-                    <StaticImage
-                        src="../../../images/logo.png"
-                        alt="Panda Pre-School Playgroup Logo"
-                        width={125}
-                        height={125}
-                    />
-                    <span className="text-2xl md:text-3xl font-kg-second-chances">PANDA PRE-SCHOOL PLAYGROUP</span>
-                </Link>
+            <Navbar.Brand href="/" className="gap-x-10">
+                <StaticImage
+                    src="../../../images/logo.png"
+                    alt="Panda Pre-School Playgroup Logo"
+                    width={125}
+                    height={125}
+                />
+                <span className="text-2xl md:text-3xl font-kg-second-chances">PANDA PRE-SCHOOL PLAYGROUP</span>
             </Navbar.Brand>
             <Navbar.Collapse className="order-1">
                 <NavigationSection
