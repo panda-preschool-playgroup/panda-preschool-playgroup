@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import IndexPage, { Head } from "@/pages/index";
-import Seo from "@/components/seo";
+import Seo from "@/components/common/seo";
 import Navigation from "@/components/common/navigation/navigation";
 
-jest.mock("@/components/seo");
+jest.mock("@/components/common/seo");
 const mockSeo = jest.mocked(Seo);
 
 jest.mock("@/components/common/navigation/navigation");
