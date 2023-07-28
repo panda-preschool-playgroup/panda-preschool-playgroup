@@ -1,15 +1,23 @@
 import { render } from "@testing-library/react";
 import IndexPage, { Head } from "@/pages/index";
-import Seo from "@/components/seo";
+import Layout from "@/components/layout/layout";
+import Seo from "@/components/common/seo";
 
-jest.mock("@/components/seo");
+jest.mock("@/components/layout/layout");
+const mockLayout = jest.mocked(Layout);
+
+jest.mock("@/components/common/seo");
 const mockSeo = jest.mocked(Seo);
 
-describe("index", () => {
-    it("renders", () => {
-        const { asFragment } = render(<IndexPage />);
+beforeEach(() => {
+    jest.clearAllMocks();
+});
 
-        expect(asFragment()).toMatchSnapshot();
+describe("index", () => {
+    it("renders the layout", () => {
+        render(<IndexPage />);
+
+        expect(mockLayout).toHaveBeenCalled();
     });
 });
 
