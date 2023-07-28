@@ -21,10 +21,12 @@ const NavigationSection: FC<NavigationSectionProps> = ({
     menuItems,
     activeSection,
 }: NavigationSectionProps) => {
+    const navigationItem = <NavigationItem text={title} href={href} activeSection={activeSection} />;
+
     return href ? (
-        <NavigationItem text={title} href={href} activeSection={activeSection} />
+        navigationItem
     ) : (
-        <Dropdown inline className="width-full" label={<NavigationItem text={title} activeSection={activeSection} />}>
+        <Dropdown inline className="width-full" label={navigationItem}>
             {menuItems?.map((menuItem: NavigationMenuItem) => (
                 <Dropdown.Item key={menuItem.title} className="text-xl">
                     <Link to={menuItem.href}>{menuItem.title}</Link>

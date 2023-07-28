@@ -1,31 +1,23 @@
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import IndexPage, { Head } from "@/pages/index";
+import Layout from "@/components/layout/layout";
 import Seo from "@/components/common/seo";
-import Navigation from "@/components/layout/navigation/navigation";
+
+jest.mock("@/components/layout/layout");
+const mockLayout = jest.mocked(Layout);
 
 jest.mock("@/components/common/seo");
 const mockSeo = jest.mocked(Seo);
-
-jest.mock("@/components/layout/navigation/navigation");
-const mockNavigation = jest.mocked(Navigation);
 
 beforeEach(() => {
     jest.clearAllMocks();
 });
 
 describe("index", () => {
-    it("renders", () => {
+    it("renders the layout", () => {
         render(<IndexPage />);
 
-        const main = screen.queryByRole("main");
-
-        expect(main).toBeInTheDocument();
-    });
-
-    it("renders the navbar", () => {
-        render(<IndexPage />);
-
-        expect(mockNavigation).toHaveBeenCalled();
+        expect(mockLayout).toHaveBeenCalled();
     });
 });
 
