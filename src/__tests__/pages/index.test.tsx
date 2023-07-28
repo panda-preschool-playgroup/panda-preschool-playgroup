@@ -1,12 +1,12 @@
 import { render, screen } from "@testing-library/react";
 import IndexPage, { Head } from "@/pages/index";
 import Seo from "@/components/common/seo";
-import Navigation from "@/components/common/navigation/navigation";
+import Navigation from "@/components/layout/navigation/navigation";
 
 jest.mock("@/components/common/seo");
 const mockSeo = jest.mocked(Seo);
 
-jest.mock("@/components/common/navigation/navigation");
+jest.mock("@/components/layout/navigation/navigation");
 const mockNavigation = jest.mocked(Navigation);
 
 beforeEach(() => {

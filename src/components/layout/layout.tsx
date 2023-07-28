@@ -1,5 +1,5 @@
 import { FC, PropsWithChildren } from "react";
-import Navigation from "@/components/common/navigation/navigation";
+import Navigation from "@/components/layout/navigation/navigation";
 
 const globalStyles = "text-slate-700 font-quicksand";
 
