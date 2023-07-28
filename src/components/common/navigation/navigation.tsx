@@ -2,8 +2,8 @@ import { FC } from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { Navbar } from "flowbite-react";
-import NavbarDropdown from "@/components/common/navbar/navbar-dropdown";
-import NavbarItem from "@/components/common/navbar//navbar-item";
+import NavigationSection from "@/components/common/navigation/navigation-section";
+import NavigationItem from "@/components/common/navigation/navigation-item";
 
 const Navigation: FC = () => {
     return (
@@ -25,14 +25,14 @@ const Navigation: FC = () => {
                 </Link>
             </Navbar.Brand>
             <Navbar.Collapse className="order-1">
-                <NavbarDropdown
+                <NavigationSection
                     title="Sessions"
                     menuItems={[
                         { title: "Playgroup", href: "#" },
                         { title: "Sticky Mitts & Tiny Tots", href: "#" },
                     ]}
                 />
-                <NavbarDropdown
+                <NavigationSection
                     title="New starters"
                     menuItems={[
                         { title: "Settling in", href: "#" },
@@ -41,14 +41,14 @@ const Navigation: FC = () => {
                         { title: "Policies", href: "#" },
                     ]}
                 />
-                <NavbarDropdown
+                <NavigationSection
                     title="Our team"
                     menuItems={[
                         { title: "Staff", href: "#" },
                         { title: "Committee", href: "#" },
                     ]}
                 />
-                <NavbarDropdown
+                <NavigationSection
                     title="Funding"
                     menuItems={[
                         { title: "Charitable framework", href: "#" },
@@ -56,7 +56,7 @@ const Navigation: FC = () => {
                         { title: "Panda pals", href: "#" },
                     ]}
                 />
-                <NavbarItem text="Contact" href="#" />
+                <NavigationItem text="Contact" href="#" />
             </Navbar.Collapse>
             <div className="flex md:order-2 w-full md:w-auto justify-between">
                 <Link to="#" className="text-white bg-cyan hover:bg-cyan-dark font-bold text-lg rounded-lg px-6 py-4">
