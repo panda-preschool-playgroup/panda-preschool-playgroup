@@ -4,13 +4,13 @@ import { Link } from "gatsby";
 interface NavigationItemProps {
     text: string;
     href?: string;
-    active?: string;
+    activeSection?: string;
 }
 
-const NavigationItem: FC<NavigationItemProps> = ({ text, href, active }: NavigationItemProps) => {
+const NavigationItem: FC<NavigationItemProps> = ({ text, href, activeSection }: NavigationItemProps) => {
     let classes = "block py-2 pr-4 pl-3 md:p-0 border-b md:border-0 text-xl font-bold hover:text-cyan-dark";
 
-    if (text === active) classes += " text-cyan";
+    if (activeSection === text) classes += " text-cyan";
 
     return (
         <li className="text-left w-full md:w-auto">

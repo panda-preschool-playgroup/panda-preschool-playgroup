@@ -5,7 +5,11 @@ import { Navbar } from "flowbite-react";
 import NavigationSection from "@/components/common/navigation/navigation-section";
 import NavigationItem from "@/components/common/navigation/navigation-item";
 
-const Navigation: FC = () => {
+interface NavigationProps {
+    activeSection?: string;
+}
+
+const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => {
     return (
         <Navbar
             fluid
@@ -30,6 +34,7 @@ const Navigation: FC = () => {
                         { title: "Playgroup", href: "#" },
                         { title: "Sticky Mitts & Tiny Tots", href: "#" },
                     ]}
+                    activeSection={activeSection}
                 />
                 <NavigationSection
                     title="New starters"
@@ -39,6 +44,7 @@ const Navigation: FC = () => {
                         { title: "Fees", href: "#" },
                         { title: "Policies", href: "#" },
                     ]}
+                    activeSection={activeSection}
                 />
                 <NavigationSection
                     title="Our team"
@@ -46,6 +52,7 @@ const Navigation: FC = () => {
                         { title: "Staff", href: "#" },
                         { title: "Committee", href: "#" },
                     ]}
+                    activeSection={activeSection}
                 />
                 <NavigationSection
                     title="Funding"
@@ -54,8 +61,9 @@ const Navigation: FC = () => {
                         { title: "Fundraising", href: "#" },
                         { title: "Panda pals", href: "#" },
                     ]}
+                    activeSection={activeSection}
                 />
-                <NavigationItem text="Contact" href="#" />
+                <NavigationItem text="Contact" href="#" activeSection={activeSection} />
             </Navbar.Collapse>
             <div className="flex md:order-2 w-full md:w-auto justify-between">
                 <Link to="#" className="text-white bg-cyan hover:bg-cyan-dark font-bold text-lg rounded-lg px-6 py-4">

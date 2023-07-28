@@ -6,6 +6,7 @@ import NavigationItem from "@/components/common/navigation/navigation-item";
 interface NavigationSectionProps {
     title: string;
     menuItems: NavigationMenuItem[];
+    activeSection?: string;
 }
 
 interface NavigationMenuItem {
@@ -13,9 +14,9 @@ interface NavigationMenuItem {
     href: string;
 }
 
-const NavigationSection: FC<NavigationSectionProps> = ({ title, menuItems }: NavigationSectionProps) => {
+const NavigationSection: FC<NavigationSectionProps> = ({ title, menuItems, activeSection }: NavigationSectionProps) => {
     return (
-        <Dropdown inline className="width-full" label={<NavigationItem text={title} />}>
+        <Dropdown inline className="width-full" label={<NavigationItem text={title} activeSection={activeSection} />}>
             {menuItems.map((menuItem: NavigationMenuItem) => (
                 <Dropdown.Item key={menuItem.title} className="text-xl">
                     <Link to={menuItem.href}>{menuItem.title}</Link>
