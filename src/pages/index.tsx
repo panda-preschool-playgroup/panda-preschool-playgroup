@@ -1,13 +1,9 @@
 import { type FC } from "react";
 import Seo from "@/components/common/seo";
-import Navigation from "@/components/common/navigation/navigation";
+import Layout from "@/components/layout/layout";
 
 const IndexPage: FC = () => {
-    return (
-        <main className="text-slate-700 font-quicksand">
-            <Navigation />
-        </main>
-    );
+    return <Layout />;
 };
 
 export default IndexPage;
