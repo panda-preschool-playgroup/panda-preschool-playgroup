@@ -29,7 +29,9 @@ const NavigationSection: FC<NavigationSectionProps> = ({
         <Dropdown inline className="width-full" label={navigationItem}>
             {menuItems?.map((menuItem: NavigationMenuItem) => (
                 <Dropdown.Item key={menuItem.title} className="text-xl">
-                    <Link to={menuItem.href}>{menuItem.title}</Link>
+                    <Link to={menuItem.href} className="no-underline">
+                        {menuItem.title}
+                    </Link>
                 </Dropdown.Item>
             ))}
         </Dropdown>

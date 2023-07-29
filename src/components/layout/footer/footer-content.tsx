@@ -18,28 +18,20 @@ const FooterContent: FC = () => {
                         YO23 3SQ
                     </p>
                     <p className="mb-4">07716 653801</p>
-                    <a href="mailto:pandaplaygroup@hotmail.co.uk" className="underline hover:no-underline">
-                        pandaplaygroup@hotmail.co.uk
-                    </a>
+                    <a href="mailto:pandaplaygroup@hotmail.co.uk">pandaplaygroup@hotmail.co.uk</a>
                     <Separator />
                 </div>
                 <div className="mb-8 md:mb-0 text-base">
                     <p className="mb-4">Ofsted registration: RP905909</p>
                     <p className="mb-4">Registered charity no: 1035584</p>
                     <p className="mb-4">
-                        <Link to="#" className="underline hover:no-underline">
-                            Policies
-                        </Link>
+                        <Link to="#">Policies</Link>
                     </p>
                     <p className="mb-4">
-                        <Link to="#" className="underline hover:no-underline">
-                            Careers
-                        </Link>
+                        <Link to="#">Careers</Link>
                     </p>
                     <p>
-                        <Link to="#" className="underline hover:no-underline">
-                            Privacy notice
-                        </Link>
+                        <Link to="#">Privacy notice</Link>
                     </p>
                     <Separator />
                 </div>
@@ -57,7 +49,6 @@ const FooterContent: FC = () => {
                         <a
                             href="https://www.facebook.com/pandascopmanthorpe/"
                             target="_blank"
-                            className="underline hover:no-underline"
                             rel="noreferrer"
                             aria-label="Panda Playgroup Facebook Page"
                         >
@@ -67,7 +58,6 @@ const FooterContent: FC = () => {
                         <a
                             href="https://www.facebook.com/Sticky-Mitts-20212022-112921877866920"
                             target="_blank"
-                            className="underline hover:no-underline"
                             rel="noreferrer"
                             aria-label="Sticky Mitts & Tiny Tots Facebook Page"
                         >
