@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
-import Navigation from "@/components/layout/navigation/navigation";
-import NavigationSection from "@/components/layout/navigation/navigation-section";
+import Navigation from "@/components/layout/header/navigation";
+import NavigationSection from "@/components/layout/header/navigation-section";
 
-jest.mock("@/components/layout/navigation/navigation-section");
+jest.mock("@/components/layout/header/navigation-section");
 const mockNavigationSection = jest.mocked(NavigationSection);
 
 beforeEach(() => {

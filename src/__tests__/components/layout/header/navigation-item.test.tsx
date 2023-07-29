@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import NavigationItem from "@/components/layout/navigation/navigation-item";
+import NavigationItem from "@/components/layout/header/navigation-item";
 
 describe("navigation item", () => {
     it("renders a link when there is an href", () => {

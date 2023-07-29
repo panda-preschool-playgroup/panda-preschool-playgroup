@@ -1,9 +1,17 @@
 import { render, screen } from "@testing-library/react";
 import Layout from "@/components/layout/layout";
-import Navigation from "@/components/layout/navigation/navigation";
+import Navigation from "@/components/layout/header/navigation";
+import FooterContent from "@/components/layout/footer/footer-content";
+import HostingBanner from "@/components/layout/footer/hosting-banner";
 
-jest.mock("@/components/layout/navigation/navigation");
+jest.mock("@/components/layout/header/navigation");
 const mockNavigation = jest.mocked(Navigation);
+
+jest.mock("@/components/layout/footer/footer-content");
+const mockFooterContent = jest.mocked(FooterContent);
+
+jest.mock("@/components/layout/footer/hosting-banner");
+const mockHostingBanner = jest.mocked(HostingBanner);
 
 beforeEach(() => {
     jest.clearAllMocks();
@@ -48,5 +56,25 @@ describe("layout", () => {
         const children = screen.queryByText("Test");
 
         expect(children).toBeInTheDocument();
+    });
+
+    it("renders the footer", () => {
+        render(<Layout />);
+
+        const footer = screen.queryByRole("contentinfo");
+
+        expect(footer).toBeInTheDocument();
+    });
+
+    it("renders the footer content", () => {
+        render(<Layout />);
+
+        expect(mockFooterContent).toHaveBeenCalled();
+    });
+
+    it("renders the hosting banner", () => {
+        render(<Layout />);
+
+        expect(mockHostingBanner).toHaveBeenCalled();
     });
 });

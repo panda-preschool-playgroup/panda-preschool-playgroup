@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+    a {
+        @apply underline hover:no-underline;
+    }
     @font-face {
         font-family: KG Second Chances;
         font-weight: 400;
