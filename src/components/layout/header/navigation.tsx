@@ -2,7 +2,7 @@ import { FC } from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { Navbar } from "flowbite-react";
-import NavigationSection from "@/components/layout/navigation/navigation-section";
+import NavigationSection from "@/components/layout/header/navigation-section";
 
 interface NavigationProps {
     activeSection?: string;

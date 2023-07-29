@@ -1,5 +1,5 @@
 import { FC, PropsWithChildren } from "react";
-import Navigation from "@/components/layout/navigation/navigation";
+import Navigation from "@/components/layout/header/navigation";
 import FooterContent from "@/components/layout/footer/footer-content";
 import SiteBanner from "@/components/layout/footer/hosting-banner";
 

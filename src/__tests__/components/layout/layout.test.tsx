@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import Layout from "@/components/layout/layout";
-import Navigation from "@/components/layout/navigation/navigation";
+import Navigation from "@/components/layout/header/navigation";
 import FooterContent from "@/components/layout/footer/footer-content";
 import HostingBanner from "@/components/layout/footer/hosting-banner";
 
-jest.mock("@/components/layout/navigation/navigation");
+jest.mock("@/components/layout/header/navigation");
 const mockNavigation = jest.mocked(Navigation);
 
 jest.mock("@/components/layout/footer/footer-content");

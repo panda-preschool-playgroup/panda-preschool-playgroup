@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Link } from "gatsby";
 import { Dropdown } from "flowbite-react";
-import NavigationItem from "@/components/layout/navigation/navigation-item";
+import NavigationItem from "@/components/layout/header/navigation-item";
 
 interface NavigationSectionProps {
     title: string;
