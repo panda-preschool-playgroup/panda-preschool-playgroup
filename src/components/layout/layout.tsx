@@ -1,7 +1,9 @@
 import { FC, PropsWithChildren } from "react";
 import Navigation from "@/components/layout/navigation/navigation";
+import FooterContent from "@/components/layout/footer/footer-content";
+import SiteBanner from "@/components/layout/footer/hosting-banner";
 
-const globalStyles = "text-slate-700 font-quicksand";
+const globalStyles = "bg-gray-100 text-slate-700 text-xl font-quicksand w-full";
 
 interface LayoutProps {
     activeSection?: string;
@@ -13,7 +15,13 @@ const Layout: FC<PropsWithChildren<LayoutProps>> = ({ activeSection, children }:
             <header className={globalStyles}>
                 <Navigation activeSection={activeSection} />
             </header>
-            <main className={globalStyles}>{children}</main>
+            <main className={globalStyles} style={{ height: "32rem" }}>
+                {children}
+            </main>
+            <footer className={globalStyles}>
+                <FooterContent />
+                <SiteBanner />
+            </footer>
         </>
     );
 };

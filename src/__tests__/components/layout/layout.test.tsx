@@ -49,4 +49,10 @@ describe("layout", () => {
 
         expect(children).toBeInTheDocument();
     });
+
+    it("renders the footer", () => {});
+
+    it("renders the footer content", () => {});
+
+    it("renders the hosting banner", () => {});
 });

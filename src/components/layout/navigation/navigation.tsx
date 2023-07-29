@@ -39,9 +39,9 @@ const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => 
                     title="New starters"
                     menuItems={[
                         { title: "Settling in", href: "#" },
+                        { title: "Virtual tour", href: "#" },
                         { title: "Prospectus", href: "#" },
                         { title: "Fees", href: "#" },
-                        { title: "Policies", href: "#" },
                     ]}
                     activeSection={activeSection}
                 />
@@ -65,7 +65,10 @@ const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => 
                 <NavigationSection title="Contact" href="#" activeSection={activeSection} />
             </Navbar.Collapse>
             <div className="flex md:order-2 w-full md:w-auto justify-between">
-                <Link to="#" className="text-white bg-cyan hover:bg-cyan-dark font-bold text-lg rounded-lg px-6 py-4">
+                <Link
+                    to="#"
+                    className="text-gray-100 bg-cyan hover:bg-cyan-dark font-bold text-lg rounded-lg px-6 py-4"
+                >
                     APPLY
                 </Link>
                 <Navbar.Toggle
