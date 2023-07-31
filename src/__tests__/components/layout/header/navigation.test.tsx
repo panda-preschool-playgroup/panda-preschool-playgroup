@@ -29,14 +29,14 @@ describe("navigation", () => {
     it("renders the navigation sections", () => {
         render(<Navigation />);
 
-        expect(mockNavigationSection).toHaveBeenCalledTimes(5);
+        expect(mockNavigationSection).toHaveBeenCalledTimes(4);
     });
 
-    it("renders the apply button", () => {
+    it("renders the admissions button", () => {
         render(<Navigation />);
 
-        const applyButton = screen.queryByRole("link", { name: "APPLY" });
+        const admissionsButton = screen.queryByRole("link", { name: "Admissions" });
 
-        expect(applyButton).toBeInTheDocument();
+        expect(admissionsButton).toBeInTheDocument();
     });
 });
