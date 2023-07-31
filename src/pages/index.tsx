@@ -1,9 +1,14 @@
-import { type FC } from "react";
+import { FC } from "react";
 import Seo from "@/components/common/seo";
 import Layout from "@/components/layout/layout";
+import Jumbotron from "@/components/index/jumbotron";
 
 const IndexPage: FC = () => {
-    return <Layout />;
+    return (
+        <Layout>
+            <Jumbotron />
+        </Layout>
+    );
 };
 
 export default IndexPage;

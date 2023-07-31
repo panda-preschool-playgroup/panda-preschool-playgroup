@@ -15,9 +15,7 @@ const Layout: FC<PropsWithChildren<LayoutProps>> = ({ activeSection, children }:
             <header className={globalStyles}>
                 <Navigation activeSection={activeSection} />
             </header>
-            <main className={globalStyles} style={{ height: "32rem" }}>
-                {children}
-            </main>
+            <main className={globalStyles}>{children}</main>
             <footer className={globalStyles}>
                 <FooterContent />
                 <SiteBanner />
