@@ -19,3 +19,12 @@
         src: url(/fonts/quicksand.woff2) format("woff2");
     }
 }
+
+@layer utilities {
+    .grid-area-1-1 {
+        grid-area: 1/1;
+    }
+    .text-shadow {
+        text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+    }
+}

@@ -11,7 +11,7 @@ const config: Config = {
                     dark: "#449e57",
                 },
                 blue: {
-                    DEFAULT: "#3187d7",
+                    DEFAULT: "#2c7ac2",
                     dark: "#276cac",
                 },
                 yellow: {
@@ -22,6 +22,9 @@ const config: Config = {
                     DEFAULT: "#2d7985",
                     dark: "#145f6b",
                 },
+            },
+            brightness: {
+                60: ".6",
             },
         },
         fontFamily: {
