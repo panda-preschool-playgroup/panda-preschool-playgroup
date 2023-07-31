@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { Navbar } from "flowbite-react";
 import NavigationSection from "@/components/layout/header/navigation-section";
+import LinkButton from "@/components/common/link-button";
 
 interface NavigationProps {
     activeSection?: string;
@@ -23,7 +24,9 @@ const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => 
                         width={125}
                         height={125}
                     />
-                    <h1 className="text-2xl md:text-3xl font-kg-second-chances">PANDA PRE-SCHOOL PLAYGROUP</h1>
+                    <h1 className="text-xl sm:text-2xl md:text-3xl font-kg-second-chances">
+                        PANDA PRE-SCHOOL PLAYGROUP
+                    </h1>
                 </Link>
             </Navbar.Brand>
             <Navbar.Collapse className="order-1">
@@ -36,10 +39,9 @@ const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => 
                     activeSection={activeSection}
                 />
                 <NavigationSection
-                    title="New starters"
+                    title="New pandas"
                     menuItems={[
                         { title: "Settling in", href: "#" },
-                        { title: "Virtual tour", href: "#" },
                         { title: "Prospectus", href: "#" },
                         { title: "Fees", href: "#" },
                     ]}
@@ -62,18 +64,12 @@ const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => 
                     ]}
                     activeSection={activeSection}
                 />
-                <NavigationSection title="Contact" href="#" activeSection={activeSection} />
             </Navbar.Collapse>
             <div className="flex md:order-2 w-full md:w-auto justify-between">
-                <Link
-                    to="#"
-                    className="text-gray-100 bg-cyan hover:bg-cyan-dark font-bold text-lg rounded-lg px-6 py-4 no-underline"
-                >
-                    APPLY
-                </Link>
+                <LinkButton text="Admissions" href="#" />
                 <Navbar.Toggle
                     theme={{
-                        base: "inline-flex items-center text-gray-500 focus:text-gray-600 hover:text-gray-600 text-sm md:hidden",
+                        base: "inline-flex items-center text-slate-500 focus:text-slate-600 hover:text-slate-600 text-sm md:hidden",
                     }}
                 />
             </div>

@@ -3,7 +3,7 @@ import Navigation from "@/components/layout/header/navigation";
 import FooterContent from "@/components/layout/footer/footer-content";
 import SiteBanner from "@/components/layout/footer/hosting-banner";
 
-const globalStyles = "bg-gray-100 text-slate-700 text-xl font-quicksand w-full";
+const globalStyles = "bg-slate-100 text-slate-700 text-xl font-quicksand w-full";
 
 interface LayoutProps {
     activeSection?: string;

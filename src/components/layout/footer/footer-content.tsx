@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 
 const FooterContent: FC = () => {
     return (
-        <div className="bg-cyan-dark text-gray-100">
+        <div className="bg-slate-600 text-slate-100">
             <div className="mx-auto w-full max-w-screen-xl md:grid md:grid-cols-3 md:gap-8 py-8 px-4">
                 <div>
                     <p className="mb-4">
@@ -71,7 +71,7 @@ const FooterContent: FC = () => {
 };
 
 const Separator = () => (
-    <hr className="w-3/4 h-0.5 my-12 bg-gray-400 border-0 visible md:invisible md:w-0 md:h-0 md:my-0 " />
+    <hr className="w-3/4 h-0.5 my-12 bg-slate-400 border-0 visible md:invisible md:w-0 md:h-0 md:my-0 " />
 );
 
 export default FooterContent;
