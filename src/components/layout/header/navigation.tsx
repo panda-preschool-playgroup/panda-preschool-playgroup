@@ -67,13 +67,13 @@ const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => 
             <div className="flex md:order-2 w-full md:w-auto justify-between">
                 <Link
                     to="#"
-                    className="text-gray-100 bg-cyan hover:bg-cyan-dark font-bold text-lg rounded-lg px-6 py-4 no-underline"
+                    className="text-slate-100 bg-cyan hover:bg-cyan-dark font-bold text-lg rounded-lg px-6 py-4 no-underline"
                 >
                     APPLY
                 </Link>
                 <Navbar.Toggle
                     theme={{
-                        base: "inline-flex items-center text-gray-500 focus:text-gray-600 hover:text-gray-600 text-sm md:hidden",
+                        base: "inline-flex items-center text-slate-500 focus:text-slate-600 hover:text-slate-600 text-sm md:hidden",
                     }}
                 />
             </div>
