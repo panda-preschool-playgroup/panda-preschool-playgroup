@@ -1,10 +1,9 @@
 {
     "testEnvironment": "jest-environment-jsdom",
-    "testPathIgnorePatterns": ["<rootDir>/src/__tests__/setup-jest.ts"],
+    "testPathIgnorePatterns": ["<rootDir>/src/__tests__/setup-jest.ts", "<rootDir>/src/__tests__/mock-layout.tsx"],
     "setupFilesAfterEnv": ["<rootDir>/src/__tests__/setup-jest.ts"],
     "collectCoverage": true,
     "collectCoverageFrom": ["<rootDir>/src/**"],
-    "coveragePathIgnorePatterns": [".*__snapshots__/.*"],
     "moduleNameMapper": {
         "@/components/(.*)": "<rootDir>/src/components/$1",
         "@/hooks/(.*)": "<rootDir>/src/hooks/$1",
