@@ -12,10 +12,10 @@ const Jumbotron: FC = () => {
                 aspectRatio={3 / 1}
                 alt=""
                 aria-hidden
-                className="grid-area-1-1 opacity-80 brightness-60"
+                className="grid-area-1-1 opacity-80 brightness-80"
             />
             <div className="grid-area-1-1 text-center relative place-items-center mx-auto px-4 py-24 lg:py-40">
-                <p className="font-kg-second-chances mb-4 py-4 md:py-8 tracking-tight leading-none text-slate-100 text-4xl md:text-6xl lg:text-7xl text-shadow">
+                <p className="font-darumadrop-one mb-4 py-4 md:py-8 tracking-tight leading-none text-slate-100 text-5xl md:text-7xl lg:text-8xl text-shadow">
                     A safe, welcoming and fun environment
                 </p>
                 <p className="font-black text-slate-100 text-xl text-shadow md:text-2xl lg:text-4xl mb-8 py-4 md:py-8 sm:px-16 lg:px-48">

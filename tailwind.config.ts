@@ -24,12 +24,12 @@ const config: Config = {
                 },
             },
             brightness: {
-                60: ".6",
+                80: ".8",
             },
         },
         fontFamily: {
-            "kg-second-chances": ['"KG Second Chances"'],
-            quicksand: ['"Quicksand"'],
+            "darumadrop-one": ['"Darumadrop One"'],
+            quicksand: ["Quicksand"],
         },
     },
     plugins: [],

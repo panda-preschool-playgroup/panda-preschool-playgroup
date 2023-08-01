@@ -24,9 +24,7 @@ const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => 
                         width={125}
                         height={125}
                     />
-                    <h1 className="text-xl sm:text-2xl md:text-3xl font-kg-second-chances">
-                        PANDA PRE-SCHOOL PLAYGROUP
-                    </h1>
+                    <h1 className="font-darumadrop-one text-2xl sm:text-3xl md:text-4xl">PANDA PRE-SCHOOL PLAYGROUP</h1>
                 </Link>
             </Navbar.Brand>
             <Navbar.Collapse className="order-1">
