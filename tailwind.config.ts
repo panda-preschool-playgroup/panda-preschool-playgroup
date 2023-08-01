@@ -28,8 +28,8 @@ const config: Config = {
             },
         },
         fontFamily: {
-            "kg-second-chances": ['"KG Second Chances"'],
-            quicksand: ['"Quicksand"'],
+            "darumadrop-one": ['"Darumadrop One"'],
+            quicksand: ["Quicksand"],
         },
     },
     plugins: [],

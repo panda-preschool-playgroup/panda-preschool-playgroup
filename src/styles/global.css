@@ -7,16 +7,16 @@
         @apply underline hover:no-underline;
     }
     @font-face {
-        font-family: KG Second Chances;
-        font-weight: 400;
-        font-display: swap;
-        src: url(/fonts/kg-second-chances.woff2) format("woff2");
-    }
-    @font-face {
         font-family: Quicksand;
         font-weight: 400;
         font-display: swap;
         src: url(/fonts/quicksand.woff2) format("woff2");
+    }
+    @font-face {
+        font-family: Darumadrop One;
+        font-weight: 400;
+        font-display: swap;
+        src: url(/fonts/darumadrop-one.woff2) format("woff2");
     }
 }
 
