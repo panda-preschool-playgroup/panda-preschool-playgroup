@@ -24,7 +24,7 @@ const config: Config = {
                 },
             },
             brightness: {
-                60: ".6",
+                80: ".8",
             },
         },
         fontFamily: {
