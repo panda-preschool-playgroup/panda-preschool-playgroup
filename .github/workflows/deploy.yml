@@ -1,0 +1,24 @@
+name: deploy
+
+on: pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: deploy
+        uses: easingthemes/ssh-deploy@3884c8554ff45c0fd37d3f12a76288d06ce7a2ff # v.4.1.8
+        env:
+          SOURCE: public/
+          SCRIPT_BEFORE: ls -la
+          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
+          REMOTE_HOST: ${{ vars.DEPLOY_HOST }}
+          REMOTE_USER: ${{ vars.DEPLOY_USER }}
