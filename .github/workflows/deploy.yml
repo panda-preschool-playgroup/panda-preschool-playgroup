@@ -19,7 +19,7 @@ jobs:
         env:
           SOURCE: public/
           TARGET: ~/public_html/new/
-          SCRIPT_BEFORE: ls -la
+          SCRIPT_AFTER: mv ~/public_html/new/fonts/ ~/public_html/new/static ~/public_html
           REMOTE_HOST: ${{ vars.DEPLOY_HOST }}
           REMOTE_PORT: ${{ vars.DEPLOY_PORT }}
           REMOTE_USER: ${{ vars.DEPLOY_USER }}
