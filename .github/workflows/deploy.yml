@@ -18,7 +18,7 @@ jobs:
         uses: easingthemes/ssh-deploy@3884c8554ff45c0fd37d3f12a76288d06ce7a2ff # v.4.1.8
         env:
           SOURCE: public/
-          TARGET: ~/tmp/
+          TARGET: ~/public_html/new/
           SCRIPT_BEFORE: ls -la
           REMOTE_HOST: ${{ vars.DEPLOY_HOST }}
           REMOTE_PORT: ${{ vars.DEPLOY_PORT }}
