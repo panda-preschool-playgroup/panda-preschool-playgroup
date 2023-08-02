@@ -29,19 +29,19 @@ const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => 
             </Navbar.Brand>
             <Navbar.Collapse className="order-1">
                 <NavigationSection
-                    title="Sessions"
-                    menuItems={[
-                        { title: "Playgroup", href: "#" },
-                        { title: "Sticky Mitts & Tiny Tots", href: "#" },
-                    ]}
-                    activeSection={activeSection}
-                />
-                <NavigationSection
                     title="New pandas"
                     menuItems={[
                         { title: "Settling in", href: "#" },
                         { title: "Prospectus", href: "#" },
                         { title: "Fees", href: "#" },
+                    ]}
+                    activeSection={activeSection}
+                />
+                <NavigationSection
+                    title="Sessions"
+                    menuItems={[
+                        { title: "Playgroup", href: "#" },
+                        { title: "Sticky Mitts & Tiny Tots", href: "#" },
                     ]}
                     activeSection={activeSection}
                 />
