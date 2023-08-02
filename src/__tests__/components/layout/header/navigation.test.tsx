@@ -32,11 +32,11 @@ describe("navigation", () => {
         expect(mockNavigationSection).toHaveBeenCalledTimes(4);
     });
 
-    it("renders the admissions button", () => {
+    it("renders the apply button", () => {
         render(<Navigation />);
 
-        const admissionsButton = screen.queryByRole("link", { name: "Admissions" });
+        const applyButton = screen.queryByRole("link", { name: "Apply" });
 
-        expect(admissionsButton).toBeInTheDocument();
+        expect(applyButton).toBeInTheDocument();
     });
 });

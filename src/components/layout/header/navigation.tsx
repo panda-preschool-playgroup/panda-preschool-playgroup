@@ -64,7 +64,7 @@ const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => 
                 />
             </Navbar.Collapse>
             <div className="flex md:order-2 w-full md:w-auto justify-between">
-                <LinkButton text="Admissions" href="#" />
+                <LinkButton text="Apply" href="#" />
                 <Navbar.Toggle
                     theme={{
                         base: "inline-flex items-center text-slate-500 focus:text-slate-600 hover:text-slate-600 text-sm md:hidden",
