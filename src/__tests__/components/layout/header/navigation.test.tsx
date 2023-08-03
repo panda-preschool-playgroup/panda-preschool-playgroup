@@ -32,11 +32,11 @@ describe("navigation", () => {
         expect(mockNavigationSection).toHaveBeenCalledTimes(4);
     });
 
-    it("renders the apply button", () => {
+    it("renders the button", () => {
         render(<Navigation />);
 
-        const applyButton = screen.queryByRole("link", { name: "Apply" });
+        const button = screen.queryByRole("link", { name: "Bookings" });
 
-        expect(applyButton).toBeInTheDocument();
+        expect(button).toBeInTheDocument();
     });
 });
