@@ -26,4 +26,7 @@ gatsby-types.d.ts
 # IDE files
 .vscode
 
+# Environment variables
+.env
+
 TODO
