@@ -10,6 +10,7 @@ on:
 jobs:
   performance-checks:
     runs-on: ubuntu-latest
+    environment: test
     steps:
       - uses: actions/checkout@v3
         with:
@@ -21,4 +22,7 @@ jobs:
       - run: npm ci
       - run: npm run perf
         env:
+          CONTENTFUL_SPACE_ID: ${{ vars.CONTENTFUL_SPACE_ID }}
+          CONTENTFUL_ENV: ${{ vars.CONTENTFUL_ENV }}
+          CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
