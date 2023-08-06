@@ -18,3 +18,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+        env:
+          CONTENTFUL_SPACE_ID: ${{ vars.CONTENTFUL_SPACE_ID }}
+          CONTENTFUL_ENV: ${{ vars.CONTENTFUL_ENV }}
+          CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}

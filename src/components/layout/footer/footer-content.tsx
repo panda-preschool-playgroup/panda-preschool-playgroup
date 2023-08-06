@@ -1,7 +1,10 @@
-import { FC } from "react";
+import { FC, Fragment } from "react";
 import { Link } from "gatsby";
+import { useFooterContent } from "@/queries/layout/footer/use-footer-content";
 
 const FooterContent: FC = () => {
+    const footerContent = useFooterContent();
+
     return (
         <div className="bg-slate-600 text-slate-100">
             <div className="mx-auto w-full max-w-screen-xl md:grid md:grid-cols-3 md:gap-8 py-8 px-4">
@@ -17,8 +20,8 @@ const FooterContent: FC = () => {
                         <br />
                         YO23 3SQ
                     </p>
-                    <p className="mb-4">07716 653801</p>
-                    <a href="mailto:pandaplaygroup@hotmail.co.uk">pandaplaygroup@hotmail.co.uk</a>
+                    <p className="mb-4">{footerContent.phoneNumber}</p>
+                    <a href={`mailto:${footerContent.emailAddress}`}>{footerContent.emailAddress}</a>
                     <Separator />
                 </div>
                 <div className="mb-8 md:mb-0 text-base">
@@ -46,23 +49,21 @@ const FooterContent: FC = () => {
                         >
                             <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
                         </svg>
-                        <a
-                            href="https://www.facebook.com/pandascopmanthorpe/"
-                            target="_blank"
-                            rel="noreferrer"
-                            aria-label="Panda Playgroup Facebook Page"
-                        >
-                            Panda Playgroup
-                        </a>{" "}
-                        |{" "}
-                        <a
-                            href="https://www.facebook.com/Sticky-Mitts-20212022-112921877866920"
-                            target="_blank"
-                            rel="noreferrer"
-                            aria-label="Sticky Mitts & Tiny Tots Facebook Page"
-                        >
-                            Sticky Mitts & Tiny Tots
-                        </a>
+                        {footerContent.facebookLinks?.map(
+                            (facebookLink: Queries.Maybe<Queries.ContentfulLink>, index: number) => (
+                                <Fragment key={facebookLink?.contentful_id}>
+                                    {index ? " | " : ""}
+                                    <a
+                                        href={facebookLink?.url ?? ""}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        aria-label={`${facebookLink?.text} Facebook Page`}
+                                    >
+                                        {facebookLink?.text}
+                                    </a>
+                                </Fragment>
+                            ),
+                        )}
                     </p>
                 </div>
             </div>
