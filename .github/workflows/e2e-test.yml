@@ -10,7 +10,6 @@ on:
 jobs:
   e2e-test:
     runs-on: ubuntu-latest
-    environment: test
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
