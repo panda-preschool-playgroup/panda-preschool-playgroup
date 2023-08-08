@@ -6,7 +6,7 @@ import Layout from "@/components/layout/layout";
 import Jumbotron from "@/components/index/jumbotron";
 
 jest.mock("@/components/layout/head/head");
-const mockHead = jest.mocked(PageHead);
+const mockPageHead = jest.mocked(PageHead);
 
 jest.mock("@/components/layout/layout");
 const mockLayout = jest.mocked(Layout).mockImplementation(MockLayout);
@@ -36,6 +36,6 @@ describe("head", () => {
     it("renders the head", () => {
         render(<Head />);
 
-        expect(mockHead).toHaveBeenCalled();
+        expect(mockPageHead).toHaveBeenCalled();
     });
 });
