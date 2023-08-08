@@ -1,12 +1,12 @@
 import { render } from "@testing-library/react";
 import MockLayout from "@/test/mock-layout";
 import IndexPage, { Head } from "@/pages/index";
-import Seo from "@/components/common/seo";
+import PageHead from "@/components/layout/head/head";
 import Layout from "@/components/layout/layout";
 import Jumbotron from "@/components/index/jumbotron";
 
-jest.mock("@/components/common/seo");
-const mockSeo = jest.mocked(Seo);
+jest.mock("@/components/layout/head/head");
+const mockPageHead = jest.mocked(PageHead);
 
 jest.mock("@/components/layout/layout");
 const mockLayout = jest.mocked(Layout).mockImplementation(MockLayout);
@@ -33,9 +33,9 @@ describe("index", () => {
 });
 
 describe("head", () => {
-    it("renders seo", () => {
+    it("renders the head", () => {
         render(<Head />);
 
-        expect(mockSeo).toHaveBeenCalled();
+        expect(mockPageHead).toHaveBeenCalled();
     });
 });
