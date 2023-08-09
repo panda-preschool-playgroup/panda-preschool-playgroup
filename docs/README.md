@@ -14,7 +14,7 @@ It is a static site developed with [Gatsby](https://www.gatsbyjs.com/) and [Type
 
 2. A Google Chrome installation, to run Lighthouse locally
 
-3. A `.env` file created in your local directory with the following enviroment variables:
+3. A `.env` file in your local directory with the following enviroment variables:
 
 ```
 CONTENTFUL_SPACE_ID=
