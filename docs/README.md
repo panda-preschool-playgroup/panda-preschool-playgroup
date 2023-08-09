@@ -22,7 +22,7 @@ CONTENTFUL_ENV=
 CONTENTFUL_ACCESS_TOKEN=
 ```
 
-Values for these can be retrieved from the CMS settings.
+Values for these can be retrieved from the settings page after logging in to Contentful.
 
 ### Running the application
 
