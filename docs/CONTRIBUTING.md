@@ -1,6 +1,6 @@
 # Branching
 
-Create a new branch using the conventional commit style e.g.
+Create a new branch using the [conventional commit](https://www.conventionalcommits.org/en/v1.0.0/) style e.g.
 
 `feat/add-carousel`
 
@@ -8,7 +8,7 @@ Create a new branch using the conventional commit style e.g.
 
 # Committing
 
-Commit messages should follow the [conventional commit](https://www.conventionalcommits.org/en/v1.0.0/) style e.g.
+Commit messages should follow the conventional commit style e.g.
 
 `feat: add image carousel on homepage`
 
