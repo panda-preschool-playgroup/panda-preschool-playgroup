@@ -12,6 +12,8 @@ Commit messages should follow the conventional commit style e.g.
 
 `feat: add image carousel on homepage`
 
+`docs: add contribution guidelines`
+
 This is enforced by [commitlint](https://github.com/conventional-changelog/commitlint/). Valid types are:
 
 ```javascript
