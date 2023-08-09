@@ -22,7 +22,7 @@ CONTENTFUL_ENV=
 CONTENTFUL_ACCESS_TOKEN=
 ```
 
-Values for these can be retrieved from the settings page after logging in to Contentful.
+Values for these can be retrieved from the settings page in Contentful.
 
 ### Common commands
 
