@@ -24,7 +24,7 @@ CONTENTFUL_ACCESS_TOKEN=
 
 Values for these can be retrieved from the settings page after logging in to Contentful.
 
-### Running the application
+### Common commands
 
 | Command                             | Description                                            |
 | ----------------------------------- | ------------------------------------------------------ |
