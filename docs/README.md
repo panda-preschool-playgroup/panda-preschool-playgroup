@@ -4,7 +4,7 @@
 
 This is the code that powers the website https://www.pandaplaygroup.co.uk/new, a charity-run children's playgroup situated in the village of Copmanthorpe near the city of York, UK.
 
-It is a static site developed with [Gatsby](https://www.gatsbyjs.com/) and [TypeScript](https://www.typescriptlang.org/), that uses [Flowbite](https://flowbite.com/) as its design system and [Contentful](https://www.contentful.com/) as its CMS.
+It is a static site developed with [Gatsby](https://www.gatsbyjs.com/) and [TypeScript](https://www.typescriptlang.org/), using [Flowbite](https://flowbite.com/) as its design system and [Contentful](https://www.contentful.com/) as its CMS.
 
 ## Development
 
