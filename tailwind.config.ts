@@ -7,8 +7,8 @@ const config: Config = {
         extend: {
             colors: {
                 green: {
-                    DEFAULT: "#77cf5f",
-                    dark: "#449e57",
+                    DEFAULT: "#73d05d",
+                    dark: "#68bb54",
                 },
                 blue: {
                     DEFAULT: "#2c7ac2",
@@ -19,8 +19,8 @@ const config: Config = {
                     DEFAULT: "#fbd40a",
                 },
                 cyan: {
-                    DEFAULT: "#2d7985",
-                    dark: "#145f6b",
+                    DEFAULT: "#066477",
+                    dark: "#055a6b",
                 },
             },
             brightness: {
