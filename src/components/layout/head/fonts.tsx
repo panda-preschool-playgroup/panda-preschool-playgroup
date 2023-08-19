@@ -4,7 +4,7 @@ const Fonts = () => {
             <link
                 key="darumadrop-one"
                 rel="preload"
-                href="/fonts/darumadrop-one.woff2"
+                href="/new2/fonts/darumadrop-one.woff2"
                 as="font"
                 type="font/woff2"
                 crossOrigin="anonymous"
@@ -12,7 +12,7 @@ const Fonts = () => {
             <link
                 key="quicksand"
                 rel="preload"
-                href="/fonts/quicksand.woff2"
+                href="/new2/fonts/quicksand.woff2"
                 as="font"
                 type="font/woff2"
                 crossOrigin="anonymous"
