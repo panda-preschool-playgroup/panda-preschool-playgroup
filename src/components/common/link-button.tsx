@@ -9,7 +9,7 @@ const LinkButton = ({ text, href }: LinkButtonProps) => {
     return (
         <Link
             to={href}
-            className="bg-cyan hover:bg-cyan-dark text-slate-100 font-bold text-lg rounded-lg px-6 py-4 no-underline"
+            className="bg-green hover:bg-green-dark text-white font-bold text-lg rounded-lg px-6 py-4 no-underline"
         >
             {text}
         </Link>
