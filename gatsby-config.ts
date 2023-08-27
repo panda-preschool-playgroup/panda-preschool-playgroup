@@ -8,7 +8,6 @@ const config: GatsbyConfig = {
         description:
             "Panda Pre-School Playgroup is a registered charity situated in the village of Copmanthorpe just outside the city of York, UK",
     },
-    pathPrefix: "/new2",
     graphqlTypegen: {
         typesOutputPath: "src/types/gatsby-types.d.ts",
     },
