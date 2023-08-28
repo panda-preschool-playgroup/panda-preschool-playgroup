@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - deploy
+      - main
 
 jobs:
   deploy:
@@ -17,7 +17,7 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
       - run: npm ci
-      - run: npm run build
+      - run: npm run ci:build
         env:
           CONTENTFUL_SPACE_ID: ${{ vars.CONTENTFUL_SPACE_ID }}
           CONTENTFUL_ENV: ${{ vars.CONTENTFUL_ENV }}
