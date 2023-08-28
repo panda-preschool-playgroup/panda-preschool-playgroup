@@ -1,5 +1,16 @@
 import { render, screen } from "@testing-library/react";
 import Jumbotron from "@/components/index/jumbotron";
+import * as gatsbyPluginImage from "gatsby-plugin-image";
+
+jest.mock("@/queries/index/use-jumbotron-image-asset", () => ({
+    useJumbotronImageAsset: jest.fn().mockReturnValue({
+        gatsbyImageData: "mock image",
+    }),
+}));
+
+beforeEach(() => {
+    jest.clearAllMocks();
+});
 
 describe("jumbotron", () => {
     it("renders", () => {
@@ -16,5 +27,14 @@ describe("jumbotron", () => {
         const link = screen.queryByRole("link", { name: "Watch our virtual tour" });
 
         expect(link).toBeInTheDocument();
+    });
+
+    it("renders the jumbotron image", () => {
+        render(<Jumbotron />);
+
+        expect(gatsbyPluginImage.GatsbyImage).toHaveBeenCalledWith(
+            expect.objectContaining({ image: "mock image" }),
+            expect.anything(),
+        );
     });
 });
