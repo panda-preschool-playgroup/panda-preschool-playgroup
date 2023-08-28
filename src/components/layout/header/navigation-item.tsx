@@ -8,10 +8,9 @@ interface NavigationItemProps {
 }
 
 const NavigationItem: FC<NavigationItemProps> = ({ text, href, activeSection }: NavigationItemProps) => {
-    let classes =
-        "block py-2 pr-4 pl-3 md:p-0 border-b md:border-0 text-xl font-bold hover:text-cyan-dark no-underline";
+    let classes = "block py-2 pr-4 pl-3 md:p-0 border-b md:border-0 text-xl font-bold hover:text-green no-underline";
 
-    if (activeSection === text) classes += " text-cyan";
+    if (activeSection === text) classes += " text-green";
 
     return (
         <li className="text-left w-full md:w-auto">
