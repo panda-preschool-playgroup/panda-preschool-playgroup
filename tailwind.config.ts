@@ -8,7 +8,7 @@ const config: Config = {
             colors: {
                 green: {
                     light: "#73d05d",
-                    DEFAULT: "#419A2D",
+                    DEFAULT: "#419a2d",
                 },
             },
             brightness: {
