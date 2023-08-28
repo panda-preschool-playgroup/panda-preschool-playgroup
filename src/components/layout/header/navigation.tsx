@@ -67,7 +67,7 @@ const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => 
                 <LinkButton text="Bookings" href="#" />
                 <Navbar.Toggle
                     theme={{
-                        base: "inline-flex items-center text-slate-500 focus:text-slate-600 hover:text-slate-600 text-sm md:hidden",
+                        base: "inline-flex items-center hover:text-green-light text-sm md:hidden",
                     }}
                 />
             </div>

@@ -23,7 +23,7 @@ describe("navigation item", () => {
 
         const link = screen.queryByRole("link", { name: "Contact" });
 
-        expect(link).toHaveClass("text-cyan");
+        expect(link).toHaveClass("text-green");
     });
 
     it("does not render the active class when the navigation item is inactive", () => {
@@ -31,6 +31,6 @@ describe("navigation item", () => {
 
         const link = screen.queryByRole("link", { name: "Contact" });
 
-        expect(link).not.toHaveClass("text-cyan");
+        expect(link).not.toHaveClass("text-green");
     });
 });
