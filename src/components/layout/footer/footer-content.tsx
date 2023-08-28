@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import { useFooterContent } from "@/queries/layout/footer/use-footer-content";
 
 const FooterContent: FC = () => {
-    const footerContent = useFooterContent();
+    const footerContent: Queries.ContentfulFooter = useFooterContent();
 
     return (
         <div className="bg-slate-600 text-slate-100">

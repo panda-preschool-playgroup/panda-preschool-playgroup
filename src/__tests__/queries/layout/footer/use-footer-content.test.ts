@@ -13,7 +13,7 @@ jest.mock("gatsby", () => ({
 
 describe("useFooterContent", () => {
     it("returns footer content", () => {
-        const footerContent = useFooterContent();
+        const footerContent: Queries.ContentfulFooter = useFooterContent();
 
         expect(footerContent.emailAddress).toEqual("test@pandaplaygroup.co.uk");
         expect(footerContent.phoneNumber).toEqual("11111 111111");
