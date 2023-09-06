@@ -5,6 +5,12 @@ on:
   push:
     branches:
       - main
+  repository_dispatch:
+    types: [cms-publish]
+
+concurrency:
+  group: deploy
+  cancel-in-progress: true
 
 jobs:
   deploy:
