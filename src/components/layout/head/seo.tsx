@@ -1,4 +1,4 @@
-import { useSiteMetadata } from "@/queries/common/use-site-metadata";
+import { useSiteMetadata } from "@/queries/layout/head/use-site-metadata";
 
 interface SeoProps {
     pageTitle?: string;

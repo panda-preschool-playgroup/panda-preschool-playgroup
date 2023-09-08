@@ -1,4 +1,4 @@
-import { useJumbotronImageAsset } from "@/queries/index/use-jumbotron-image-asset";
+import { useGetJumbotronImage } from "@/queries/index/use-get-jumbotron-image";
 
 jest.mock("gatsby", () => ({
     useStaticQuery: jest.fn().mockReturnValue({
@@ -9,10 +9,10 @@ jest.mock("gatsby", () => ({
     graphql: jest.fn(),
 }));
 
-describe("useJumbotronImageAsset", () => {
-    it("returns jumbotron image asset", () => {
-        const jumbotronImageAsset: Queries.ContentfulAsset = useJumbotronImageAsset();
+describe("useGetJumbotronImage", () => {
+    it("returns jumbotron image", () => {
+        const jumbotronImage: Queries.ContentfulAsset = useGetJumbotronImage();
 
-        expect(jumbotronImageAsset.gatsbyImageData).toEqual("mock image");
+        expect(jumbotronImage.gatsbyImageData).toEqual("mock image");
     });
 });

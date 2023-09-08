@@ -46,11 +46,11 @@ describe("footer content", () => {
 
         const policies = screen.queryByRole("link", { name: "Policies" });
         const privacyNotice = screen.queryByRole("link", { name: "Privacy notice" });
-        const careers = screen.queryByRole("link", { name: "Careers" });
+        const vacancies = screen.queryByRole("link", { name: "Vacancies" });
 
         expect(policies).toBeInTheDocument();
         expect(privacyNotice).toBeInTheDocument();
-        expect(careers).toBeInTheDocument();
+        expect(vacancies).toBeInTheDocument();
     });
 
     it("renders the social media links", () => {

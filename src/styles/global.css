@@ -18,6 +18,12 @@
         font-display: swap;
         src: url(/fonts/darumadrop-one.woff2) format("woff2");
     }
+    @font-face {
+        font-family: DK Crayon Crumble;
+        font-weight: 400;
+        font-display: swap;
+        src: url(/fonts/dk-crayon-crumble.woff2) format("woff2");
+    }
 }
 
 @layer utilities {

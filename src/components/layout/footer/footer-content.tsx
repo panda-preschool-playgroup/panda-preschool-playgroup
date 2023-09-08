@@ -31,7 +31,7 @@ const FooterContent: FC = () => {
                         <Link to="#">Policies</Link>
                     </p>
                     <p className="mb-4">
-                        <Link to="#">Careers</Link>
+                        <Link to="#">Vacancies</Link>
                     </p>
                     <p>
                         <Link to="#">Privacy notice</Link>

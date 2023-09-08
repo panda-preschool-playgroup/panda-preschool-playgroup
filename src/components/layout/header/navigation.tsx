@@ -18,18 +18,21 @@ const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => 
         >
             <Navbar.Brand as="div">
                 <Link to="/" className="flex items-center w-full gap-x-10 no-underline" aria-label="Home">
-                    <StaticImage
-                        src="../../../images/logo.png"
-                        alt="Panda Pre-School Playgroup Logo"
-                        width={125}
-                        height={125}
-                    />
-                    <h1 className="font-darumadrop-one text-2xl sm:text-3xl md:text-4xl">PANDA PRE-SCHOOL PLAYGROUP</h1>
+                    <StaticImage src="../../../images/logo.png" alt="Panda Playgroup Logo" width={125} height={125} />
+                    <h1 className="font-darumadrop-one text-2xl sm:text-3xl md:text-4xl">PANDA PLAYGROUP</h1>
                 </Link>
             </Navbar.Brand>
             <Navbar.Collapse className="order-1">
                 <NavigationSection
-                    title="New pandas"
+                    title="Sessions"
+                    menuItems={[
+                        { title: "Pre-school", href: "#" },
+                        { title: "Sticky Mitts & Tiny Tots", href: "#" },
+                    ]}
+                    activeSection={activeSection}
+                />
+                <NavigationSection
+                    title="New Pandas"
                     menuItems={[
                         { title: "Settling in", href: "#" },
                         { title: "Prospectus", href: "#" },
@@ -38,10 +41,10 @@ const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => 
                     activeSection={activeSection}
                 />
                 <NavigationSection
-                    title="Sessions"
+                    title="Our approach"
                     menuItems={[
-                        { title: "Playgroup", href: "#" },
-                        { title: "Sticky Mitts & Tiny Tots", href: "#" },
+                        { title: "Mission statement", href: "#" },
+                        { title: "Eco-sustainability pledge", href: "#" },
                     ]}
                     activeSection={activeSection}
                 />
@@ -64,7 +67,7 @@ const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => 
                 />
             </Navbar.Collapse>
             <div className="flex md:order-2 w-full md:w-auto justify-between">
-                <LinkButton text="Bookings" href="#" />
+                <LinkButton text="Apply" href="#" />
                 <Navbar.Toggle
                     theme={{
                         base: "inline-flex items-center hover:text-green-light text-sm md:hidden",

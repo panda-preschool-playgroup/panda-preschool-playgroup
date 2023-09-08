@@ -3,10 +3,10 @@ import "dotenv/config";
 
 const config: GatsbyConfig = {
     siteMetadata: {
-        title: "Panda Pre-School Playgroup",
+        title: "Panda Playgroup",
         siteUrl: "https://www.pandaplaygroup.co.uk",
         description:
-            "Panda Pre-School Playgroup is a registered charity situated in the village of Copmanthorpe just outside the city of York, UK",
+            "Panda Playgroup is a registered charity situated in the village of Copmanthorpe just outside the city of York, UK",
     },
     pathPrefix: "/new",
     graphqlTypegen: {
@@ -47,7 +47,7 @@ const config: GatsbyConfig = {
         {
             resolve: "gatsby-plugin-manifest",
             options: {
-                name: "Panda Pre-School Playgroup",
+                name: "Panda Playgroup",
                 short_name: "Panda Playgroup",
                 icon: "src/images/logo.png",
                 icon_options: {

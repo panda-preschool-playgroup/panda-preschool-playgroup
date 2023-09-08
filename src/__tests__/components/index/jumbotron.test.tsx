@@ -2,8 +2,8 @@ import { render, screen } from "@testing-library/react";
 import Jumbotron from "@/components/index/jumbotron";
 import * as gatsbyPluginImage from "gatsby-plugin-image";
 
-jest.mock("@/queries/index/use-jumbotron-image-asset", () => ({
-    useJumbotronImageAsset: jest.fn().mockReturnValue({
+jest.mock("@/queries/index/use-get-jumbotron-image", () => ({
+    useGetJumbotronImage: jest.fn().mockReturnValue({
         gatsbyImageData: "mock image",
     }),
 }));

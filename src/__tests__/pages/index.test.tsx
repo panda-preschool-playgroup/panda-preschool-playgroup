@@ -14,6 +14,15 @@ const mockLayout = jest.mocked(Layout).mockImplementation(MockLayout);
 jest.mock("@/components/index/jumbotron");
 const mockJumbotron = jest.mocked(Jumbotron);
 
+jest.mock("@/queries/index/use-get-homepage-images", () => ({
+    useGetHomepageImages: jest.fn().mockReturnValue([
+        {
+            title: "Homepage - Pre-school",
+            gatsbyImageData: "mock image",
+        },
+    ]),
+}));
+
 beforeEach(() => {
     jest.clearAllMocks();
 });
