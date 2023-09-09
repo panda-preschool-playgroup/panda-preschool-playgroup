@@ -19,7 +19,7 @@ const NavigationItem: FC<NavigationItemProps> = ({ text, href, activeSection }: 
                     {text}
                 </Link>
             ) : (
-                <p className={classes}>{text}</p>
+                <span className={classes}>{text}</span>
             )}
         </li>
     );

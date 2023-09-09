@@ -6,6 +6,9 @@
     a {
         @apply underline hover:no-underline;
     }
+    p {
+        @apply mb-10;
+    }
     @font-face {
         font-family: Quicksand;
         font-weight: 400;

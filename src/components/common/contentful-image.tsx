@@ -13,13 +13,7 @@ const ContentfulImage = ({ imageTitle, images }: ContentfulImageProps) => {
     return (
         <>
             {image?.gatsbyImageData && (
-                <GatsbyImage
-                    image={image.gatsbyImageData}
-                    alt=""
-                    aria-hidden
-                    className="rounded-lg"
-                    // className="grid-area-1-1 opacity-80 brightness-80"
-                />
+                <GatsbyImage image={image.gatsbyImageData} alt={image.description ?? ""} className="rounded-lg" />
             )}
         </>
     );
