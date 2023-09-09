@@ -6,7 +6,7 @@ const useGetHomepageImages = (): Queries.ContentfulAsset[] => {
             allContentfulAsset(filter: { title: { glob: "Homepage*" } }) {
                 nodes {
                     title
-                    gatsbyImageData(placeholder: BLURRED)
+                    gatsbyImageData(height: 520, width: 400, placeholder: BLURRED)
                 }
             }
         }

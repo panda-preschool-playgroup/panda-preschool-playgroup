@@ -45,28 +45,40 @@ const IndexPage: FC = () => {
                 </div>
             </div>
 
-            <div className="md:pl-[35%] py-24 px-[10%] bg-emerald-700 text-slate-100 text-right">
-                <h2 className="font-dk-crayon-crumble mb-12 tracking-tight leading-none text-5xl lg:text-6xl">
-                    Drop-in sessions, Sticky Mitts & Tiny Tots
-                </h2>
-                <p>
-                    As well as our pre-school we offer our extremely popular drop-in sessions for babies and toddlers,
-                    <br></br>
-                    <strong>Sticky Mitts and Tiny Tots</strong>! This is a friendly, fun group for children and their
-                    grown-ups happening regularly during term time.
-                </p>
-                <br></br>
-                <p>
-                    We aim to help parents find somewhere safe and welcoming to come and have fun with their children,
-                    meet other parents and get a taste of what Panda Playgroup has to offer.
-                </p>
-                <br></br>
-                <br></br>
-                <p className="text-2xl">
-                    <strong>
-                        <Link to="/">Discover our drop-in sessions</Link>
-                    </strong>
-                </p>
+            {/* <div className="py-24 px-[10%]">
+                <div className="lg:flex lg:gap-36">
+                    <div className="self-center pb-20 lg:pb-0"> */}
+
+            <div className="py-24 px-[10%] bg-emerald-700 text-slate-100 text-right">
+                <div className="lg:flex lg:gap-36 ">
+                    <div className="self-center pb-20 lg:pb-0 lg:order-last">
+                        <h2 className="font-dk-crayon-crumble mb-12 tracking-tight leading-none text-5xl lg:text-6xl">
+                            Drop-in sessions, Sticky Mitts & Tiny Tots
+                        </h2>
+                        <p>
+                            As well as our pre-school we offer our extremely popular drop-in sessions for babies and
+                            toddlers,
+                            <br></br>
+                            <strong>Sticky Mitts and Tiny Tots</strong>! This is a friendly, fun group for children and
+                            their grown-ups happening regularly during term time.
+                        </p>
+                        <br></br>
+                        <p>
+                            We aim to help parents find somewhere safe and welcoming to come and have fun with their
+                            children, meet other parents and get a taste of what Panda Playgroup has to offer.
+                        </p>
+                        <br></br>
+                        <br></br>
+                        <p className="text-2xl">
+                            <strong>
+                                <Link to="/">Discover our drop-in sessions</Link>
+                            </strong>
+                        </p>
+                    </div>
+                    <div className="shrink-0 flex justify-center">
+                        <ContentfulImage imageTitle="Homepage - Sticky Mitts & Tiny Tots" images={images} />
+                    </div>
+                </div>
             </div>
             <div className="py-24 px-[10%] md:w-[75%]">
                 <h2 className="font-dk-crayon-crumble mb-12 tracking-tight leading-none text-5xl lg:text-6xl">
