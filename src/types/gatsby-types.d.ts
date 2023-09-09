@@ -924,6 +924,7 @@ type ContentfulLink = ContentfulEntry & ContentfulReference & Node & {
   readonly footer: Maybe<ReadonlyArray<Maybe<ContentfulFooter>>>;
   readonly id: Scalars['ID'];
   readonly internal: Internal;
+  readonly name: Maybe<Scalars['String']>;
   readonly node_locale: Scalars['String'];
   readonly parent: Maybe<Node>;
   readonly spaceId: Maybe<Scalars['String']>;
@@ -1001,6 +1002,7 @@ type ContentfulLinkFieldSelector = {
   readonly footer: InputMaybe<ContentfulFooterFieldSelector>;
   readonly id: InputMaybe<FieldSelectorEnum>;
   readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly name: InputMaybe<FieldSelectorEnum>;
   readonly node_locale: InputMaybe<FieldSelectorEnum>;
   readonly parent: InputMaybe<NodeFieldSelector>;
   readonly spaceId: InputMaybe<FieldSelectorEnum>;
@@ -1017,6 +1019,7 @@ type ContentfulLinkFilterInput = {
   readonly footer: InputMaybe<ContentfulFooterFilterListInput>;
   readonly id: InputMaybe<StringQueryOperatorInput>;
   readonly internal: InputMaybe<InternalFilterInput>;
+  readonly name: InputMaybe<StringQueryOperatorInput>;
   readonly node_locale: InputMaybe<StringQueryOperatorInput>;
   readonly parent: InputMaybe<NodeFilterInput>;
   readonly spaceId: InputMaybe<StringQueryOperatorInput>;
@@ -1078,6 +1081,7 @@ type ContentfulLinkSortInput = {
   readonly footer: InputMaybe<ContentfulFooterSortInput>;
   readonly id: InputMaybe<SortOrderEnum>;
   readonly internal: InputMaybe<InternalSortInput>;
+  readonly name: InputMaybe<SortOrderEnum>;
   readonly node_locale: InputMaybe<SortOrderEnum>;
   readonly parent: InputMaybe<NodeSortInput>;
   readonly spaceId: InputMaybe<SortOrderEnum>;
@@ -2621,6 +2625,7 @@ type Query_contentfulLinkArgs = {
   footer: InputMaybe<ContentfulFooterFilterListInput>;
   id: InputMaybe<StringQueryOperatorInput>;
   internal: InputMaybe<InternalFilterInput>;
+  name: InputMaybe<StringQueryOperatorInput>;
   node_locale: InputMaybe<StringQueryOperatorInput>;
   parent: InputMaybe<NodeFilterInput>;
   spaceId: InputMaybe<StringQueryOperatorInput>;
