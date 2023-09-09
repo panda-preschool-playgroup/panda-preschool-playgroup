@@ -1,6 +1,6 @@
 {
     "testEnvironment": "jest-environment-jsdom",
-    "testPathIgnorePatterns": ["<rootDir>/src/__tests__/setup-jest.ts", "<rootDir>/src/__tests__/mock-layout.tsx"],
+    "testPathIgnorePatterns": ["<rootDir>/src/__tests__/setup-jest.ts", "<rootDir>/src/__tests__/fixtures.tsx"],
     "setupFilesAfterEnv": ["<rootDir>/src/__tests__/setup-jest.ts"],
     "collectCoverage": true,
     "collectCoverageFrom": ["<rootDir>/src/**"],
