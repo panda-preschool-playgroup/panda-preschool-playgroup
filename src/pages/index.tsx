@@ -14,8 +14,8 @@ const IndexPage: FC = () => {
             <Jumbotron />
 
             <div className="py-24 px-[10%]">
-                <div className="flex gap-36">
-                    <div className="self-center">
+                <div className="lg:flex lg:gap-36">
+                    <div className="self-center pb-20 lg:pb-0">
                         <h2 className="font-dk-crayon-crumble mb-12 tracking-tight leading-none text-5xl lg:text-6xl">
                             Our pre-school for little Pandas
                         </h2>
@@ -39,7 +39,7 @@ const IndexPage: FC = () => {
                             </strong>
                         </p>
                     </div>
-                    <div className="shrink-0">
+                    <div className="shrink-0 flex justify-center">
                         <ContentfulImage imageTitle="Homepage - Pre-school" images={images} />
                     </div>
                 </div>
