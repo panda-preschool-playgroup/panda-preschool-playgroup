@@ -1,4 +1,4 @@
-# Panda Pre-School Playgroup
+# Panda Playgroup
 
 ## Introduction
 

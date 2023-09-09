@@ -13,7 +13,7 @@ describe("navigation", () => {
     it("renders the heading", () => {
         render(<Navigation />);
 
-        const heading = screen.queryByRole("heading", { name: "PANDA PRE-SCHOOL PLAYGROUP" });
+        const heading = screen.queryByRole("heading", { name: "PANDA PLAYGROUP" });
 
         expect(heading).toBeInTheDocument();
     });
@@ -29,13 +29,13 @@ describe("navigation", () => {
     it("renders the navigation sections", () => {
         render(<Navigation />);
 
-        expect(mockNavigationSection).toHaveBeenCalledTimes(4);
+        expect(mockNavigationSection).toHaveBeenCalledTimes(5);
     });
 
     it("renders the button", () => {
         render(<Navigation />);
 
-        const button = screen.queryByRole("link", { name: "Bookings" });
+        const button = screen.queryByRole("link", { name: "Apply" });
 
         expect(button).toBeInTheDocument();
     });

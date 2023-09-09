@@ -17,6 +17,7 @@ const config: Config = {
         },
         fontFamily: {
             "darumadrop-one": ['"Darumadrop One"'],
+            "dk-crayon-crumble": ["DK Crayon Crumble"],
             quicksand: ["Quicksand"],
         },
     },

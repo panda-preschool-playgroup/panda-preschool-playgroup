@@ -1,9 +1,9 @@
 import { graphql, useStaticQuery } from "gatsby";
 
-const useJumbotronImageAsset = (): Queries.ContentfulAsset => {
+const useGetJumbotronImage = (): Queries.ContentfulAsset => {
     const data = useStaticQuery(graphql`
         {
-            contentfulAsset(title: { eq: "Homepage Background" }) {
+            contentfulAsset(title: { eq: "Homepage - Background" }) {
                 gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
             }
         }
@@ -12,4 +12,4 @@ const useJumbotronImageAsset = (): Queries.ContentfulAsset => {
     return data.contentfulAsset;
 };
 
-export { useJumbotronImageAsset };
+export { useGetJumbotronImage };
