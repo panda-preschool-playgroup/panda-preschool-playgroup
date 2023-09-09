@@ -36,8 +36,8 @@ const IndexPage: FC = () => {
             </Section>
             <Section
                 style="alt"
-                heading="Drop-in sessions, Sticky Mitts & Tiny Tots"
-                image={<ContentfulImage imageTitle="Homepage - Sticky Mitts & Tiny Tots" images={images} />}
+                heading="Drop-in sessions, Sticky Mitts and Tiny Tots"
+                image={<ContentfulImage imageTitle="Homepage - Sticky Mitts and Tiny Tots" images={images} />}
             >
                 <p>
                     As well as our pre-school we offer our extremely popular drop-in sessions for babies and toddlers,{" "}
