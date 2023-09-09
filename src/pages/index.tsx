@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Link } from "gatsby";
-import PageHead from "@/components/layout/head/head";
+import PageHead from "@/components/layout/page-head/page-head";
 import Layout from "@/components/layout/layout";
 import Jumbotron from "@/components/index/jumbotron";
 import { useGetHomepageImages } from "@/queries/index/use-get-homepage-images";
@@ -44,10 +44,6 @@ const IndexPage: FC = () => {
                     </div>
                 </div>
             </div>
-
-            {/* <div className="py-24 px-[10%]">
-                <div className="lg:flex lg:gap-36">
-                    <div className="self-center pb-20 lg:pb-0"> */}
 
             <div className="py-24 px-[10%] bg-emerald-700 text-slate-100 text-right">
                 <div className="lg:flex lg:gap-36 ">

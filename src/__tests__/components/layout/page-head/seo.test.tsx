@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
-import Seo from "@/components/layout/head/seo";
+import Seo from "@/components/layout/page-head/seo";
 
-jest.mock("@/queries/layout/head/use-site-metadata", () => ({
+jest.mock("@/queries/layout/page-head/use-site-metadata", () => ({
     useSiteMetadata: jest.fn().mockReturnValue({ title: "Test Title", description: "Test Description" }),
 }));
 

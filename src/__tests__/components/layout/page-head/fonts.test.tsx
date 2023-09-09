@@ -1,4 +1,4 @@
-import Fonts from "@/components/layout/head/fonts";
+import Fonts from "@/components/layout/page-head/fonts";
 import { render } from "@testing-library/react";
 
 describe("fonts", () => {

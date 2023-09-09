@@ -1,4 +1,4 @@
-import { useSiteMetadata } from "@/queries/layout/head/use-site-metadata";
+import { useSiteMetadata } from "@/queries/layout/page-head/use-site-metadata";
 
 jest.mock("gatsby", () => ({
     useStaticQuery: jest.fn().mockReturnValue({
