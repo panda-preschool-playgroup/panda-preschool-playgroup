@@ -22,7 +22,7 @@ const StandardSection: FC<PropsWithChildren<SectionProps>> = ({
     children,
 }: PropsWithChildren<SectionProps>) => {
     return (
-        <div className="py-24 lg:px-48 md:px-24 px-12">
+        <div className="py-24 xl:px-48 md:px-24 px-12">
             <div className="xl:flex xl:gap-36">
                 <div className="self-center pb-20 xl:pb-0">
                     <h2 className="font-dk-crayon-crumble mb-12 tracking-tight leading-none text-5xl lg:text-6xl">
@@ -46,7 +46,7 @@ const AltSection: FC<PropsWithChildren<SectionProps>> = ({
     children,
 }: PropsWithChildren<SectionProps>) => {
     return (
-        <div className="py-24 lg:px-48 md:px-24 px-12 bg-emerald-700 text-slate-100 text-right">
+        <div className="py-24 xl:px-48 md:px-24 px-12 bg-emerald-700 text-slate-100 text-right">
             <div className="xl:flex xl:gap-36">
                 <div className="self-center pb-20 xl:pb-0 xl:order-last">
                     <h2 className="font-dk-crayon-crumble mb-12 tracking-tight leading-none text-5xl lg:text-6xl">
