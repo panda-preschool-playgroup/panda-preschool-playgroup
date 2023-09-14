@@ -7,7 +7,7 @@ const FooterContent: FC = () => {
 
     return (
         <div className="bg-slate-600 text-slate-100">
-            <div className="mx-auto w-full max-w-screen-xl md:grid md:grid-cols-3 md:gap-8 py-8 px-4">
+            <div className="mx-auto w-full max-w-screen-xl md:grid md:grid-cols-3 md:gap-8 py-8 px-4 md:px-24 xl:px-4">
                 <div>
                     <p className="mb-4">
                         Howell Hall
