@@ -14,7 +14,7 @@ const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => 
         <Navbar
             fluid
             className="border-b-4 border-green h-42"
-            theme={{ inner: { base: "mx-3 flex flex-wrap items-center justify-between gap-y-5 gap-x-5" } }}
+            theme={{ inner: { base: "mx-3 flex flex-wrap items-center justify-between gap-y-5 gap-x-5 xl:pb-0 pb-4" } }}
         >
             <Navbar.Brand as="div">
                 <Link to="/" className="flex items-center w-full gap-x-10 no-underline" aria-label="Home">
