@@ -19,7 +19,7 @@ const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => 
             <Navbar.Brand as="div">
                 <Link to="/" className="flex items-center w-full gap-x-10 no-underline" aria-label="Home">
                     <StaticImage src="../../../images/logo.png" alt="Panda Playgroup Logo" width={125} height={125} />
-                    <h1 className="font-darumadrop-one text-2xl sm:text-3xl md:text-4xl">PANDA PLAYGROUP</h1>
+                    <h1 className="font-sofia-pro-soft-bold text-2xl sm:text-3xl md:text-4xl">Panda Playgroup</h1>
                 </Link>
             </Navbar.Brand>
             <Navbar.Collapse className="order-1">

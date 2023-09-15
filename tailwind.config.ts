@@ -16,7 +16,7 @@ const config: Config = {
             },
         },
         fontFamily: {
-            "darumadrop-one": ['"Darumadrop One"'],
+            "sofia-pro-soft-bold": ['"Sofia Pro Soft Bold"'],
             "dk-crayon-crumble": ["DK Crayon Crumble"],
             quicksand: ["Quicksand"],
         },

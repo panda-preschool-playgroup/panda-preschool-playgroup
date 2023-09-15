@@ -2,9 +2,9 @@ const Fonts = () => {
     return (
         <>
             <link
-                key="darumadrop-one"
+                key="sofia-pro-soft-bold"
                 rel="preload"
-                href="/fonts/darumadrop-one.woff2"
+                href="/fonts/sofia-pro-soft-bold.woff2"
                 as="font"
                 type="font/woff2"
                 crossOrigin="anonymous"

@@ -13,7 +13,7 @@ describe("navigation", () => {
     it("renders the heading", () => {
         render(<Navigation />);
 
-        const heading = screen.queryByRole("heading", { name: "PANDA PLAYGROUP" });
+        const heading = screen.queryByRole("heading", { name: "Panda Playgroup" });
 
         expect(heading).toBeInTheDocument();
     });
