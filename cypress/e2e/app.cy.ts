@@ -2,7 +2,7 @@ describe("app", () => {
     it("renders with a heading", () => {
         cy.visit("/");
 
-        cy.findByRole("banner").findByRole("heading", { name: "PANDA PLAYGROUP" }).should("exist");
+        cy.findByRole("banner").findByRole("heading", { name: "Panda Playgroup" }).should("exist");
     });
 
     it("renders the logo", () => {
