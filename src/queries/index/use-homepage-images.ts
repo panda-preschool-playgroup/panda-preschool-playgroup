@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby";
 
-const useGetHomepageImages = (): Queries.ContentfulAsset[] => {
+const useHomepageImages = (): Queries.ContentfulAsset[] => {
     const data = useStaticQuery(graphql`
         {
             allContentfulAsset(filter: { title: { glob: "Homepage*" } }) {
@@ -16,4 +16,4 @@ const useGetHomepageImages = (): Queries.ContentfulAsset[] => {
     return data.allContentfulAsset.nodes;
 };
 
-export { useGetHomepageImages };
+export { useHomepageImages };

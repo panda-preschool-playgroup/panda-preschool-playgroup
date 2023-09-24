@@ -2,15 +2,15 @@ import { render, screen } from "@testing-library/react";
 import { createMockContentfulAsset } from "@/test/fixtures";
 import * as gatsbyPluginImage from "gatsby-plugin-image";
 import Jumbotron from "@/components/index/jumbotron";
-import * as jumbotronQuery from "@/queries/index/use-get-jumbotron-image";
+import * as jumbotronQuery from "@/queries/index/use-jumbotron-image";
 
-jest.mock("@/queries/index/use-get-jumbotron-image", () => ({
-    useGetJumbotronImage: jest.fn(),
+jest.mock("@/queries/index/use-jumbotron-image", () => ({
+    useJumbotronImage: jest.fn(),
 }));
 const mockJumbotronQuery = jest.mocked(jumbotronQuery);
 
 const image = createMockContentfulAsset();
-mockJumbotronQuery.useGetJumbotronImage.mockReturnValue(image);
+mockJumbotronQuery.useJumbotronImage.mockReturnValue(image);
 
 beforeEach(() => {
     jest.clearAllMocks();
@@ -36,7 +36,7 @@ describe("jumbotron", () => {
     it("renders the jumbotron image", () => {
         render(<Jumbotron />);
 
-        expect(mockJumbotronQuery.useGetJumbotronImage).toHaveBeenCalledTimes(1);
+        expect(mockJumbotronQuery.useJumbotronImage).toHaveBeenCalledTimes(1);
 
         expect(gatsbyPluginImage.GatsbyImage).toHaveBeenCalledWith(
             expect.objectContaining({ image: image.gatsbyImageData }),
