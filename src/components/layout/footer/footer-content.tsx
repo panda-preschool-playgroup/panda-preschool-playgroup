@@ -28,9 +28,6 @@ const FooterContent: FC = () => {
                     <p className="mb-4">Ofsted registration: RP905909</p>
                     <p className="mb-4">Registered charity no: 1035584</p>
                     <p className="mb-4">
-                        <Link to="#">Policies</Link>
-                    </p>
-                    <p className="mb-4">
                         <Link to="#">Vacancies</Link>
                     </p>
                     <p>

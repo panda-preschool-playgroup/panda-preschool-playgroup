@@ -37,6 +37,7 @@ const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => 
                         { title: "Settling in", href: "#" },
                         { title: "Prospectus", href: "#" },
                         { title: "Fees", href: "#" },
+                        { title: "Policies", href: "#" },
                     ]}
                     activeSection={activeSection}
                 />

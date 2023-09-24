@@ -44,11 +44,9 @@ describe("footer content", () => {
     it("renders the useful links", () => {
         render(<FooterContent />);
 
-        const policies = screen.queryByRole("link", { name: "Policies" });
         const privacyNotice = screen.queryByRole("link", { name: "Privacy notice" });
         const vacancies = screen.queryByRole("link", { name: "Vacancies" });
 
-        expect(policies).toBeInTheDocument();
         expect(privacyNotice).toBeInTheDocument();
         expect(vacancies).toBeInTheDocument();
     });
