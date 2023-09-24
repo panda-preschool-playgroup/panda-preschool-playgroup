@@ -5,10 +5,11 @@ import Layout from "@/components/layout/layout";
 import ContentfulImage from "@/components/common/contentful-image";
 import Jumbotron from "@/components/index/jumbotron";
 import Section from "@/components/index/section";
-import { useGetHomepageImages } from "@/queries/index/use-get-homepage-images";
+import { useHomepageImages } from "@/queries/index/use-homepage-images";
+import InformationCards from "@/components/index/information-cards";
 
 const IndexPage: FC = () => {
-    const images: Queries.ContentfulAsset[] = useGetHomepageImages();
+    const images: Queries.ContentfulAsset[] = useHomepageImages();
 
     return (
         <Layout>
@@ -65,6 +66,7 @@ const IndexPage: FC = () => {
                     <Link to="/">see the list of &quot;Panda Pals&quot;</Link> who very kindly support our cause!
                 </p>
             </Section>
+            <InformationCards />
         </Layout>
     );
 };
