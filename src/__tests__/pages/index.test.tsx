@@ -5,7 +5,8 @@ import PageHead from "@/components/layout/page-head/page-head";
 import Layout from "@/components/layout/layout";
 import Jumbotron from "@/components/index/jumbotron";
 import Section from "@/components/index/section";
-import * as homepageImagesQuery from "@/queries/index/use-get-homepage-images";
+import InformationCards from "@/components/index/information-cards";
+import * as homepageImagesQuery from "@/queries/index/use-homepage-images";
 
 jest.mock("@/components/layout/page-head/page-head");
 const mockPageHead = jest.mocked(PageHead);
@@ -16,12 +17,15 @@ const mockLayout = jest.mocked(Layout).mockImplementation(MockLayout);
 jest.mock("@/components/index/jumbotron");
 const mockJumbotron = jest.mocked(Jumbotron);
 
+jest.mock("@/components/index/information-cards");
+const mockInformationCards = jest.mocked(InformationCards);
+
 jest.mock("@/components/index/section");
 const mockSection = jest.mocked(Section);
 
 jest.mock("@/components/common/contentful-image");
 
-jest.mock("@/queries/index/use-get-homepage-images");
+jest.mock("@/queries/index/use-homepage-images");
 const mockHomepageImagesQuery = jest.mocked(homepageImagesQuery);
 
 beforeEach(() => {
@@ -41,10 +45,16 @@ describe("index", () => {
         expect(mockJumbotron).toHaveBeenCalled();
     });
 
+    it("renders the information cards", () => {
+        render(<IndexPage />);
+
+        expect(mockInformationCards).toHaveBeenCalled();
+    });
+
     it("retrieves the homepage images", () => {
         render(<IndexPage />);
 
-        expect(mockHomepageImagesQuery.useGetHomepageImages).toHaveBeenCalledTimes(1);
+        expect(mockHomepageImagesQuery.useHomepageImages).toHaveBeenCalledTimes(1);
     });
 
     it("renders the sections", () => {

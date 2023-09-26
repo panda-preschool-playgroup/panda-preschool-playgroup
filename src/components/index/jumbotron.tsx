@@ -1,10 +1,10 @@
 import { FC } from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import LinkButton from "@/components/common/link-button";
-import { useGetJumbotronImage } from "@/queries/index/use-get-jumbotron-image";
+import { useJumbotronImage } from "@/queries/index/use-jumbotron-image";
 
 const Jumbotron: FC = () => {
-    const jumbotronImage: Queries.ContentfulAsset = useGetJumbotronImage();
+    const jumbotronImage: Queries.ContentfulAsset = useJumbotronImage();
 
     return (
         <section className="grid">

@@ -1160,6 +1160,478 @@ type ContentfulReference = {
   readonly id: Scalars['ID'];
 };
 
+type ContentfulTerm = ContentfulEntry & ContentfulReference & Node & {
+  readonly children: ReadonlyArray<Node>;
+  readonly contentful_id: Scalars['String'];
+  readonly createdAt: Maybe<Scalars['Date']>;
+  readonly firstHalf: Maybe<Scalars['String']>;
+  readonly id: Scalars['ID'];
+  readonly internal: Internal;
+  readonly name: Maybe<Scalars['String']>;
+  readonly node_locale: Scalars['String'];
+  readonly parent: Maybe<Node>;
+  readonly secondHalf: Maybe<Scalars['String']>;
+  readonly spaceId: Maybe<Scalars['String']>;
+  readonly sys: Maybe<ContentfulTermSys>;
+  readonly term_dates: Maybe<ReadonlyArray<Maybe<ContentfulTermDates>>>;
+  readonly updatedAt: Maybe<Scalars['Date']>;
+};
+
+
+type ContentfulTerm_createdAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type ContentfulTerm_updatedAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+type ContentfulTermConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<ContentfulTermEdge>;
+  readonly group: ReadonlyArray<ContentfulTermGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<ContentfulTerm>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type ContentfulTermConnection_distinctArgs = {
+  field: ContentfulTermFieldSelector;
+};
+
+
+type ContentfulTermConnection_groupArgs = {
+  field: ContentfulTermFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type ContentfulTermConnection_maxArgs = {
+  field: ContentfulTermFieldSelector;
+};
+
+
+type ContentfulTermConnection_minArgs = {
+  field: ContentfulTermFieldSelector;
+};
+
+
+type ContentfulTermConnection_sumArgs = {
+  field: ContentfulTermFieldSelector;
+};
+
+type ContentfulTermDates = ContentfulEntry & ContentfulReference & Node & {
+  readonly academicYear: Maybe<Scalars['String']>;
+  readonly children: ReadonlyArray<Node>;
+  readonly contentful_id: Scalars['String'];
+  readonly createdAt: Maybe<Scalars['Date']>;
+  readonly id: Scalars['ID'];
+  readonly internal: Internal;
+  readonly name: Maybe<Scalars['String']>;
+  readonly node_locale: Scalars['String'];
+  readonly parent: Maybe<Node>;
+  readonly spaceId: Maybe<Scalars['String']>;
+  readonly sys: Maybe<ContentfulTermDatesSys>;
+  readonly terms: Maybe<ReadonlyArray<Maybe<ContentfulTerm>>>;
+  readonly updatedAt: Maybe<Scalars['Date']>;
+};
+
+
+type ContentfulTermDates_createdAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type ContentfulTermDates_updatedAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+type ContentfulTermDatesConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<ContentfulTermDatesEdge>;
+  readonly group: ReadonlyArray<ContentfulTermDatesGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<ContentfulTermDates>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type ContentfulTermDatesConnection_distinctArgs = {
+  field: ContentfulTermDatesFieldSelector;
+};
+
+
+type ContentfulTermDatesConnection_groupArgs = {
+  field: ContentfulTermDatesFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type ContentfulTermDatesConnection_maxArgs = {
+  field: ContentfulTermDatesFieldSelector;
+};
+
+
+type ContentfulTermDatesConnection_minArgs = {
+  field: ContentfulTermDatesFieldSelector;
+};
+
+
+type ContentfulTermDatesConnection_sumArgs = {
+  field: ContentfulTermDatesFieldSelector;
+};
+
+type ContentfulTermDatesEdge = {
+  readonly next: Maybe<ContentfulTermDates>;
+  readonly node: ContentfulTermDates;
+  readonly previous: Maybe<ContentfulTermDates>;
+};
+
+type ContentfulTermDatesFieldSelector = {
+  readonly academicYear: InputMaybe<FieldSelectorEnum>;
+  readonly children: InputMaybe<NodeFieldSelector>;
+  readonly contentful_id: InputMaybe<FieldSelectorEnum>;
+  readonly createdAt: InputMaybe<FieldSelectorEnum>;
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly name: InputMaybe<FieldSelectorEnum>;
+  readonly node_locale: InputMaybe<FieldSelectorEnum>;
+  readonly parent: InputMaybe<NodeFieldSelector>;
+  readonly spaceId: InputMaybe<FieldSelectorEnum>;
+  readonly sys: InputMaybe<ContentfulTermDatesSysFieldSelector>;
+  readonly terms: InputMaybe<ContentfulTermFieldSelector>;
+  readonly updatedAt: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulTermDatesFilterInput = {
+  readonly academicYear: InputMaybe<StringQueryOperatorInput>;
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly contentful_id: InputMaybe<StringQueryOperatorInput>;
+  readonly createdAt: InputMaybe<DateQueryOperatorInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly name: InputMaybe<StringQueryOperatorInput>;
+  readonly node_locale: InputMaybe<StringQueryOperatorInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly spaceId: InputMaybe<StringQueryOperatorInput>;
+  readonly sys: InputMaybe<ContentfulTermDatesSysFilterInput>;
+  readonly terms: InputMaybe<ContentfulTermFilterListInput>;
+  readonly updatedAt: InputMaybe<DateQueryOperatorInput>;
+};
+
+type ContentfulTermDatesFilterListInput = {
+  readonly elemMatch: InputMaybe<ContentfulTermDatesFilterInput>;
+};
+
+type ContentfulTermDatesGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<ContentfulTermDatesEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<ContentfulTermDatesGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<ContentfulTermDates>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type ContentfulTermDatesGroupConnection_distinctArgs = {
+  field: ContentfulTermDatesFieldSelector;
+};
+
+
+type ContentfulTermDatesGroupConnection_groupArgs = {
+  field: ContentfulTermDatesFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type ContentfulTermDatesGroupConnection_maxArgs = {
+  field: ContentfulTermDatesFieldSelector;
+};
+
+
+type ContentfulTermDatesGroupConnection_minArgs = {
+  field: ContentfulTermDatesFieldSelector;
+};
+
+
+type ContentfulTermDatesGroupConnection_sumArgs = {
+  field: ContentfulTermDatesFieldSelector;
+};
+
+type ContentfulTermDatesSortInput = {
+  readonly academicYear: InputMaybe<SortOrderEnum>;
+  readonly children: InputMaybe<NodeSortInput>;
+  readonly contentful_id: InputMaybe<SortOrderEnum>;
+  readonly createdAt: InputMaybe<SortOrderEnum>;
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly internal: InputMaybe<InternalSortInput>;
+  readonly name: InputMaybe<SortOrderEnum>;
+  readonly node_locale: InputMaybe<SortOrderEnum>;
+  readonly parent: InputMaybe<NodeSortInput>;
+  readonly spaceId: InputMaybe<SortOrderEnum>;
+  readonly sys: InputMaybe<ContentfulTermDatesSysSortInput>;
+  readonly terms: InputMaybe<ContentfulTermSortInput>;
+  readonly updatedAt: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulTermDatesSys = {
+  readonly contentType: Maybe<ContentfulTermDatesSysContentType>;
+  readonly revision: Maybe<Scalars['Int']>;
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type ContentfulTermDatesSysContentType = {
+  readonly sys: Maybe<ContentfulTermDatesSysContentTypeSys>;
+};
+
+type ContentfulTermDatesSysContentTypeFieldSelector = {
+  readonly sys: InputMaybe<ContentfulTermDatesSysContentTypeSysFieldSelector>;
+};
+
+type ContentfulTermDatesSysContentTypeFilterInput = {
+  readonly sys: InputMaybe<ContentfulTermDatesSysContentTypeSysFilterInput>;
+};
+
+type ContentfulTermDatesSysContentTypeSortInput = {
+  readonly sys: InputMaybe<ContentfulTermDatesSysContentTypeSysSortInput>;
+};
+
+type ContentfulTermDatesSysContentTypeSys = {
+  readonly id: Maybe<Scalars['String']>;
+  readonly linkType: Maybe<Scalars['String']>;
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type ContentfulTermDatesSysContentTypeSysFieldSelector = {
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly linkType: InputMaybe<FieldSelectorEnum>;
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulTermDatesSysContentTypeSysFilterInput = {
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly linkType: InputMaybe<StringQueryOperatorInput>;
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type ContentfulTermDatesSysContentTypeSysSortInput = {
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly linkType: InputMaybe<SortOrderEnum>;
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulTermDatesSysFieldSelector = {
+  readonly contentType: InputMaybe<ContentfulTermDatesSysContentTypeFieldSelector>;
+  readonly revision: InputMaybe<FieldSelectorEnum>;
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulTermDatesSysFilterInput = {
+  readonly contentType: InputMaybe<ContentfulTermDatesSysContentTypeFilterInput>;
+  readonly revision: InputMaybe<IntQueryOperatorInput>;
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type ContentfulTermDatesSysSortInput = {
+  readonly contentType: InputMaybe<ContentfulTermDatesSysContentTypeSortInput>;
+  readonly revision: InputMaybe<SortOrderEnum>;
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulTermEdge = {
+  readonly next: Maybe<ContentfulTerm>;
+  readonly node: ContentfulTerm;
+  readonly previous: Maybe<ContentfulTerm>;
+};
+
+type ContentfulTermFieldSelector = {
+  readonly children: InputMaybe<NodeFieldSelector>;
+  readonly contentful_id: InputMaybe<FieldSelectorEnum>;
+  readonly createdAt: InputMaybe<FieldSelectorEnum>;
+  readonly firstHalf: InputMaybe<FieldSelectorEnum>;
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly name: InputMaybe<FieldSelectorEnum>;
+  readonly node_locale: InputMaybe<FieldSelectorEnum>;
+  readonly parent: InputMaybe<NodeFieldSelector>;
+  readonly secondHalf: InputMaybe<FieldSelectorEnum>;
+  readonly spaceId: InputMaybe<FieldSelectorEnum>;
+  readonly sys: InputMaybe<ContentfulTermSysFieldSelector>;
+  readonly term_dates: InputMaybe<ContentfulTermDatesFieldSelector>;
+  readonly updatedAt: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulTermFilterInput = {
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly contentful_id: InputMaybe<StringQueryOperatorInput>;
+  readonly createdAt: InputMaybe<DateQueryOperatorInput>;
+  readonly firstHalf: InputMaybe<StringQueryOperatorInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly name: InputMaybe<StringQueryOperatorInput>;
+  readonly node_locale: InputMaybe<StringQueryOperatorInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly secondHalf: InputMaybe<StringQueryOperatorInput>;
+  readonly spaceId: InputMaybe<StringQueryOperatorInput>;
+  readonly sys: InputMaybe<ContentfulTermSysFilterInput>;
+  readonly term_dates: InputMaybe<ContentfulTermDatesFilterListInput>;
+  readonly updatedAt: InputMaybe<DateQueryOperatorInput>;
+};
+
+type ContentfulTermFilterListInput = {
+  readonly elemMatch: InputMaybe<ContentfulTermFilterInput>;
+};
+
+type ContentfulTermGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<ContentfulTermEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<ContentfulTermGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<ContentfulTerm>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type ContentfulTermGroupConnection_distinctArgs = {
+  field: ContentfulTermFieldSelector;
+};
+
+
+type ContentfulTermGroupConnection_groupArgs = {
+  field: ContentfulTermFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type ContentfulTermGroupConnection_maxArgs = {
+  field: ContentfulTermFieldSelector;
+};
+
+
+type ContentfulTermGroupConnection_minArgs = {
+  field: ContentfulTermFieldSelector;
+};
+
+
+type ContentfulTermGroupConnection_sumArgs = {
+  field: ContentfulTermFieldSelector;
+};
+
+type ContentfulTermSortInput = {
+  readonly children: InputMaybe<NodeSortInput>;
+  readonly contentful_id: InputMaybe<SortOrderEnum>;
+  readonly createdAt: InputMaybe<SortOrderEnum>;
+  readonly firstHalf: InputMaybe<SortOrderEnum>;
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly internal: InputMaybe<InternalSortInput>;
+  readonly name: InputMaybe<SortOrderEnum>;
+  readonly node_locale: InputMaybe<SortOrderEnum>;
+  readonly parent: InputMaybe<NodeSortInput>;
+  readonly secondHalf: InputMaybe<SortOrderEnum>;
+  readonly spaceId: InputMaybe<SortOrderEnum>;
+  readonly sys: InputMaybe<ContentfulTermSysSortInput>;
+  readonly term_dates: InputMaybe<ContentfulTermDatesSortInput>;
+  readonly updatedAt: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulTermSys = {
+  readonly contentType: Maybe<ContentfulTermSysContentType>;
+  readonly revision: Maybe<Scalars['Int']>;
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type ContentfulTermSysContentType = {
+  readonly sys: Maybe<ContentfulTermSysContentTypeSys>;
+};
+
+type ContentfulTermSysContentTypeFieldSelector = {
+  readonly sys: InputMaybe<ContentfulTermSysContentTypeSysFieldSelector>;
+};
+
+type ContentfulTermSysContentTypeFilterInput = {
+  readonly sys: InputMaybe<ContentfulTermSysContentTypeSysFilterInput>;
+};
+
+type ContentfulTermSysContentTypeSortInput = {
+  readonly sys: InputMaybe<ContentfulTermSysContentTypeSysSortInput>;
+};
+
+type ContentfulTermSysContentTypeSys = {
+  readonly id: Maybe<Scalars['String']>;
+  readonly linkType: Maybe<Scalars['String']>;
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type ContentfulTermSysContentTypeSysFieldSelector = {
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly linkType: InputMaybe<FieldSelectorEnum>;
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulTermSysContentTypeSysFilterInput = {
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly linkType: InputMaybe<StringQueryOperatorInput>;
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type ContentfulTermSysContentTypeSysSortInput = {
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly linkType: InputMaybe<SortOrderEnum>;
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulTermSysFieldSelector = {
+  readonly contentType: InputMaybe<ContentfulTermSysContentTypeFieldSelector>;
+  readonly revision: InputMaybe<FieldSelectorEnum>;
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulTermSysFilterInput = {
+  readonly contentType: InputMaybe<ContentfulTermSysContentTypeFilterInput>;
+  readonly revision: InputMaybe<IntQueryOperatorInput>;
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type ContentfulTermSysSortInput = {
+  readonly contentType: InputMaybe<ContentfulTermSysContentTypeSortInput>;
+  readonly revision: InputMaybe<SortOrderEnum>;
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
 type DateQueryOperatorInput = {
   readonly eq: InputMaybe<Scalars['Date']>;
   readonly gt: InputMaybe<Scalars['Date']>;
@@ -2421,6 +2893,8 @@ type Query = {
   readonly allContentfulEntry: ContentfulEntryConnection;
   readonly allContentfulFooter: ContentfulFooterConnection;
   readonly allContentfulLink: ContentfulLinkConnection;
+  readonly allContentfulTerm: ContentfulTermConnection;
+  readonly allContentfulTermDates: ContentfulTermDatesConnection;
   readonly allDirectory: DirectoryConnection;
   readonly allFile: FileConnection;
   readonly allImageSharp: ImageSharpConnection;
@@ -2434,6 +2908,8 @@ type Query = {
   readonly contentfulEntry: Maybe<ContentfulEntry>;
   readonly contentfulFooter: Maybe<ContentfulFooter>;
   readonly contentfulLink: Maybe<ContentfulLink>;
+  readonly contentfulTerm: Maybe<ContentfulTerm>;
+  readonly contentfulTermDates: Maybe<ContentfulTermDates>;
   readonly directory: Maybe<Directory>;
   readonly file: Maybe<File>;
   readonly imageSharp: Maybe<ImageSharp>;
@@ -2482,6 +2958,22 @@ type Query_allContentfulLinkArgs = {
   limit: InputMaybe<Scalars['Int']>;
   skip: InputMaybe<Scalars['Int']>;
   sort: InputMaybe<ReadonlyArray<InputMaybe<ContentfulLinkSortInput>>>;
+};
+
+
+type Query_allContentfulTermArgs = {
+  filter: InputMaybe<ContentfulTermFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<ContentfulTermSortInput>>>;
+};
+
+
+type Query_allContentfulTermDatesArgs = {
+  filter: InputMaybe<ContentfulTermDatesFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<ContentfulTermDatesSortInput>>>;
 };
 
 
@@ -2633,6 +3125,41 @@ type Query_contentfulLinkArgs = {
   text: InputMaybe<StringQueryOperatorInput>;
   updatedAt: InputMaybe<DateQueryOperatorInput>;
   url: InputMaybe<StringQueryOperatorInput>;
+};
+
+
+type Query_contentfulTermArgs = {
+  children: InputMaybe<NodeFilterListInput>;
+  contentful_id: InputMaybe<StringQueryOperatorInput>;
+  createdAt: InputMaybe<DateQueryOperatorInput>;
+  firstHalf: InputMaybe<StringQueryOperatorInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  name: InputMaybe<StringQueryOperatorInput>;
+  node_locale: InputMaybe<StringQueryOperatorInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  secondHalf: InputMaybe<StringQueryOperatorInput>;
+  spaceId: InputMaybe<StringQueryOperatorInput>;
+  sys: InputMaybe<ContentfulTermSysFilterInput>;
+  term_dates: InputMaybe<ContentfulTermDatesFilterListInput>;
+  updatedAt: InputMaybe<DateQueryOperatorInput>;
+};
+
+
+type Query_contentfulTermDatesArgs = {
+  academicYear: InputMaybe<StringQueryOperatorInput>;
+  children: InputMaybe<NodeFilterListInput>;
+  contentful_id: InputMaybe<StringQueryOperatorInput>;
+  createdAt: InputMaybe<DateQueryOperatorInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  name: InputMaybe<StringQueryOperatorInput>;
+  node_locale: InputMaybe<StringQueryOperatorInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  spaceId: InputMaybe<StringQueryOperatorInput>;
+  sys: InputMaybe<ContentfulTermDatesSysFilterInput>;
+  terms: InputMaybe<ContentfulTermFilterListInput>;
+  updatedAt: InputMaybe<DateQueryOperatorInput>;
 };
 
 

@@ -1,4 +1,4 @@
-import { useGetHomepageImages } from "@/queries/index/use-get-homepage-images";
+import { useHomepageImages } from "@/queries/index/use-homepage-images";
 import * as gatsby from "gatsby";
 
 jest.mock("gatsby", () => ({
@@ -7,7 +7,7 @@ jest.mock("gatsby", () => ({
 }));
 const mockGatsby = jest.mocked(gatsby);
 
-describe("useGetHomepageImages", () => {
+describe("useHomepageImages", () => {
     it("returns homepage images", () => {
         mockGatsby.useStaticQuery.mockReturnValueOnce({
             allContentfulAsset: {
@@ -22,7 +22,7 @@ describe("useGetHomepageImages", () => {
             },
         });
 
-        const homepageImages: Queries.ContentfulAsset[] = useGetHomepageImages();
+        const homepageImages: Queries.ContentfulAsset[] = useHomepageImages();
 
         expect(homepageImages).toHaveLength(2);
 

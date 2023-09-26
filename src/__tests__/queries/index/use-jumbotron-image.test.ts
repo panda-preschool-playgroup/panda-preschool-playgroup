@@ -1,4 +1,4 @@
-import { useGetJumbotronImage } from "@/queries/index/use-get-jumbotron-image";
+import { useJumbotronImage } from "@/queries/index/use-jumbotron-image";
 import { createMockGatsbyImageData } from "@/test/fixtures";
 import * as gatsby from "gatsby";
 
@@ -8,7 +8,7 @@ jest.mock("gatsby", () => ({
 }));
 const mockGatsby = jest.mocked(gatsby);
 
-describe("useGetJumbotronImage", () => {
+describe("useJumbotronImage", () => {
     it("returns jumbotron image", () => {
         const imageData = createMockGatsbyImageData();
 
@@ -18,7 +18,7 @@ describe("useGetJumbotronImage", () => {
             },
         });
 
-        const jumbotronImage: Queries.ContentfulAsset = useGetJumbotronImage();
+        const jumbotronImage: Queries.ContentfulAsset = useJumbotronImage();
 
         expect(jumbotronImage.gatsbyImageData).toBe(imageData);
     });
