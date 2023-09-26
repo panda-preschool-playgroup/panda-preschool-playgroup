@@ -60,7 +60,7 @@ const config: GatsbyConfig = {
                 cache_busting_mode: "none",
             },
         },
-        "gatsby-plugin-offline",
+        "gatsby-plugin-remove-serviceworker",
     ],
 };
 
