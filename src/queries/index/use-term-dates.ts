@@ -6,20 +6,10 @@ const useTermDates = (): Queries.ContentfulTermDates => {
             contentfulTermDates(name: { eq: "Term Dates" }) {
                 academicYear
                 terms {
-                    sys {
-                        id
-                    }
-                    fields {
-                        name {
-                            en_US
-                        }
-                        firstHalf {
-                            en_US
-                        }
-                        secondHalf {
-                            en_US
-                        }
-                    }
+                    id
+                    name
+                    firstHalf
+                    secondHalf
                 }
             }
         }

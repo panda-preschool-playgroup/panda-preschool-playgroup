@@ -6,20 +6,10 @@ jest.mock("@/queries/index/use-term-dates", () => ({
         academicYear: "2020/21",
         terms: [
             {
-                sys: {
-                    id: "1",
-                },
-                fields: {
-                    name: {
-                        en_US: "Michaelmas",
-                    },
-                    firstHalf: {
-                        en_US: "Mon 10th Oct - Fri 11th Nov",
-                    },
-                    secondHalf: {
-                        en_US: "Mon 21st Nov Oct - Fri 16th Dec",
-                    },
-                },
+                id: "1",
+                name: "Michaelmas",
+                firstHalf: "Mon 10th Oct - Fri 11th Nov",
+                secondHalf: "Mon 21st Nov Oct - Fri 16th Dec",
             },
         ],
     }),

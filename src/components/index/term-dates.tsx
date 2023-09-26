@@ -12,8 +12,8 @@ const TermDates: FC = () => {
             </h2>
             <Table>
                 <Table.Body className="text-lg text-slate-800 divide-y">
-                    {termDates.terms?.map((term: Queries.Maybe<Queries.ContentfulTermDatesTerms>) => (
-                        <Term key={term?.sys?.id} term={term} />
+                    {termDates.terms?.map((term: Queries.Maybe<Queries.ContentfulTerm>) => (
+                        <Term key={term?.id} term={term} />
                     ))}
                 </Table.Body>
             </Table>
@@ -22,18 +22,18 @@ const TermDates: FC = () => {
 };
 
 interface TermProps {
-    term: Queries.Maybe<Queries.ContentfulTermDatesTerms>;
+    term: Queries.Maybe<Queries.ContentfulTerm>;
 }
 
 const Term: FC<TermProps> = ({ term }: TermProps) => {
     return (
         <>
             <Table.Row>
-                <Table.Cell rowSpan={2}>{term?.fields?.name?.en_US}</Table.Cell>
-                <Table.Cell>{term?.fields?.firstHalf?.en_US}</Table.Cell>
+                <Table.Cell rowSpan={2}>{term?.name}</Table.Cell>
+                <Table.Cell>{term?.firstHalf}</Table.Cell>
             </Table.Row>
             <Table.Row>
-                <Table.Cell>{term?.fields?.secondHalf?.en_US}</Table.Cell>
+                <Table.Cell>{term?.secondHalf}</Table.Cell>
             </Table.Row>
         </>
     );

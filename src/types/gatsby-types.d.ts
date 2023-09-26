@@ -1244,7 +1244,7 @@ type ContentfulTermDates = ContentfulEntry & ContentfulReference & Node & {
   readonly parent: Maybe<Node>;
   readonly spaceId: Maybe<Scalars['String']>;
   readonly sys: Maybe<ContentfulTermDatesSys>;
-  readonly terms: Maybe<ReadonlyArray<Maybe<ContentfulTermDatesTerms>>>;
+  readonly terms: Maybe<ReadonlyArray<Maybe<ContentfulTerm>>>;
   readonly updatedAt: Maybe<Scalars['Date']>;
 };
 
@@ -1321,7 +1321,7 @@ type ContentfulTermDatesFieldSelector = {
   readonly parent: InputMaybe<NodeFieldSelector>;
   readonly spaceId: InputMaybe<FieldSelectorEnum>;
   readonly sys: InputMaybe<ContentfulTermDatesSysFieldSelector>;
-  readonly terms: InputMaybe<ContentfulTermDatesTermsFieldSelector>;
+  readonly terms: InputMaybe<ContentfulTermFieldSelector>;
   readonly updatedAt: InputMaybe<FieldSelectorEnum>;
 };
 
@@ -1337,7 +1337,7 @@ type ContentfulTermDatesFilterInput = {
   readonly parent: InputMaybe<NodeFilterInput>;
   readonly spaceId: InputMaybe<StringQueryOperatorInput>;
   readonly sys: InputMaybe<ContentfulTermDatesSysFilterInput>;
-  readonly terms: InputMaybe<ContentfulTermDatesTermsFilterListInput>;
+  readonly terms: InputMaybe<ContentfulTermFilterListInput>;
   readonly updatedAt: InputMaybe<DateQueryOperatorInput>;
 };
 
@@ -1398,7 +1398,7 @@ type ContentfulTermDatesSortInput = {
   readonly parent: InputMaybe<NodeSortInput>;
   readonly spaceId: InputMaybe<SortOrderEnum>;
   readonly sys: InputMaybe<ContentfulTermDatesSysSortInput>;
-  readonly terms: InputMaybe<ContentfulTermDatesTermsSortInput>;
+  readonly terms: InputMaybe<ContentfulTermSortInput>;
   readonly updatedAt: InputMaybe<SortOrderEnum>;
 };
 
@@ -1466,282 +1466,6 @@ type ContentfulTermDatesSysSortInput = {
   readonly type: InputMaybe<SortOrderEnum>;
 };
 
-type ContentfulTermDatesTerms = {
-  readonly fields: Maybe<ContentfulTermDatesTermsFields>;
-  readonly sys: Maybe<ContentfulTermDatesTermsSys>;
-};
-
-type ContentfulTermDatesTermsFieldSelector = {
-  readonly fields: InputMaybe<ContentfulTermDatesTermsFieldsFieldSelector>;
-  readonly sys: InputMaybe<ContentfulTermDatesTermsSysFieldSelector>;
-};
-
-type ContentfulTermDatesTermsFields = {
-  readonly firstHalf: Maybe<ContentfulTermDatesTermsFieldsFirstHalf>;
-  readonly name: Maybe<ContentfulTermDatesTermsFieldsName>;
-  readonly secondHalf: Maybe<ContentfulTermDatesTermsFieldsSecondHalf>;
-};
-
-type ContentfulTermDatesTermsFieldsFieldSelector = {
-  readonly firstHalf: InputMaybe<ContentfulTermDatesTermsFieldsFirstHalfFieldSelector>;
-  readonly name: InputMaybe<ContentfulTermDatesTermsFieldsNameFieldSelector>;
-  readonly secondHalf: InputMaybe<ContentfulTermDatesTermsFieldsSecondHalfFieldSelector>;
-};
-
-type ContentfulTermDatesTermsFieldsFilterInput = {
-  readonly firstHalf: InputMaybe<ContentfulTermDatesTermsFieldsFirstHalfFilterInput>;
-  readonly name: InputMaybe<ContentfulTermDatesTermsFieldsNameFilterInput>;
-  readonly secondHalf: InputMaybe<ContentfulTermDatesTermsFieldsSecondHalfFilterInput>;
-};
-
-type ContentfulTermDatesTermsFieldsFirstHalf = {
-  readonly en_US: Maybe<Scalars['String']>;
-};
-
-type ContentfulTermDatesTermsFieldsFirstHalfFieldSelector = {
-  readonly en_US: InputMaybe<FieldSelectorEnum>;
-};
-
-type ContentfulTermDatesTermsFieldsFirstHalfFilterInput = {
-  readonly en_US: InputMaybe<StringQueryOperatorInput>;
-};
-
-type ContentfulTermDatesTermsFieldsFirstHalfSortInput = {
-  readonly en_US: InputMaybe<SortOrderEnum>;
-};
-
-type ContentfulTermDatesTermsFieldsName = {
-  readonly en_US: Maybe<Scalars['String']>;
-};
-
-type ContentfulTermDatesTermsFieldsNameFieldSelector = {
-  readonly en_US: InputMaybe<FieldSelectorEnum>;
-};
-
-type ContentfulTermDatesTermsFieldsNameFilterInput = {
-  readonly en_US: InputMaybe<StringQueryOperatorInput>;
-};
-
-type ContentfulTermDatesTermsFieldsNameSortInput = {
-  readonly en_US: InputMaybe<SortOrderEnum>;
-};
-
-type ContentfulTermDatesTermsFieldsSecondHalf = {
-  readonly en_US: Maybe<Scalars['String']>;
-};
-
-type ContentfulTermDatesTermsFieldsSecondHalfFieldSelector = {
-  readonly en_US: InputMaybe<FieldSelectorEnum>;
-};
-
-type ContentfulTermDatesTermsFieldsSecondHalfFilterInput = {
-  readonly en_US: InputMaybe<StringQueryOperatorInput>;
-};
-
-type ContentfulTermDatesTermsFieldsSecondHalfSortInput = {
-  readonly en_US: InputMaybe<SortOrderEnum>;
-};
-
-type ContentfulTermDatesTermsFieldsSortInput = {
-  readonly firstHalf: InputMaybe<ContentfulTermDatesTermsFieldsFirstHalfSortInput>;
-  readonly name: InputMaybe<ContentfulTermDatesTermsFieldsNameSortInput>;
-  readonly secondHalf: InputMaybe<ContentfulTermDatesTermsFieldsSecondHalfSortInput>;
-};
-
-type ContentfulTermDatesTermsFilterInput = {
-  readonly fields: InputMaybe<ContentfulTermDatesTermsFieldsFilterInput>;
-  readonly sys: InputMaybe<ContentfulTermDatesTermsSysFilterInput>;
-};
-
-type ContentfulTermDatesTermsFilterListInput = {
-  readonly elemMatch: InputMaybe<ContentfulTermDatesTermsFilterInput>;
-};
-
-type ContentfulTermDatesTermsSortInput = {
-  readonly fields: InputMaybe<ContentfulTermDatesTermsFieldsSortInput>;
-  readonly sys: InputMaybe<ContentfulTermDatesTermsSysSortInput>;
-};
-
-type ContentfulTermDatesTermsSys = {
-  readonly contentType: Maybe<ContentfulTermDatesTermsSysContentType>;
-  readonly createdAt: Maybe<Scalars['Date']>;
-  readonly environment: Maybe<ContentfulTermDatesTermsSysEnvironment>;
-  readonly id: Maybe<Scalars['String']>;
-  readonly revision: Maybe<Scalars['Int']>;
-  readonly space: Maybe<ContentfulTermDatesTermsSysSpace>;
-  readonly type: Maybe<Scalars['String']>;
-  readonly updatedAt: Maybe<Scalars['Date']>;
-};
-
-
-type ContentfulTermDatesTermsSys_createdAtArgs = {
-  difference: InputMaybe<Scalars['String']>;
-  formatString: InputMaybe<Scalars['String']>;
-  fromNow: InputMaybe<Scalars['Boolean']>;
-  locale: InputMaybe<Scalars['String']>;
-};
-
-
-type ContentfulTermDatesTermsSys_updatedAtArgs = {
-  difference: InputMaybe<Scalars['String']>;
-  formatString: InputMaybe<Scalars['String']>;
-  fromNow: InputMaybe<Scalars['Boolean']>;
-  locale: InputMaybe<Scalars['String']>;
-};
-
-type ContentfulTermDatesTermsSysContentType = {
-  readonly sys: Maybe<ContentfulTermDatesTermsSysContentTypeSys>;
-};
-
-type ContentfulTermDatesTermsSysContentTypeFieldSelector = {
-  readonly sys: InputMaybe<ContentfulTermDatesTermsSysContentTypeSysFieldSelector>;
-};
-
-type ContentfulTermDatesTermsSysContentTypeFilterInput = {
-  readonly sys: InputMaybe<ContentfulTermDatesTermsSysContentTypeSysFilterInput>;
-};
-
-type ContentfulTermDatesTermsSysContentTypeSortInput = {
-  readonly sys: InputMaybe<ContentfulTermDatesTermsSysContentTypeSysSortInput>;
-};
-
-type ContentfulTermDatesTermsSysContentTypeSys = {
-  readonly id: Maybe<Scalars['String']>;
-  readonly linkType: Maybe<Scalars['String']>;
-  readonly type: Maybe<Scalars['String']>;
-};
-
-type ContentfulTermDatesTermsSysContentTypeSysFieldSelector = {
-  readonly id: InputMaybe<FieldSelectorEnum>;
-  readonly linkType: InputMaybe<FieldSelectorEnum>;
-  readonly type: InputMaybe<FieldSelectorEnum>;
-};
-
-type ContentfulTermDatesTermsSysContentTypeSysFilterInput = {
-  readonly id: InputMaybe<StringQueryOperatorInput>;
-  readonly linkType: InputMaybe<StringQueryOperatorInput>;
-  readonly type: InputMaybe<StringQueryOperatorInput>;
-};
-
-type ContentfulTermDatesTermsSysContentTypeSysSortInput = {
-  readonly id: InputMaybe<SortOrderEnum>;
-  readonly linkType: InputMaybe<SortOrderEnum>;
-  readonly type: InputMaybe<SortOrderEnum>;
-};
-
-type ContentfulTermDatesTermsSysEnvironment = {
-  readonly sys: Maybe<ContentfulTermDatesTermsSysEnvironmentSys>;
-};
-
-type ContentfulTermDatesTermsSysEnvironmentFieldSelector = {
-  readonly sys: InputMaybe<ContentfulTermDatesTermsSysEnvironmentSysFieldSelector>;
-};
-
-type ContentfulTermDatesTermsSysEnvironmentFilterInput = {
-  readonly sys: InputMaybe<ContentfulTermDatesTermsSysEnvironmentSysFilterInput>;
-};
-
-type ContentfulTermDatesTermsSysEnvironmentSortInput = {
-  readonly sys: InputMaybe<ContentfulTermDatesTermsSysEnvironmentSysSortInput>;
-};
-
-type ContentfulTermDatesTermsSysEnvironmentSys = {
-  readonly id: Maybe<Scalars['String']>;
-  readonly linkType: Maybe<Scalars['String']>;
-  readonly type: Maybe<Scalars['String']>;
-};
-
-type ContentfulTermDatesTermsSysEnvironmentSysFieldSelector = {
-  readonly id: InputMaybe<FieldSelectorEnum>;
-  readonly linkType: InputMaybe<FieldSelectorEnum>;
-  readonly type: InputMaybe<FieldSelectorEnum>;
-};
-
-type ContentfulTermDatesTermsSysEnvironmentSysFilterInput = {
-  readonly id: InputMaybe<StringQueryOperatorInput>;
-  readonly linkType: InputMaybe<StringQueryOperatorInput>;
-  readonly type: InputMaybe<StringQueryOperatorInput>;
-};
-
-type ContentfulTermDatesTermsSysEnvironmentSysSortInput = {
-  readonly id: InputMaybe<SortOrderEnum>;
-  readonly linkType: InputMaybe<SortOrderEnum>;
-  readonly type: InputMaybe<SortOrderEnum>;
-};
-
-type ContentfulTermDatesTermsSysFieldSelector = {
-  readonly contentType: InputMaybe<ContentfulTermDatesTermsSysContentTypeFieldSelector>;
-  readonly createdAt: InputMaybe<FieldSelectorEnum>;
-  readonly environment: InputMaybe<ContentfulTermDatesTermsSysEnvironmentFieldSelector>;
-  readonly id: InputMaybe<FieldSelectorEnum>;
-  readonly revision: InputMaybe<FieldSelectorEnum>;
-  readonly space: InputMaybe<ContentfulTermDatesTermsSysSpaceFieldSelector>;
-  readonly type: InputMaybe<FieldSelectorEnum>;
-  readonly updatedAt: InputMaybe<FieldSelectorEnum>;
-};
-
-type ContentfulTermDatesTermsSysFilterInput = {
-  readonly contentType: InputMaybe<ContentfulTermDatesTermsSysContentTypeFilterInput>;
-  readonly createdAt: InputMaybe<DateQueryOperatorInput>;
-  readonly environment: InputMaybe<ContentfulTermDatesTermsSysEnvironmentFilterInput>;
-  readonly id: InputMaybe<StringQueryOperatorInput>;
-  readonly revision: InputMaybe<IntQueryOperatorInput>;
-  readonly space: InputMaybe<ContentfulTermDatesTermsSysSpaceFilterInput>;
-  readonly type: InputMaybe<StringQueryOperatorInput>;
-  readonly updatedAt: InputMaybe<DateQueryOperatorInput>;
-};
-
-type ContentfulTermDatesTermsSysSortInput = {
-  readonly contentType: InputMaybe<ContentfulTermDatesTermsSysContentTypeSortInput>;
-  readonly createdAt: InputMaybe<SortOrderEnum>;
-  readonly environment: InputMaybe<ContentfulTermDatesTermsSysEnvironmentSortInput>;
-  readonly id: InputMaybe<SortOrderEnum>;
-  readonly revision: InputMaybe<SortOrderEnum>;
-  readonly space: InputMaybe<ContentfulTermDatesTermsSysSpaceSortInput>;
-  readonly type: InputMaybe<SortOrderEnum>;
-  readonly updatedAt: InputMaybe<SortOrderEnum>;
-};
-
-type ContentfulTermDatesTermsSysSpace = {
-  readonly sys: Maybe<ContentfulTermDatesTermsSysSpaceSys>;
-};
-
-type ContentfulTermDatesTermsSysSpaceFieldSelector = {
-  readonly sys: InputMaybe<ContentfulTermDatesTermsSysSpaceSysFieldSelector>;
-};
-
-type ContentfulTermDatesTermsSysSpaceFilterInput = {
-  readonly sys: InputMaybe<ContentfulTermDatesTermsSysSpaceSysFilterInput>;
-};
-
-type ContentfulTermDatesTermsSysSpaceSortInput = {
-  readonly sys: InputMaybe<ContentfulTermDatesTermsSysSpaceSysSortInput>;
-};
-
-type ContentfulTermDatesTermsSysSpaceSys = {
-  readonly id: Maybe<Scalars['String']>;
-  readonly linkType: Maybe<Scalars['String']>;
-  readonly type: Maybe<Scalars['String']>;
-};
-
-type ContentfulTermDatesTermsSysSpaceSysFieldSelector = {
-  readonly id: InputMaybe<FieldSelectorEnum>;
-  readonly linkType: InputMaybe<FieldSelectorEnum>;
-  readonly type: InputMaybe<FieldSelectorEnum>;
-};
-
-type ContentfulTermDatesTermsSysSpaceSysFilterInput = {
-  readonly id: InputMaybe<StringQueryOperatorInput>;
-  readonly linkType: InputMaybe<StringQueryOperatorInput>;
-  readonly type: InputMaybe<StringQueryOperatorInput>;
-};
-
-type ContentfulTermDatesTermsSysSpaceSysSortInput = {
-  readonly id: InputMaybe<SortOrderEnum>;
-  readonly linkType: InputMaybe<SortOrderEnum>;
-  readonly type: InputMaybe<SortOrderEnum>;
-};
-
 type ContentfulTermEdge = {
   readonly next: Maybe<ContentfulTerm>;
   readonly node: ContentfulTerm;
@@ -1780,6 +1504,10 @@ type ContentfulTermFilterInput = {
   readonly sys: InputMaybe<ContentfulTermSysFilterInput>;
   readonly term_dates: InputMaybe<ContentfulTermDatesFilterListInput>;
   readonly updatedAt: InputMaybe<DateQueryOperatorInput>;
+};
+
+type ContentfulTermFilterListInput = {
+  readonly elemMatch: InputMaybe<ContentfulTermFilterInput>;
 };
 
 type ContentfulTermGroupConnection = {
@@ -3430,7 +3158,7 @@ type Query_contentfulTermDatesArgs = {
   parent: InputMaybe<NodeFilterInput>;
   spaceId: InputMaybe<StringQueryOperatorInput>;
   sys: InputMaybe<ContentfulTermDatesSysFilterInput>;
-  terms: InputMaybe<ContentfulTermDatesTermsFilterListInput>;
+  terms: InputMaybe<ContentfulTermFilterListInput>;
   updatedAt: InputMaybe<DateQueryOperatorInput>;
 };
 
