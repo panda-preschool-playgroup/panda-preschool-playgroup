@@ -666,6 +666,486 @@ type ContentfulEntrySortInput = {
   readonly parent: InputMaybe<NodeSortInput>;
 };
 
+type ContentfulEvent = ContentfulEntry & ContentfulReference & Node & {
+  readonly children: ReadonlyArray<Node>;
+  readonly contentful_id: Scalars['String'];
+  readonly createdAt: Maybe<Scalars['Date']>;
+  readonly date: Maybe<Scalars['Date']>;
+  readonly events: Maybe<ReadonlyArray<Maybe<ContentfulEvents>>>;
+  readonly id: Scalars['ID'];
+  readonly image: Maybe<ContentfulAsset>;
+  readonly internal: Internal;
+  readonly name: Maybe<Scalars['String']>;
+  readonly node_locale: Scalars['String'];
+  readonly parent: Maybe<Node>;
+  readonly spaceId: Maybe<Scalars['String']>;
+  readonly sys: Maybe<ContentfulEventSys>;
+  readonly updatedAt: Maybe<Scalars['Date']>;
+  readonly url: Maybe<Scalars['String']>;
+};
+
+
+type ContentfulEvent_createdAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type ContentfulEvent_dateArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type ContentfulEvent_updatedAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+type ContentfulEventConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<ContentfulEventEdge>;
+  readonly group: ReadonlyArray<ContentfulEventGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<ContentfulEvent>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type ContentfulEventConnection_distinctArgs = {
+  field: ContentfulEventFieldSelector;
+};
+
+
+type ContentfulEventConnection_groupArgs = {
+  field: ContentfulEventFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type ContentfulEventConnection_maxArgs = {
+  field: ContentfulEventFieldSelector;
+};
+
+
+type ContentfulEventConnection_minArgs = {
+  field: ContentfulEventFieldSelector;
+};
+
+
+type ContentfulEventConnection_sumArgs = {
+  field: ContentfulEventFieldSelector;
+};
+
+type ContentfulEventEdge = {
+  readonly next: Maybe<ContentfulEvent>;
+  readonly node: ContentfulEvent;
+  readonly previous: Maybe<ContentfulEvent>;
+};
+
+type ContentfulEventFieldSelector = {
+  readonly children: InputMaybe<NodeFieldSelector>;
+  readonly contentful_id: InputMaybe<FieldSelectorEnum>;
+  readonly createdAt: InputMaybe<FieldSelectorEnum>;
+  readonly date: InputMaybe<FieldSelectorEnum>;
+  readonly events: InputMaybe<ContentfulEventsFieldSelector>;
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly image: InputMaybe<ContentfulAssetFieldSelector>;
+  readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly name: InputMaybe<FieldSelectorEnum>;
+  readonly node_locale: InputMaybe<FieldSelectorEnum>;
+  readonly parent: InputMaybe<NodeFieldSelector>;
+  readonly spaceId: InputMaybe<FieldSelectorEnum>;
+  readonly sys: InputMaybe<ContentfulEventSysFieldSelector>;
+  readonly updatedAt: InputMaybe<FieldSelectorEnum>;
+  readonly url: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulEventFilterInput = {
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly contentful_id: InputMaybe<StringQueryOperatorInput>;
+  readonly createdAt: InputMaybe<DateQueryOperatorInput>;
+  readonly date: InputMaybe<DateQueryOperatorInput>;
+  readonly events: InputMaybe<ContentfulEventsFilterListInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly image: InputMaybe<ContentfulAssetFilterInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly name: InputMaybe<StringQueryOperatorInput>;
+  readonly node_locale: InputMaybe<StringQueryOperatorInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly spaceId: InputMaybe<StringQueryOperatorInput>;
+  readonly sys: InputMaybe<ContentfulEventSysFilterInput>;
+  readonly updatedAt: InputMaybe<DateQueryOperatorInput>;
+  readonly url: InputMaybe<StringQueryOperatorInput>;
+};
+
+type ContentfulEventFilterListInput = {
+  readonly elemMatch: InputMaybe<ContentfulEventFilterInput>;
+};
+
+type ContentfulEventGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<ContentfulEventEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<ContentfulEventGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<ContentfulEvent>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type ContentfulEventGroupConnection_distinctArgs = {
+  field: ContentfulEventFieldSelector;
+};
+
+
+type ContentfulEventGroupConnection_groupArgs = {
+  field: ContentfulEventFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type ContentfulEventGroupConnection_maxArgs = {
+  field: ContentfulEventFieldSelector;
+};
+
+
+type ContentfulEventGroupConnection_minArgs = {
+  field: ContentfulEventFieldSelector;
+};
+
+
+type ContentfulEventGroupConnection_sumArgs = {
+  field: ContentfulEventFieldSelector;
+};
+
+type ContentfulEventSortInput = {
+  readonly children: InputMaybe<NodeSortInput>;
+  readonly contentful_id: InputMaybe<SortOrderEnum>;
+  readonly createdAt: InputMaybe<SortOrderEnum>;
+  readonly date: InputMaybe<SortOrderEnum>;
+  readonly events: InputMaybe<ContentfulEventsSortInput>;
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly image: InputMaybe<ContentfulAssetSortInput>;
+  readonly internal: InputMaybe<InternalSortInput>;
+  readonly name: InputMaybe<SortOrderEnum>;
+  readonly node_locale: InputMaybe<SortOrderEnum>;
+  readonly parent: InputMaybe<NodeSortInput>;
+  readonly spaceId: InputMaybe<SortOrderEnum>;
+  readonly sys: InputMaybe<ContentfulEventSysSortInput>;
+  readonly updatedAt: InputMaybe<SortOrderEnum>;
+  readonly url: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulEventSys = {
+  readonly contentType: Maybe<ContentfulEventSysContentType>;
+  readonly revision: Maybe<Scalars['Int']>;
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type ContentfulEventSysContentType = {
+  readonly sys: Maybe<ContentfulEventSysContentTypeSys>;
+};
+
+type ContentfulEventSysContentTypeFieldSelector = {
+  readonly sys: InputMaybe<ContentfulEventSysContentTypeSysFieldSelector>;
+};
+
+type ContentfulEventSysContentTypeFilterInput = {
+  readonly sys: InputMaybe<ContentfulEventSysContentTypeSysFilterInput>;
+};
+
+type ContentfulEventSysContentTypeSortInput = {
+  readonly sys: InputMaybe<ContentfulEventSysContentTypeSysSortInput>;
+};
+
+type ContentfulEventSysContentTypeSys = {
+  readonly id: Maybe<Scalars['String']>;
+  readonly linkType: Maybe<Scalars['String']>;
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type ContentfulEventSysContentTypeSysFieldSelector = {
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly linkType: InputMaybe<FieldSelectorEnum>;
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulEventSysContentTypeSysFilterInput = {
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly linkType: InputMaybe<StringQueryOperatorInput>;
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type ContentfulEventSysContentTypeSysSortInput = {
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly linkType: InputMaybe<SortOrderEnum>;
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulEventSysFieldSelector = {
+  readonly contentType: InputMaybe<ContentfulEventSysContentTypeFieldSelector>;
+  readonly revision: InputMaybe<FieldSelectorEnum>;
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulEventSysFilterInput = {
+  readonly contentType: InputMaybe<ContentfulEventSysContentTypeFilterInput>;
+  readonly revision: InputMaybe<IntQueryOperatorInput>;
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type ContentfulEventSysSortInput = {
+  readonly contentType: InputMaybe<ContentfulEventSysContentTypeSortInput>;
+  readonly revision: InputMaybe<SortOrderEnum>;
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulEvents = ContentfulEntry & ContentfulReference & Node & {
+  readonly children: ReadonlyArray<Node>;
+  readonly contentful_id: Scalars['String'];
+  readonly createdAt: Maybe<Scalars['Date']>;
+  readonly events: Maybe<ReadonlyArray<Maybe<ContentfulEvent>>>;
+  readonly id: Scalars['ID'];
+  readonly internal: Internal;
+  readonly name: Maybe<Scalars['String']>;
+  readonly node_locale: Scalars['String'];
+  readonly parent: Maybe<Node>;
+  readonly spaceId: Maybe<Scalars['String']>;
+  readonly sys: Maybe<ContentfulEventsSys>;
+  readonly updatedAt: Maybe<Scalars['Date']>;
+};
+
+
+type ContentfulEvents_createdAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type ContentfulEvents_updatedAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+type ContentfulEventsConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<ContentfulEventsEdge>;
+  readonly group: ReadonlyArray<ContentfulEventsGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<ContentfulEvents>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type ContentfulEventsConnection_distinctArgs = {
+  field: ContentfulEventsFieldSelector;
+};
+
+
+type ContentfulEventsConnection_groupArgs = {
+  field: ContentfulEventsFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type ContentfulEventsConnection_maxArgs = {
+  field: ContentfulEventsFieldSelector;
+};
+
+
+type ContentfulEventsConnection_minArgs = {
+  field: ContentfulEventsFieldSelector;
+};
+
+
+type ContentfulEventsConnection_sumArgs = {
+  field: ContentfulEventsFieldSelector;
+};
+
+type ContentfulEventsEdge = {
+  readonly next: Maybe<ContentfulEvents>;
+  readonly node: ContentfulEvents;
+  readonly previous: Maybe<ContentfulEvents>;
+};
+
+type ContentfulEventsFieldSelector = {
+  readonly children: InputMaybe<NodeFieldSelector>;
+  readonly contentful_id: InputMaybe<FieldSelectorEnum>;
+  readonly createdAt: InputMaybe<FieldSelectorEnum>;
+  readonly events: InputMaybe<ContentfulEventFieldSelector>;
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly name: InputMaybe<FieldSelectorEnum>;
+  readonly node_locale: InputMaybe<FieldSelectorEnum>;
+  readonly parent: InputMaybe<NodeFieldSelector>;
+  readonly spaceId: InputMaybe<FieldSelectorEnum>;
+  readonly sys: InputMaybe<ContentfulEventsSysFieldSelector>;
+  readonly updatedAt: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulEventsFilterInput = {
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly contentful_id: InputMaybe<StringQueryOperatorInput>;
+  readonly createdAt: InputMaybe<DateQueryOperatorInput>;
+  readonly events: InputMaybe<ContentfulEventFilterListInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly name: InputMaybe<StringQueryOperatorInput>;
+  readonly node_locale: InputMaybe<StringQueryOperatorInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly spaceId: InputMaybe<StringQueryOperatorInput>;
+  readonly sys: InputMaybe<ContentfulEventsSysFilterInput>;
+  readonly updatedAt: InputMaybe<DateQueryOperatorInput>;
+};
+
+type ContentfulEventsFilterListInput = {
+  readonly elemMatch: InputMaybe<ContentfulEventsFilterInput>;
+};
+
+type ContentfulEventsGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<ContentfulEventsEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<ContentfulEventsGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<ContentfulEvents>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type ContentfulEventsGroupConnection_distinctArgs = {
+  field: ContentfulEventsFieldSelector;
+};
+
+
+type ContentfulEventsGroupConnection_groupArgs = {
+  field: ContentfulEventsFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type ContentfulEventsGroupConnection_maxArgs = {
+  field: ContentfulEventsFieldSelector;
+};
+
+
+type ContentfulEventsGroupConnection_minArgs = {
+  field: ContentfulEventsFieldSelector;
+};
+
+
+type ContentfulEventsGroupConnection_sumArgs = {
+  field: ContentfulEventsFieldSelector;
+};
+
+type ContentfulEventsSortInput = {
+  readonly children: InputMaybe<NodeSortInput>;
+  readonly contentful_id: InputMaybe<SortOrderEnum>;
+  readonly createdAt: InputMaybe<SortOrderEnum>;
+  readonly events: InputMaybe<ContentfulEventSortInput>;
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly internal: InputMaybe<InternalSortInput>;
+  readonly name: InputMaybe<SortOrderEnum>;
+  readonly node_locale: InputMaybe<SortOrderEnum>;
+  readonly parent: InputMaybe<NodeSortInput>;
+  readonly spaceId: InputMaybe<SortOrderEnum>;
+  readonly sys: InputMaybe<ContentfulEventsSysSortInput>;
+  readonly updatedAt: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulEventsSys = {
+  readonly contentType: Maybe<ContentfulEventsSysContentType>;
+  readonly revision: Maybe<Scalars['Int']>;
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type ContentfulEventsSysContentType = {
+  readonly sys: Maybe<ContentfulEventsSysContentTypeSys>;
+};
+
+type ContentfulEventsSysContentTypeFieldSelector = {
+  readonly sys: InputMaybe<ContentfulEventsSysContentTypeSysFieldSelector>;
+};
+
+type ContentfulEventsSysContentTypeFilterInput = {
+  readonly sys: InputMaybe<ContentfulEventsSysContentTypeSysFilterInput>;
+};
+
+type ContentfulEventsSysContentTypeSortInput = {
+  readonly sys: InputMaybe<ContentfulEventsSysContentTypeSysSortInput>;
+};
+
+type ContentfulEventsSysContentTypeSys = {
+  readonly id: Maybe<Scalars['String']>;
+  readonly linkType: Maybe<Scalars['String']>;
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type ContentfulEventsSysContentTypeSysFieldSelector = {
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly linkType: InputMaybe<FieldSelectorEnum>;
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulEventsSysContentTypeSysFilterInput = {
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly linkType: InputMaybe<StringQueryOperatorInput>;
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type ContentfulEventsSysContentTypeSysSortInput = {
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly linkType: InputMaybe<SortOrderEnum>;
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulEventsSysFieldSelector = {
+  readonly contentType: InputMaybe<ContentfulEventsSysContentTypeFieldSelector>;
+  readonly revision: InputMaybe<FieldSelectorEnum>;
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulEventsSysFilterInput = {
+  readonly contentType: InputMaybe<ContentfulEventsSysContentTypeFilterInput>;
+  readonly revision: InputMaybe<IntQueryOperatorInput>;
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type ContentfulEventsSysSortInput = {
+  readonly contentType: InputMaybe<ContentfulEventsSysContentTypeSortInput>;
+  readonly revision: InputMaybe<SortOrderEnum>;
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
 type ContentfulFooter = ContentfulEntry & ContentfulReference & Node & {
   readonly children: ReadonlyArray<Node>;
   readonly contentful_id: Scalars['String'];
@@ -2891,6 +3371,8 @@ type Query = {
   readonly allContentfulAsset: ContentfulAssetConnection;
   readonly allContentfulContentType: ContentfulContentTypeConnection;
   readonly allContentfulEntry: ContentfulEntryConnection;
+  readonly allContentfulEvent: ContentfulEventConnection;
+  readonly allContentfulEvents: ContentfulEventsConnection;
   readonly allContentfulFooter: ContentfulFooterConnection;
   readonly allContentfulLink: ContentfulLinkConnection;
   readonly allContentfulTerm: ContentfulTermConnection;
@@ -2906,6 +3388,8 @@ type Query = {
   readonly contentfulAsset: Maybe<ContentfulAsset>;
   readonly contentfulContentType: Maybe<ContentfulContentType>;
   readonly contentfulEntry: Maybe<ContentfulEntry>;
+  readonly contentfulEvent: Maybe<ContentfulEvent>;
+  readonly contentfulEvents: Maybe<ContentfulEvents>;
   readonly contentfulFooter: Maybe<ContentfulFooter>;
   readonly contentfulLink: Maybe<ContentfulLink>;
   readonly contentfulTerm: Maybe<ContentfulTerm>;
@@ -2942,6 +3426,22 @@ type Query_allContentfulEntryArgs = {
   limit: InputMaybe<Scalars['Int']>;
   skip: InputMaybe<Scalars['Int']>;
   sort: InputMaybe<ReadonlyArray<InputMaybe<ContentfulEntrySortInput>>>;
+};
+
+
+type Query_allContentfulEventArgs = {
+  filter: InputMaybe<ContentfulEventFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<ContentfulEventSortInput>>>;
+};
+
+
+type Query_allContentfulEventsArgs = {
+  filter: InputMaybe<ContentfulEventsFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<ContentfulEventsSortInput>>>;
 };
 
 
@@ -3089,6 +3589,41 @@ type Query_contentfulEntryArgs = {
   internal: InputMaybe<InternalFilterInput>;
   node_locale: InputMaybe<StringQueryOperatorInput>;
   parent: InputMaybe<NodeFilterInput>;
+};
+
+
+type Query_contentfulEventArgs = {
+  children: InputMaybe<NodeFilterListInput>;
+  contentful_id: InputMaybe<StringQueryOperatorInput>;
+  createdAt: InputMaybe<DateQueryOperatorInput>;
+  date: InputMaybe<DateQueryOperatorInput>;
+  events: InputMaybe<ContentfulEventsFilterListInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  image: InputMaybe<ContentfulAssetFilterInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  name: InputMaybe<StringQueryOperatorInput>;
+  node_locale: InputMaybe<StringQueryOperatorInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  spaceId: InputMaybe<StringQueryOperatorInput>;
+  sys: InputMaybe<ContentfulEventSysFilterInput>;
+  updatedAt: InputMaybe<DateQueryOperatorInput>;
+  url: InputMaybe<StringQueryOperatorInput>;
+};
+
+
+type Query_contentfulEventsArgs = {
+  children: InputMaybe<NodeFilterListInput>;
+  contentful_id: InputMaybe<StringQueryOperatorInput>;
+  createdAt: InputMaybe<DateQueryOperatorInput>;
+  events: InputMaybe<ContentfulEventFilterListInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  name: InputMaybe<StringQueryOperatorInput>;
+  node_locale: InputMaybe<StringQueryOperatorInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  spaceId: InputMaybe<StringQueryOperatorInput>;
+  sys: InputMaybe<ContentfulEventsSysFilterInput>;
+  updatedAt: InputMaybe<DateQueryOperatorInput>;
 };
 
 

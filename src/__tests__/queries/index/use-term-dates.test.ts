@@ -10,7 +10,7 @@ jest.mock("gatsby", () => ({
 }));
 
 describe("useTermDates", () => {
-    it("returns jumbotron image", () => {
+    it("returns term dates", () => {
         const termDates: Queries.ContentfulTermDates = useTermDates();
 
         expect(termDates.academicYear).toEqual("2023/24");
