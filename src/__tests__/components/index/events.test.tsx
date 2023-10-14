@@ -44,7 +44,7 @@ describe("events", () => {
 
         expect(mockEvent.mock.calls[0][0].name).toEqual("Event one");
         expect(mockEvent.mock.calls[0][0].date).toEqual("2020-01-01");
-        expect(mockEvent.mock.calls[0][0].url).toEqual("http://localhost:8000/event");
+        expect(mockEvent.mock.calls[0][0].href).toEqual("http://localhost:8000/event");
     });
 
     it("renders multiple events", () => {

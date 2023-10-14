@@ -16,7 +16,7 @@ const Events: FC = () => {
                                 key={event.id}
                                 name={event.name ?? ""}
                                 date={event.date ?? ""}
-                                url={event.url}
+                                href={event.url}
                                 image={event.image}
                             />
                         ),
