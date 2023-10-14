@@ -1,7 +1,34 @@
 import { IGatsbyImageData } from "gatsby-plugin-image";
 import { PropsWithChildren } from "react";
 
-const createMockContentfulAsset = (overrides?: Partial<Queries.ContentfulAsset>): Queries.ContentfulAsset => {
+const createMockGatsbyImageData = (props?: Partial<IGatsbyImageData>): IGatsbyImageData => {
+    return {
+        layout: "fixed",
+        width: 0,
+        height: 0,
+        images: { sources: [] },
+        ...props,
+    };
+};
+
+const MockLayout = ({ children }: PropsWithChildren) => {
+    return <>{children}</>;
+};
+
+const createMockContentfulEntry = (): Queries.ContentfulEntry &
+    Queries.ContentfulReference &
+    Queries.Node & {
+        children: ReadonlyArray<Node>;
+        contentful_id: Queries.Scalars["String"];
+        createdAt: Queries.Maybe<Queries.Scalars["Date"]>;
+        id: Queries.Scalars["ID"];
+        internal: Queries.Internal;
+        node_locale: Queries.Scalars["String"];
+        parent: Queries.Maybe<Node>;
+        spaceId: Queries.Maybe<Queries.Scalars["String"]>;
+        sys: Queries.Maybe<Queries.ContentfulFooterSys>;
+        updatedAt: Queries.Maybe<Queries.Scalars["Date"]>;
+    } => {
     return {
         contentful_id: "",
         id: "",
@@ -18,6 +45,18 @@ const createMockContentfulAsset = (overrides?: Partial<Queries.ContentfulAsset>)
             type: "",
         },
         parent: null,
+        createdAt: null,
+        node_locale: "",
+        spaceId: null,
+        sys: null,
+        updatedAt: null,
+    };
+};
+
+const createMockContentfulAsset = (props?: Partial<Queries.ContentfulAsset>): Queries.ContentfulAsset => {
+    return {
+        ...createMockContentfulEntry(),
+        gatsbyImageData: createMockGatsbyImageData(),
         filename: "",
         filesize: null,
         gatsbyImage: null,
@@ -26,34 +65,32 @@ const createMockContentfulAsset = (overrides?: Partial<Queries.ContentfulAsset>)
         publicUrl: "",
         resize: null,
         width: null,
-        createdAt: null,
         description: null,
         file: null,
-        gatsbyImageData: createMockGatsbyImageData(),
-        node_locale: null,
         placeholderUrl: null,
         size: null,
-        spaceId: null,
-        sys: null,
         title: null,
-        updatedAt: null,
         url: null,
-        ...overrides,
+        ...props,
     };
 };
 
-const createMockGatsbyImageData = (overrides?: Partial<IGatsbyImageData>): IGatsbyImageData => {
+const createMockContentfulEvent = (props?: Partial<Queries.ContentfulEvent>): Queries.ContentfulEvent => {
     return {
-        layout: "fixed",
-        width: 0,
-        height: 0,
-        images: { sources: [] },
-        ...overrides,
+        ...createMockContentfulEntry(),
+        name: "",
+        date: "",
+        image: createMockContentfulAsset(),
+        url: "",
+        events: [],
+        ...props,
     };
 };
 
-const MockLayout = ({ children }: PropsWithChildren) => {
-    return <>{children}</>;
+export {
+    createMockGatsbyImageData,
+    MockLayout,
+    createMockContentfulEntry,
+    createMockContentfulAsset,
+    createMockContentfulEvent,
 };
-
-export { createMockContentfulAsset, createMockGatsbyImageData, MockLayout };
