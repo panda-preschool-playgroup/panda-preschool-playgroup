@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 
 interface EventProps {
     name: string;
@@ -13,13 +13,15 @@ const Event: FC<EventProps> = ({ name, date, href, image }: EventProps) => {
 
     const content = (
         <>
-            {image?.gatsbyImageData && (
+            {image?.gatsbyImageData ? (
                 <GatsbyImage
                     image={image.gatsbyImageData}
                     alt={""}
                     aria-hidden
                     className="object-cover w-full h-24 md:w-24 max-w-xl rounded-t-lg md:rounded-none md:rounded-l-lg"
                 />
+            ) : (
+                <StaticImage src="../../images/logo.png" alt="" width={96} height={96} />
             )}
             <div className="px-8 pt-4 md:py-0 grow">{name}</div>
             <div className="px-8 pb-4 md:py-0 text-sm">{formatDate(date)}</div>
