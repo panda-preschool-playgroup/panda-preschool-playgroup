@@ -10,10 +10,10 @@ describe("event", () => {
         expect(url).toBeInTheDocument();
     });
 
-    it("renders the date", () => {
+    it("renders the formatted date", () => {
         render(<Event name={"Event one"} date={"2020-01-01"} url="http://localhost:8000/event" />);
 
-        const url = screen.queryByText("2020-01-01");
+        const url = screen.queryByText("Wed 1 Jan 2020");
 
         expect(url).toBeInTheDocument();
     });
@@ -21,7 +21,7 @@ describe("event", () => {
     it("renders the link", () => {
         render(<Event name={"Event one"} date={"2020-01-01"} url="http://localhost:8000/event" />);
 
-        const url = screen.queryByRole("link", { name: "Event one 2020-01-01" });
+        const url = screen.queryByRole("link", { name: "Event one Wed 1 Jan 2020" });
 
         expect(url).toBeInTheDocument();
     });

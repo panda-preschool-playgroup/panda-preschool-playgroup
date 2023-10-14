@@ -23,9 +23,15 @@ const Event: FC<EventProps> = ({ name, date, url, image }: EventProps) => {
                 />
             )}
             <div className="px-8 pt-4 md:py-0 grow">{name}</div>
-            <div className="px-8 pb-4 md:py-0 text-sm">{date}</div>
+            <div className="px-8 pb-4 md:py-0 text-sm">{formatDate(date)}</div>
         </a>
     );
+};
+
+const formatDate = (date: string): string => {
+    return new Date(date)
+        .toLocaleDateString("en-gb", { weekday: "short", year: "numeric", month: "short", day: "numeric" })
+        .replace(",", "");
 };
 
 export default Event;
