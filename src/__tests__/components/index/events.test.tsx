@@ -52,14 +52,28 @@ describe("events", () => {
             ...createMockContentfulEntry(),
             name: "",
             events: [
-                createMockContentfulEvent({ name: "Event one" }),
-                createMockContentfulEvent({ name: "Event two" }),
-                createMockContentfulEvent({ name: "Event three" }),
+                createMockContentfulEvent({ id: "1", name: "Event one" }),
+                createMockContentfulEvent({ id: "2", name: "Event two" }),
+                createMockContentfulEvent({ id: "3", name: "Event three" }),
             ],
         });
 
         render(<Events />);
 
         expect(mockEvent).toHaveBeenCalledTimes(3);
+    });
+
+    it("renders a message when there are no events", () => {
+        mockEventsQuery.useEvents.mockReturnValueOnce({
+            ...createMockContentfulEntry(),
+            name: "",
+            events: [],
+        });
+
+        render(<Events />);
+
+        const message = screen.queryByText("Check back soon!");
+
+        expect(message).toBeInTheDocument();
     });
 });
