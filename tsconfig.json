@@ -14,6 +14,7 @@
             "@/components/*": ["src/components/*"],
             "@/pages/*": ["src/pages/*"],
             "@/queries/*": ["src/queries/*"],
+            "@/services/*": ["src/services/*"],
             "@/styles/*": ["src/styles/*"],
             "@/types/*": ["src/types/*"],
             "@/test/*": ["src/__tests__/*"]

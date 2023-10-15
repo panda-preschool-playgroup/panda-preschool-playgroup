@@ -4,12 +4,13 @@ const useTermDates = (): Queries.ContentfulTermDates => {
     const data = useStaticQuery(graphql`
         {
             contentfulTermDates(name: { eq: "Term Dates" }) {
-                academicYear
                 terms {
                     id
                     name
-                    firstHalf
-                    secondHalf
+                    start
+                    lastDayBeforeHalfTerm
+                    firstDayAfterHalfTerm
+                    end
                 }
             }
         }

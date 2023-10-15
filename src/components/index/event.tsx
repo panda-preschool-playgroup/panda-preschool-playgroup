@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
+import { formatDate } from "@/services/dates";
 
 interface EventProps {
     name: string;
@@ -35,12 +36,6 @@ const Event: FC<EventProps> = ({ name, date, href, image }: EventProps) => {
     ) : (
         <div className={classes}>{content}</div>
     );
-};
-
-const formatDate = (date: string): string => {
-    return new Date(date)
-        .toLocaleDateString("en-gb", { weekday: "short", year: "numeric", month: "short", day: "numeric" })
-        .replace(",", "");
 };
 
 export default Event;
