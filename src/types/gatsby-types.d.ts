@@ -1644,14 +1644,16 @@ type ContentfulTerm = ContentfulEntry & ContentfulReference & Node & {
   readonly children: ReadonlyArray<Node>;
   readonly contentful_id: Scalars['String'];
   readonly createdAt: Maybe<Scalars['Date']>;
-  readonly firstHalf: Maybe<Scalars['String']>;
+  readonly end: Maybe<Scalars['Date']>;
+  readonly firstDayAfterHalfTerm: Maybe<Scalars['Date']>;
   readonly id: Scalars['ID'];
   readonly internal: Internal;
+  readonly lastDayBeforeHalfTerm: Maybe<Scalars['Date']>;
   readonly name: Maybe<Scalars['String']>;
   readonly node_locale: Scalars['String'];
   readonly parent: Maybe<Node>;
-  readonly secondHalf: Maybe<Scalars['String']>;
   readonly spaceId: Maybe<Scalars['String']>;
+  readonly start: Maybe<Scalars['Date']>;
   readonly sys: Maybe<ContentfulTermSys>;
   readonly term_dates: Maybe<ReadonlyArray<Maybe<ContentfulTermDates>>>;
   readonly updatedAt: Maybe<Scalars['Date']>;
@@ -1659,6 +1661,38 @@ type ContentfulTerm = ContentfulEntry & ContentfulReference & Node & {
 
 
 type ContentfulTerm_createdAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type ContentfulTerm_endArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type ContentfulTerm_firstDayAfterHalfTermArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type ContentfulTerm_lastDayBeforeHalfTermArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type ContentfulTerm_startArgs = {
   difference: InputMaybe<Scalars['String']>;
   formatString: InputMaybe<Scalars['String']>;
   fromNow: InputMaybe<Scalars['Boolean']>;
@@ -1956,14 +1990,16 @@ type ContentfulTermFieldSelector = {
   readonly children: InputMaybe<NodeFieldSelector>;
   readonly contentful_id: InputMaybe<FieldSelectorEnum>;
   readonly createdAt: InputMaybe<FieldSelectorEnum>;
-  readonly firstHalf: InputMaybe<FieldSelectorEnum>;
+  readonly end: InputMaybe<FieldSelectorEnum>;
+  readonly firstDayAfterHalfTerm: InputMaybe<FieldSelectorEnum>;
   readonly id: InputMaybe<FieldSelectorEnum>;
   readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly lastDayBeforeHalfTerm: InputMaybe<FieldSelectorEnum>;
   readonly name: InputMaybe<FieldSelectorEnum>;
   readonly node_locale: InputMaybe<FieldSelectorEnum>;
   readonly parent: InputMaybe<NodeFieldSelector>;
-  readonly secondHalf: InputMaybe<FieldSelectorEnum>;
   readonly spaceId: InputMaybe<FieldSelectorEnum>;
+  readonly start: InputMaybe<FieldSelectorEnum>;
   readonly sys: InputMaybe<ContentfulTermSysFieldSelector>;
   readonly term_dates: InputMaybe<ContentfulTermDatesFieldSelector>;
   readonly updatedAt: InputMaybe<FieldSelectorEnum>;
@@ -1973,14 +2009,16 @@ type ContentfulTermFilterInput = {
   readonly children: InputMaybe<NodeFilterListInput>;
   readonly contentful_id: InputMaybe<StringQueryOperatorInput>;
   readonly createdAt: InputMaybe<DateQueryOperatorInput>;
-  readonly firstHalf: InputMaybe<StringQueryOperatorInput>;
+  readonly end: InputMaybe<DateQueryOperatorInput>;
+  readonly firstDayAfterHalfTerm: InputMaybe<DateQueryOperatorInput>;
   readonly id: InputMaybe<StringQueryOperatorInput>;
   readonly internal: InputMaybe<InternalFilterInput>;
+  readonly lastDayBeforeHalfTerm: InputMaybe<DateQueryOperatorInput>;
   readonly name: InputMaybe<StringQueryOperatorInput>;
   readonly node_locale: InputMaybe<StringQueryOperatorInput>;
   readonly parent: InputMaybe<NodeFilterInput>;
-  readonly secondHalf: InputMaybe<StringQueryOperatorInput>;
   readonly spaceId: InputMaybe<StringQueryOperatorInput>;
+  readonly start: InputMaybe<DateQueryOperatorInput>;
   readonly sys: InputMaybe<ContentfulTermSysFilterInput>;
   readonly term_dates: InputMaybe<ContentfulTermDatesFilterListInput>;
   readonly updatedAt: InputMaybe<DateQueryOperatorInput>;
@@ -2035,14 +2073,16 @@ type ContentfulTermSortInput = {
   readonly children: InputMaybe<NodeSortInput>;
   readonly contentful_id: InputMaybe<SortOrderEnum>;
   readonly createdAt: InputMaybe<SortOrderEnum>;
-  readonly firstHalf: InputMaybe<SortOrderEnum>;
+  readonly end: InputMaybe<SortOrderEnum>;
+  readonly firstDayAfterHalfTerm: InputMaybe<SortOrderEnum>;
   readonly id: InputMaybe<SortOrderEnum>;
   readonly internal: InputMaybe<InternalSortInput>;
+  readonly lastDayBeforeHalfTerm: InputMaybe<SortOrderEnum>;
   readonly name: InputMaybe<SortOrderEnum>;
   readonly node_locale: InputMaybe<SortOrderEnum>;
   readonly parent: InputMaybe<NodeSortInput>;
-  readonly secondHalf: InputMaybe<SortOrderEnum>;
   readonly spaceId: InputMaybe<SortOrderEnum>;
+  readonly start: InputMaybe<SortOrderEnum>;
   readonly sys: InputMaybe<ContentfulTermSysSortInput>;
   readonly term_dates: InputMaybe<ContentfulTermDatesSortInput>;
   readonly updatedAt: InputMaybe<SortOrderEnum>;
@@ -3667,14 +3707,16 @@ type Query_contentfulTermArgs = {
   children: InputMaybe<NodeFilterListInput>;
   contentful_id: InputMaybe<StringQueryOperatorInput>;
   createdAt: InputMaybe<DateQueryOperatorInput>;
-  firstHalf: InputMaybe<StringQueryOperatorInput>;
+  end: InputMaybe<DateQueryOperatorInput>;
+  firstDayAfterHalfTerm: InputMaybe<DateQueryOperatorInput>;
   id: InputMaybe<StringQueryOperatorInput>;
   internal: InputMaybe<InternalFilterInput>;
+  lastDayBeforeHalfTerm: InputMaybe<DateQueryOperatorInput>;
   name: InputMaybe<StringQueryOperatorInput>;
   node_locale: InputMaybe<StringQueryOperatorInput>;
   parent: InputMaybe<NodeFilterInput>;
-  secondHalf: InputMaybe<StringQueryOperatorInput>;
   spaceId: InputMaybe<StringQueryOperatorInput>;
+  start: InputMaybe<DateQueryOperatorInput>;
   sys: InputMaybe<ContentfulTermSysFilterInput>;
   term_dates: InputMaybe<ContentfulTermDatesFilterListInput>;
   updatedAt: InputMaybe<DateQueryOperatorInput>;

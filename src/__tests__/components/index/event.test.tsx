@@ -1,5 +1,13 @@
 import { render, screen } from "@testing-library/react";
 import Event from "@/components/index/event";
+import * as datesService from "@/services/dates";
+
+jest.mock("@/services/dates");
+const mockDatesService = jest.mocked(datesService);
+
+beforeEach(() => {
+    jest.clearAllMocks();
+});
 
 describe("event", () => {
     it("renders the name", () => {
@@ -11,17 +19,23 @@ describe("event", () => {
     });
 
     it("renders the formatted date", () => {
+        mockDatesService.formatDate.mockReturnValueOnce("Test Wed 1 Jan 2020");
+
         render(<Event name={"Event one"} date={"2020-01-01"} />);
 
-        const date = screen.queryByText("Wed 1 Jan 2020");
+        expect(mockDatesService.formatDate).toHaveBeenCalled();
+
+        const date = screen.queryByText("Test Wed 1 Jan 2020");
 
         expect(date).toBeInTheDocument();
     });
 
     it("renders the link", () => {
+        mockDatesService.formatDate.mockReturnValueOnce("Test Wed 1 Jan 2020");
+
         render(<Event name={"Event one"} date={"2020-01-01"} href="http://localhost:8000/event" />);
 
-        const url = screen.queryByRole("link", { name: "Event one Wed 1 Jan 2020" });
+        const url = screen.queryByRole("link", { name: "Event one Test Wed 1 Jan 2020" });
 
         expect(url).toBeInTheDocument();
     });
