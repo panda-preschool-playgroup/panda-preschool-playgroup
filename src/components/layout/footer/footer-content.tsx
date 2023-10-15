@@ -7,7 +7,7 @@ const FooterContent: FC = () => {
 
     return (
         <div className="bg-slate-600 text-slate-100">
-            <div className="mx-auto w-full max-w-screen-xl md:grid md:grid-cols-3 md:gap-8 py-8 px-4 md:px-24 xl:px-4">
+            <div className="mx-auto w-full max-w-screen-xl lg:grid lg:grid-cols-3 lg:gap-8 py-8 px-4 lg:px-24 xl:px-4">
                 <div>
                     <p className="mb-4">
                         Howell Hall
@@ -70,7 +70,7 @@ const FooterContent: FC = () => {
 };
 
 const Separator = () => (
-    <hr className="w-3/4 h-0.5 my-12 bg-slate-400 border-0 visible md:invisible md:w-0 md:h-0 md:my-0 " />
+    <hr className="w-3/4 h-0.5 my-12 bg-slate-400 border-0 visible md:invisible lg:w-0 lg:h-0 lg:my-0 " />
 );
 
 export default FooterContent;
