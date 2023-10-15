@@ -1747,7 +1747,6 @@ type ContentfulTermConnection_sumArgs = {
 };
 
 type ContentfulTermDates = ContentfulEntry & ContentfulReference & Node & {
-  readonly academicYear: Maybe<Scalars['String']>;
   readonly children: ReadonlyArray<Node>;
   readonly contentful_id: Scalars['String'];
   readonly createdAt: Maybe<Scalars['Date']>;
@@ -1824,7 +1823,6 @@ type ContentfulTermDatesEdge = {
 };
 
 type ContentfulTermDatesFieldSelector = {
-  readonly academicYear: InputMaybe<FieldSelectorEnum>;
   readonly children: InputMaybe<NodeFieldSelector>;
   readonly contentful_id: InputMaybe<FieldSelectorEnum>;
   readonly createdAt: InputMaybe<FieldSelectorEnum>;
@@ -1840,7 +1838,6 @@ type ContentfulTermDatesFieldSelector = {
 };
 
 type ContentfulTermDatesFilterInput = {
-  readonly academicYear: InputMaybe<StringQueryOperatorInput>;
   readonly children: InputMaybe<NodeFilterListInput>;
   readonly contentful_id: InputMaybe<StringQueryOperatorInput>;
   readonly createdAt: InputMaybe<DateQueryOperatorInput>;
@@ -1901,7 +1898,6 @@ type ContentfulTermDatesGroupConnection_sumArgs = {
 };
 
 type ContentfulTermDatesSortInput = {
-  readonly academicYear: InputMaybe<SortOrderEnum>;
   readonly children: InputMaybe<NodeSortInput>;
   readonly contentful_id: InputMaybe<SortOrderEnum>;
   readonly createdAt: InputMaybe<SortOrderEnum>;
@@ -3724,7 +3720,6 @@ type Query_contentfulTermArgs = {
 
 
 type Query_contentfulTermDatesArgs = {
-  academicYear: InputMaybe<StringQueryOperatorInput>;
   children: InputMaybe<NodeFilterListInput>;
   contentful_id: InputMaybe<StringQueryOperatorInput>;
   createdAt: InputMaybe<DateQueryOperatorInput>;
