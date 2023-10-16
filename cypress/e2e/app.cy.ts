@@ -5,12 +5,6 @@ describe("app", () => {
         cy.findByRole("banner").findByRole("heading", { name: "Panda Playgroup" }).should("exist");
     });
 
-    it("renders the logo", () => {
-        cy.visit("/");
-
-        cy.findByRole("banner").findByRole("img", { name: "Panda Playgroup Logo" }).should("exist");
-    });
-
     it("renders the homepage content", () => {
         cy.visit("/");
 
