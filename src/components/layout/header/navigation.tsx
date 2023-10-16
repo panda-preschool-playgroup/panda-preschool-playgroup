@@ -17,8 +17,8 @@ const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => 
             theme={{ inner: { base: "mx-3 flex flex-wrap items-center justify-between gap-y-5 gap-x-5 xl:pb-0 pb-4" } }}
         >
             <Navbar.Brand as="div">
-                <Link to="/" className="flex items-center w-full gap-x-10 no-underline" aria-label="Home">
-                    <StaticImage src="../../../images/logo.png" alt="Panda Playgroup Logo" width={125} height={125} />
+                <Link to="/" className="flex items-center w-full gap-x-10 no-underline">
+                    <StaticImage src="../../../images/logo.png" alt="" aria-hidden width={125} height={125} />
                     <h1 className="font-sofia-pro-soft-bold text-2xl sm:text-3xl md:text-4xl">Panda Playgroup</h1>
                 </Link>
             </Navbar.Brand>

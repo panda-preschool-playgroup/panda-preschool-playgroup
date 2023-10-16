@@ -21,7 +21,7 @@ describe("navigation", () => {
     it("renders the home page link", () => {
         render(<Navigation />);
 
-        const homepageLink = screen.queryByRole("link", { name: "Home" });
+        const homepageLink = screen.queryByRole("link", { name: "Panda Playgroup" });
 
         expect(homepageLink).toBeInTheDocument();
     });
