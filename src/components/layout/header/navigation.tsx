@@ -26,8 +26,8 @@ const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => 
                 <NavigationSection
                     title="Sessions"
                     menuItems={[
-                        { title: "Our pre-school", href: "sessions/pre-school" },
-                        { title: "Sticky Mitts and Tiny Tots", href: "#" },
+                        { title: "Our pre-school", href: "/sessions/pre-school" },
+                        { title: "Sticky Mitts and Tiny Tots", href: "/sessions/sticky-mitts-tiny-tots" },
                     ]}
                     activeSection={activeSection}
                 />
@@ -66,6 +66,7 @@ const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => 
                     ]}
                     activeSection={activeSection}
                 />
+                <NavigationSection title="Contact us" href="/" />
             </Navbar.Collapse>
             <div className="flex md:order-2 w-full md:w-auto justify-between">
                 <LinkButton text="Apply" href="#" />

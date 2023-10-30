@@ -1,8 +1,8 @@
 import { FC } from "react";
+import { Link } from "gatsby";
 import Layout from "@/components/layout/layout";
 import PageHead from "@/components/layout/page-head/page-head";
 import Section from "@/components/index/section";
-import { Link } from "gatsby";
 
 const PreSchoolPage: FC = () => {
     const heading = "Our pre-school";
@@ -19,7 +19,7 @@ const PreSchoolPage: FC = () => {
                 <p>
                     From the age of two, children are eligible to join Panda Playgroup. The pre-school is registered
                     with <a href="https://reports.ofsted.gov.uk/provider/16/EY501461">OFSTED</a> and is a member of the
-                    Pre-school Learning Alliance.
+                    Early Years Alliance.
                 </p>
                 <p>
                     Our aim is to provide your child with the best support and care as they take their first steps
