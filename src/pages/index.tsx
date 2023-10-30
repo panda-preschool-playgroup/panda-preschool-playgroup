@@ -14,6 +14,7 @@ const IndexPage: FC = () => {
     return (
         <Layout>
             <Jumbotron />
+            <InformationCards />
             <Section
                 style="standard"
                 heading="Our pre-school for little Pandas"
@@ -66,7 +67,6 @@ const IndexPage: FC = () => {
                     <Link to="/">see the list of &quot;Panda Pals&quot;</Link> who very kindly support our cause!
                 </p>
             </Section>
-            <InformationCards />
         </Layout>
     );
 };

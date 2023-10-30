@@ -1,11 +1,15 @@
 import { render, screen } from "@testing-library/react";
 import Layout from "@/components/layout/layout";
 import Navigation from "@/components/layout/header/navigation";
+import Breadcrumb from "@/components/layout/header/breadcrumb";
 import FooterContent from "@/components/layout/footer/footer-content";
 import HostingBanner from "@/components/layout/footer/hosting-banner";
 
 jest.mock("@/components/layout/header/navigation");
 const mockNavigation = jest.mocked(Navigation);
+
+jest.mock("@/components/layout/header/breadcrumb");
+const mockBreadcrumb = jest.mocked(Breadcrumb);
 
 jest.mock("@/components/layout/footer/footer-content");
 const mockFooterContent = jest.mocked(FooterContent);
@@ -36,6 +40,30 @@ describe("layout", () => {
         render(<Layout activeSection="Contact" />);
 
         expect(mockNavigation.mock.calls[0][0]).toEqual({ activeSection: "Contact" });
+    });
+
+    it("does not render the breadcrumb when there is no active section or page heading", () => {
+        render(<Layout />);
+
+        expect(mockBreadcrumb).not.toHaveBeenCalled();
+    });
+
+    it("does not render the breadcrumb when there is no active section", () => {
+        render(<Layout pageHeading="Our pre-school" />);
+
+        expect(mockBreadcrumb).not.toHaveBeenCalled();
+    });
+
+    it("does not render the breadcrumb when there is no page heading", () => {
+        render(<Layout activeSection="Sessions" />);
+
+        expect(mockBreadcrumb).not.toHaveBeenCalled();
+    });
+
+    it("renders the breadcrumb when there is an active section and page heading", () => {
+        render(<Layout activeSection="Sessions" pageHeading="Our pre-school" />);
+
+        expect(mockBreadcrumb).toHaveBeenCalled();
     });
 
     it("renders the main section", () => {
