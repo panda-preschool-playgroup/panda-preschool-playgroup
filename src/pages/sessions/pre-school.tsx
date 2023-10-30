@@ -2,14 +2,14 @@ import { FC } from "react";
 import { Link } from "gatsby";
 import Layout from "@/components/layout/layout";
 import PageHead from "@/components/layout/page-head/page-head";
-import Section from "@/components/index/section";
+import Article from "@/components/common/article";
 
 const PreSchoolPage: FC = () => {
     const heading = "Our pre-school";
 
     return (
         <Layout activeSection="Sessions" pageHeading={heading}>
-            <Section style="standard" heading={heading}>
+            <Article heading={heading}>
                 <p>
                     Our morning sessions run Monday to Friday, <strong>09:00am to 12:00pm</strong>. We then have lunch
                     club from <strong>12:00pm to 12:30pm</strong>, and the afternoon session runs from{" "}
@@ -32,7 +32,7 @@ const PreSchoolPage: FC = () => {
                     we do not plan on buying any more. If you&apos;d like to find out more about our environmental
                     commitments please consult the <Link to="/approach/green-panda">Green Panda</Link>.
                 </p>
-            </Section>
+            </Article>
         </Layout>
     );
 };

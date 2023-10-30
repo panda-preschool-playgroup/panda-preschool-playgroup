@@ -2,14 +2,14 @@ import { FC } from "react";
 import { Link } from "gatsby";
 import Layout from "@/components/layout/layout";
 import PageHead from "@/components/layout/page-head/page-head";
-import Section from "@/components/index/section";
+import Article from "@/components/common/article";
 
 const StickyMittsTinyTotsPage: FC = () => {
     const heading = "Sticky Mitts and Tiny Tots";
 
     return (
         <Layout activeSection="Sessions" pageHeading={heading}>
-            <Section style="standard" heading={heading}>
+            <Article heading={heading}>
                 <p>
                     Sticky Mitts and Tiny Tots is a friendly, fun group for children and their grown-ups on a Monday and
                     Wednesday morning from <strong>09:45am to 11:15am</strong> during term time. Sessions take place in
@@ -24,7 +24,7 @@ const StickyMittsTinyTotsPage: FC = () => {
                     The sessions are £3.00 for one adult and one child or £4.00 for an adult and more than one child. We
                     ask for registration, booking and prepayment for half a term in advance.
                 </p>
-            </Section>
+            </Article>
         </Layout>
     );
 };
