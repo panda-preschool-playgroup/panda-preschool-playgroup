@@ -29,7 +29,7 @@ describe("navigation", () => {
     it("renders the navigation sections", () => {
         render(<Navigation />);
 
-        expect(mockNavigationSection).toHaveBeenCalledTimes(5);
+        expect(mockNavigationSection).toHaveBeenCalledTimes(6);
     });
 
     it("renders the button", () => {

@@ -1,7 +1,7 @@
 {
     "ci": {
         "collect": {
-            "url": ["http://localhost:9000"],
+            "url": ["http://localhost:9000", "http://localhost:9000/sessions/pre-school/"],
             "startServerCommand": "npm run build && npm run serve",
             "startServerReadyPattern": "in the browser"
         },

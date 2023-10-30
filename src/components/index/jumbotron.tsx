@@ -24,7 +24,10 @@ const Jumbotron: FC = () => {
                     Situated in the heart of Copmanthorpe village in York, we aim to provide children with an exciting
                     journey of learning through play
                 </p>
-                <LinkButton text="Watch our virtual tour" href="#" />
+                <div className="flex justify-center flex-col sm:flex-row gap-6 sm:gap-24">
+                    <LinkButton text="Watch our virtual tour" href="#" />
+                    <LinkButton text="View the Panda gallery" href="#" />
+                </div>
             </div>
         </section>
     );
