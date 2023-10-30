@@ -8,7 +8,7 @@ const PreSchoolPage: FC = () => {
     const heading = "Our pre-school";
 
     return (
-        <Layout activeSection="Sessions" pageHeading={heading}>
+        <Layout showHomeLink activeSection="Sessions" pageHeading={heading}>
             <Article heading={heading}>
                 <p>
                     Our morning sessions run Monday to Friday, <strong>09:00am to 12:00pm</strong>. We then have lunch

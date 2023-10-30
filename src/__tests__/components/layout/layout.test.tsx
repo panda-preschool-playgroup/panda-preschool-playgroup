@@ -105,4 +105,28 @@ describe("layout", () => {
 
         expect(mockHostingBanner).toHaveBeenCalled();
     });
+
+    it("does not render the home link when showHomeLink is not passed", () => {
+        render(<Layout />);
+
+        const homeLink = screen.queryByRole("link", { name: "Back to home" });
+
+        expect(homeLink).not.toBeInTheDocument();
+    });
+
+    it("does not render the home link when showHomeLink is false", () => {
+        render(<Layout showHomeLink={false} />);
+
+        const homeLink = screen.queryByRole("link", { name: "Back to home" });
+
+        expect(homeLink).not.toBeInTheDocument();
+    });
+
+    it("renders the home link when showHomeLink is true", () => {
+        render(<Layout showHomeLink={true} />);
+
+        const homeLink = screen.queryByRole("link", { name: "Back to home" });
+
+        expect(homeLink).toBeInTheDocument();
+    });
 });

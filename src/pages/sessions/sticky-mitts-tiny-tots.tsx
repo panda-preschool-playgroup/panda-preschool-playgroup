@@ -8,7 +8,7 @@ const StickyMittsTinyTotsPage: FC = () => {
     const heading = "Sticky Mitts and Tiny Tots";
 
     return (
-        <Layout activeSection="Sessions" pageHeading={heading}>
+        <Layout showHomeLink activeSection="Sessions" pageHeading={heading}>
             <Article heading={heading}>
                 <p>
                     Sticky Mitts and Tiny Tots is a friendly, fun group for children and their grown-ups on a Monday and
