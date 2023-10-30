@@ -20,7 +20,7 @@ const Article: FC<PropsWithChildren<ArticleProps>> = ({
                     {children}
                 </div>
                 {image && (
-                    <div className="pt-8 shrink-0 flex justify-center self-center">
+                    <div className="pt-8 shrink-0 flex justify-center self-center pb-12 2xl:pb-0">
                         <div className="md:shrink-0">{image}</div>
                     </div>
                 )}

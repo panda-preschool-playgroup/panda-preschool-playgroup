@@ -3,13 +3,17 @@ import { Link } from "gatsby";
 import Layout from "@/components/layout/layout";
 import PageHead from "@/components/layout/page-head/page-head";
 import Article from "@/components/common/article";
+import { useStickyMittsTinyTotsImage } from "@/queries/sticky-mitts-tiny-tots/use-sticky-mitts-tiny-tots-image";
+import ContentfulImage from "@/components/common/contentful-image";
 
 const StickyMittsTinyTotsPage: FC = () => {
     const heading = "Sticky Mitts and Tiny Tots";
 
+    const image = useStickyMittsTinyTotsImage();
+
     return (
         <Layout showHomeLink activeSection="Sessions" pageHeading={heading}>
-            <Article heading={heading}>
+            <Article heading={heading} image={<ContentfulImage imageTitle="Sticky Mitts" images={[image]} />}>
                 <p>
                     Sticky Mitts and Tiny Tots is a friendly, fun group for children and their grown-ups on a Monday and
                     Wednesday morning from <strong>09:45am to 11:15am</strong> during term time. Sessions take place in
