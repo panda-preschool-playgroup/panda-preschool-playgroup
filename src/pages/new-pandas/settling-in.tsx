@@ -1,0 +1,31 @@
+import { FC } from "react";
+import Layout from "@/components/layout/layout";
+import PageHead from "@/components/layout/page-head/page-head";
+import Article from "@/components/common/article";
+
+const SettlingIn: FC = () => {
+    const heading = "Settling in";
+
+    return (
+        <Layout showHomeLink activeSection="Sessions" pageHeading={heading}>
+            <Article heading={heading}>
+                <p>
+                    When you choose for your child to start at Panda Playgroup, you will be invited to come in for two
+                    settling-in visits. Each visit will last around an hour. There is no cost for attending settling-in
+                    visits, and they should be arranged in advance.
+                </p>
+                <p>
+                    All of our children are allocated a key worker, who is responsible for working closely with you to
+                    help settle your child into Panda Playgroup. They also have a longer-term responsibility to provide
+                    the best learning outcomes for your child, communicate your child&apos;s progress with you and
+                    maintain a dedicated learning journal. This learning journal provides a record of your child&apos;s
+                    interests and development, using photos, comments and artwork.
+                </p>
+            </Article>
+        </Layout>
+    );
+};
+
+export default SettlingIn;
+
+export const Head = () => <PageHead />;
