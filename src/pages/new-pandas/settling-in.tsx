@@ -3,9 +3,9 @@ import Layout from "@/components/layout/layout";
 import PageHead from "@/components/layout/page-head/page-head";
 import Article from "@/components/common/article";
 
-const SettlingIn: FC = () => {
-    const heading = "Settling in";
+const heading = "Settling in";
 
+const SettlingIn: FC = () => {
     return (
         <Layout showHomeLink activeSection="Sessions" pageHeading={heading}>
             <Article heading={heading}>
@@ -28,4 +28,4 @@ const SettlingIn: FC = () => {
 
 export default SettlingIn;
 
-export const Head = () => <PageHead />;
+export const Head = () => <PageHead pageTitle={heading} />;

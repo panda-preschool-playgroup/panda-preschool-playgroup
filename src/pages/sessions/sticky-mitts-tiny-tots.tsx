@@ -6,9 +6,9 @@ import Article from "@/components/common/article";
 import { useStickyMittsTinyTotsImage } from "@/queries/sticky-mitts-tiny-tots/use-sticky-mitts-tiny-tots-image";
 import ContentfulImage from "@/components/common/contentful-image";
 
-const StickyMittsTinyTotsPage: FC = () => {
-    const heading = "Sticky Mitts and Tiny Tots";
+const heading = "Sticky Mitts and Tiny Tots";
 
+const StickyMittsTinyTotsPage: FC = () => {
     const image = useStickyMittsTinyTotsImage();
 
     return (
@@ -35,4 +35,4 @@ const StickyMittsTinyTotsPage: FC = () => {
 
 export default StickyMittsTinyTotsPage;
 
-export const Head = () => <PageHead />;
+export const Head = () => <PageHead pageTitle={heading} />;

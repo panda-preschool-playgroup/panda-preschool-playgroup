@@ -4,9 +4,9 @@ import Layout from "@/components/layout/layout";
 import PageHead from "@/components/layout/page-head/page-head";
 import Article from "@/components/common/article";
 
-const PreSchoolPage: FC = () => {
-    const heading = "Our pre-school";
+const heading = "Our pre-school";
 
+const PreSchoolPage: FC = () => {
     return (
         <Layout showHomeLink activeSection="Sessions" pageHeading={heading}>
             <Article heading={heading}>
@@ -49,4 +49,4 @@ const PreSchoolPage: FC = () => {
 
 export default PreSchoolPage;
 
-export const Head = () => <PageHead />;
+export const Head = () => <PageHead pageTitle={heading} />;

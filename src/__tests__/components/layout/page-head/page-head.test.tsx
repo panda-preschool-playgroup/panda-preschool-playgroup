@@ -25,4 +25,12 @@ describe("page head", () => {
 
         expect(mockSeo).toHaveBeenCalled();
     });
+
+    it("renders seo with a page title", () => {
+        render(<PageHead pageTitle="Test title" />);
+
+        expect(mockSeo).toHaveBeenCalled();
+
+        expect(mockSeo.mock.calls[0][0].pageTitle).toEqual("Test title");
+    });
 });

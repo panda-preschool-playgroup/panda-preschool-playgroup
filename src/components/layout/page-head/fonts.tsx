@@ -1,4 +1,6 @@
-const Fonts = () => {
+import { FC } from "react";
+
+const Fonts: FC = () => {
     return (
         <>
             <link

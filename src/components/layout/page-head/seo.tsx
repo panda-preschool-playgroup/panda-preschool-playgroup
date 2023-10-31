@@ -1,10 +1,11 @@
 import { useSiteMetadata } from "@/queries/layout/page-head/use-site-metadata";
+import { FC } from "react";
 
 interface SeoProps {
     pageTitle?: string;
 }
 
-const Seo = ({ pageTitle }: SeoProps) => {
+const Seo: FC<SeoProps> = ({ pageTitle }: SeoProps) => {
     const siteMetadata = useSiteMetadata();
 
     return (
