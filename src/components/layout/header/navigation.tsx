@@ -4,12 +4,15 @@ import { StaticImage } from "gatsby-plugin-image";
 import { Navbar } from "flowbite-react";
 import NavigationSection from "@/components/layout/header/navigation-section";
 import LinkButton from "@/components/common/link-button";
+import { useProspectus } from "@/queries/layout/header/use-prospectus";
 
 interface NavigationProps {
     activeSection?: string;
 }
 
 const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => {
+    const prospectus = useProspectus();
+
     return (
         <Navbar
             fluid
@@ -35,7 +38,7 @@ const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => 
                     title="New Pandas"
                     menuItems={[
                         { title: "Settling in", href: "/new-pandas/settling-in" },
-                        { title: "Prospectus", href: "#" },
+                        { title: "Prospectus", href: prospectus?.publicUrl ?? "#", isExternal: true },
                         { title: "Fees", href: "#" },
                         { title: "Policies", href: "#" },
                     ]}

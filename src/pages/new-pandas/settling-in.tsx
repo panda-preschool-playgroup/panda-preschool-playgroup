@@ -7,7 +7,7 @@ const heading = "Settling in";
 
 const SettlingIn: FC = () => {
     return (
-        <Layout showHomeLink activeSection="Sessions" pageHeading={heading}>
+        <Layout showHomeLink activeSection="New Pandas" pageHeading={heading}>
             <Article heading={heading}>
                 <p>
                     When you choose for your child to start at Panda Playgroup, you will be invited to come in for two

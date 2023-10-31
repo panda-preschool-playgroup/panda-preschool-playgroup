@@ -5,6 +5,8 @@ import NavigationSection from "@/components/layout/header/navigation-section";
 jest.mock("@/components/layout/header/navigation-section");
 const mockNavigationSection = jest.mocked(NavigationSection);
 
+jest.mock("@/queries/layout/header/use-prospectus");
+
 beforeEach(() => {
     jest.clearAllMocks();
 });
