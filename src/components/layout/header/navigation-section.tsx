@@ -13,6 +13,7 @@ interface NavigationSectionProps {
 interface NavigationMenuItem {
     title: string;
     href: string;
+    isExternal?: boolean;
 }
 
 const NavigationSection: FC<NavigationSectionProps> = ({
@@ -29,12 +30,22 @@ const NavigationSection: FC<NavigationSectionProps> = ({
         <Dropdown inline className="width-full" label={navigationItem}>
             {menuItems?.map((menuItem: NavigationMenuItem) => (
                 <Dropdown.Item key={menuItem.title} className="text-xl">
-                    <Link to={menuItem.href} className="no-underline">
-                        {menuItem.title}
-                    </Link>
+                    <MenuItemLink title={menuItem.title} href={menuItem.href} isExternal={menuItem.isExternal} />
                 </Dropdown.Item>
             ))}
         </Dropdown>
+    );
+};
+
+const MenuItemLink: FC<NavigationMenuItem> = ({ title, href, isExternal }: NavigationMenuItem) => {
+    return isExternal ? (
+        <a href={href} className="no-underline" target="_blank" rel="noreferrer">
+            {title}
+        </a>
+    ) : (
+        <Link to={href} className="no-underline">
+            {title}
+        </Link>
     );
 };
 

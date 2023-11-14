@@ -32,7 +32,7 @@ const IndexPage: FC = () => {
                 </p>
                 <p className="mt-8 text-2xl">
                     <strong>
-                        <Link to="/">Find out more about our pre-school</Link>
+                        <Link to="/sessions/pre-school">Find out more about our pre-school</Link>
                     </strong>
                 </p>
             </Section>
@@ -52,7 +52,7 @@ const IndexPage: FC = () => {
                 </p>
                 <p className="text-2xl">
                     <strong>
-                        <Link to="/">Discover our drop-in sessions</Link>
+                        <Link to="/sessions/sticky-mitts-tiny-tots">Discover our drop-in sessions</Link>
                     </strong>
                 </p>
             </Section>
