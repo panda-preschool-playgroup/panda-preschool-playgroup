@@ -5,7 +5,7 @@ import Article from "@/components/common/article";
 
 const heading = "Settling in";
 
-const SettlingIn: FC = () => {
+const SettlingInPage: FC = () => {
     return (
         <Layout showHomeLink activeSection="New Pandas" pageHeading={heading}>
             <Article heading={heading}>
@@ -26,6 +26,6 @@ const SettlingIn: FC = () => {
     );
 };
 
-export default SettlingIn;
+export default SettlingInPage;
 
 export const Head = () => <PageHead pageTitle={heading} />;

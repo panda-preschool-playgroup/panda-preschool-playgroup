@@ -11,10 +11,11 @@ const PreSchoolPage: FC = () => {
         <Layout showHomeLink activeSection="Sessions" pageHeading={heading}>
             <Article heading={heading}>
                 <p>
-                    Our morning sessions run Monday to Friday, <strong>09:00am to 12:00pm</strong>. We then have lunch
+                    Our morning sessions run Monday to Friday, <strong>9:00am to 12:00pm</strong>. We then have lunch
                     club from <strong>12:00pm to 12:30pm</strong>, and the afternoon session runs from{" "}
-                    <strong>12:30pm to 3:00pm</strong>. We also offer an earlier <strong>08:30am</strong> start for
-                    those who would prefer.
+                    <strong>12:30pm to 3:00pm</strong>. We also offer an earlier <strong>8:30am</strong> start on
+                    request. The pre-school is open for bookings from September or Easter and we&apos;d love to meet
+                    you!
                 </p>
                 <p>
                     From the age of two, children are eligible to join Panda Playgroup. The pre-school is registered

@@ -39,7 +39,7 @@ const NavigationSection: FC<NavigationSectionProps> = ({
 
 const MenuItemLink: FC<NavigationMenuItem> = ({ title, href, isExternal }: NavigationMenuItem) => {
     return isExternal ? (
-        <a href={href} className="no-underline">
+        <a href={href} className="no-underline" target="_blank" rel="noreferrer">
             {title}
         </a>
     ) : (
