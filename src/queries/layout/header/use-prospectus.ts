@@ -4,7 +4,7 @@ const useProspectus = (): Queries.Maybe<Queries.ContentfulAsset> => {
     const data = useStaticQuery<Queries.Query>(graphql`
         {
             contentfulAsset(title: { eq: "Panda Playgroup Prospectus" }) {
-                publicUrl
+                url
             }
         }
     `);

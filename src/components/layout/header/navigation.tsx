@@ -38,7 +38,7 @@ const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => 
                     title="New Pandas"
                     menuItems={[
                         { title: "Settling in", href: "/new-pandas/settling-in" },
-                        { title: "Prospectus", href: prospectus?.publicUrl ?? "#", isExternal: true },
+                        { title: "Prospectus", href: prospectus?.url ?? "#", isExternal: true },
                         { title: "Fees", href: "/new-pandas/fees" },
                         { title: "Policies", href: "#" },
                     ]}
