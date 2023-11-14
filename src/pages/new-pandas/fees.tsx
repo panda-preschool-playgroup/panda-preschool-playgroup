@@ -12,7 +12,7 @@ const FeesPage: FC = () => {
             <Article heading={heading}>
                 <p>
                     The fee for your child attending Panda Playgroup is <strong>£5.50 per hour</strong>, or{" "}
-                    <strong>£35.75</strong> for a full day including lunch club. Add an additional{" "}
+                    <strong>£33.00</strong> for a full day including lunch club. Add an additional{" "}
                     <strong>£2.75</strong> per day if opting for an earlier <strong>8:30am</strong> start.
                 </p>
                 <p>We also ask for a small amount half-termly towards milk, snacks and other consumables.</p>
