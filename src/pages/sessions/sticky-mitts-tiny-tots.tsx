@@ -25,9 +25,9 @@ const StickyMittsTinyTotsPage: FC = () => {
                     healthy snack and, of course, singing! We also have baby weighing scales.
                 </p>
                 <p>
-                    The sessions are <strong>£3.00</strong> for one adult and one child or <strong>£4.00</strong> for an
-                    adult and more than one child. We ask for registration, booking and prepayment for half a term in
-                    advance.
+                    The sessions are <strong>£3.00</strong> for one adult and one child if paid half-termly in advance,
+                    or <strong>£4.00</strong> when dropping in. Additional siblings are an extra <strong>£1.00</strong>{" "}
+                    each per session.
                 </p>
             </Article>
         </Layout>
