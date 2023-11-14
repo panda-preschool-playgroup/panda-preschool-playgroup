@@ -30,7 +30,12 @@ const Event: FC<EventProps> = ({ name, date, href, image }: EventProps) => {
     );
 
     return href ? (
-        <a href={href} className={classes.concat(" no-underline cursor-pointer hover:bg-slate-200")}>
+        <a
+            href={href}
+            className={classes.concat(" no-underline cursor-pointer hover:bg-slate-200")}
+            target="_blank"
+            rel="noreferrer"
+        >
             {content}
         </a>
     ) : (
