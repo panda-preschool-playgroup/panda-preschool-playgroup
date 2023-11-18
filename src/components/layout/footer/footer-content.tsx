@@ -29,10 +29,10 @@ const FooterContent: FC = () => {
                     <p className="mb-4">Registered charity no: 1035584</p>
                     <p className="mb-4">Member of the Early Years Alliance</p>
                     <p className="mb-4">
-                        <Link to="#">Vacancies</Link>
+                        <Link to="/vacancies">Vacancies</Link>
                     </p>
                     <p>
-                        <Link to="#">Privacy notice</Link>
+                        <Link to="/privacy-notice">Privacy notice</Link>
                     </p>
                     <Separator />
                 </div>

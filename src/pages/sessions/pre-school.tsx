@@ -43,6 +43,10 @@ const PreSchoolPage: FC = () => {
                     think you have skills, hobbies or interests that would be of interest to our children, please let us
                     know by <Link to="/">getting in touch</Link>!
                 </p>
+                <p>
+                    We are also always on the lookout for new committee members - take a look at our{" "}
+                    <Link to="/vacancies">vacancies</Link> if you think you could help.
+                </p>
             </Article>
         </Layout>
     );
