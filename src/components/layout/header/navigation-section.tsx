@@ -29,9 +29,12 @@ const NavigationSection: FC<NavigationSectionProps> = ({
     ) : (
         <Dropdown inline className="width-full" label={navigationItem}>
             {menuItems?.map((menuItem: NavigationMenuItem) => (
-                <Dropdown.Item key={menuItem.title} className="text-xl">
-                    <MenuItemLink title={menuItem.title} href={menuItem.href} isExternal={menuItem.isExternal} />
-                </Dropdown.Item>
+                <MenuItemLink
+                    key={menuItem.title}
+                    title={menuItem.title}
+                    href={menuItem.href}
+                    isExternal={menuItem.isExternal}
+                />
             ))}
         </Dropdown>
     );
@@ -40,11 +43,11 @@ const NavigationSection: FC<NavigationSectionProps> = ({
 const MenuItemLink: FC<NavigationMenuItem> = ({ title, href, isExternal }: NavigationMenuItem) => {
     return isExternal ? (
         <a href={href} className="no-underline" target="_blank" rel="noreferrer">
-            {title}
+            <Dropdown.Item className="text-xl">{title}</Dropdown.Item>
         </a>
     ) : (
         <Link to={href} className="no-underline">
-            {title}
+            <Dropdown.Item className="text-xl">{title}</Dropdown.Item>
         </Link>
     );
 };
