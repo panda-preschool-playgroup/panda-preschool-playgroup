@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import Layout from "@/components/layout/layout";
 import PageHead from "@/components/layout/page-head/page-head";
 import Article from "@/components/common/article";
-import { useStickyMittsTinyTotsImage } from "@/queries/sticky-mitts-tiny-tots/use-sticky-mitts-tiny-tots-image";
+import { useStickyMittsTinyTotsImage } from "@/queries/sessions/sticky-mitts-tiny-tots/use-sticky-mitts-tiny-tots-image";
 import ContentfulImage from "@/components/common/contentful-image";
 
 const heading = "Sticky Mitts and Tiny Tots";

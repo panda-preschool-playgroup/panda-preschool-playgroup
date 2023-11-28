@@ -309,6 +309,10 @@ type ContentfulAssetFilterInput = {
   readonly width: InputMaybe<IntQueryOperatorInput>;
 };
 
+type ContentfulAssetFilterListInput = {
+  readonly elemMatch: InputMaybe<ContentfulAssetFilterInput>;
+};
+
 type ContentfulAssetGroupConnection = {
   readonly distinct: ReadonlyArray<Scalars['String']>;
   readonly edges: ReadonlyArray<ContentfulAssetEdge>;
@@ -1631,6 +1635,232 @@ type ContentfulLinkSysFilterInput = {
 
 type ContentfulLinkSysSortInput = {
   readonly contentType: InputMaybe<ContentfulLinkSysContentTypeSortInput>;
+  readonly revision: InputMaybe<SortOrderEnum>;
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulPolicyGroup = ContentfulEntry & ContentfulReference & Node & {
+  readonly children: ReadonlyArray<Node>;
+  readonly contentful_id: Scalars['String'];
+  readonly createdAt: Maybe<Scalars['Date']>;
+  readonly id: Scalars['ID'];
+  readonly internal: Internal;
+  readonly node_locale: Scalars['String'];
+  readonly parent: Maybe<Node>;
+  readonly policies: Maybe<ReadonlyArray<Maybe<ContentfulAsset>>>;
+  readonly spaceId: Maybe<Scalars['String']>;
+  readonly sys: Maybe<ContentfulPolicyGroupSys>;
+  readonly title: Maybe<Scalars['String']>;
+  readonly updatedAt: Maybe<Scalars['Date']>;
+};
+
+
+type ContentfulPolicyGroup_createdAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type ContentfulPolicyGroup_updatedAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+type ContentfulPolicyGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<ContentfulPolicyGroupEdge>;
+  readonly group: ReadonlyArray<ContentfulPolicyGroupGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<ContentfulPolicyGroup>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type ContentfulPolicyGroupConnection_distinctArgs = {
+  field: ContentfulPolicyGroupFieldSelector;
+};
+
+
+type ContentfulPolicyGroupConnection_groupArgs = {
+  field: ContentfulPolicyGroupFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type ContentfulPolicyGroupConnection_maxArgs = {
+  field: ContentfulPolicyGroupFieldSelector;
+};
+
+
+type ContentfulPolicyGroupConnection_minArgs = {
+  field: ContentfulPolicyGroupFieldSelector;
+};
+
+
+type ContentfulPolicyGroupConnection_sumArgs = {
+  field: ContentfulPolicyGroupFieldSelector;
+};
+
+type ContentfulPolicyGroupEdge = {
+  readonly next: Maybe<ContentfulPolicyGroup>;
+  readonly node: ContentfulPolicyGroup;
+  readonly previous: Maybe<ContentfulPolicyGroup>;
+};
+
+type ContentfulPolicyGroupFieldSelector = {
+  readonly children: InputMaybe<NodeFieldSelector>;
+  readonly contentful_id: InputMaybe<FieldSelectorEnum>;
+  readonly createdAt: InputMaybe<FieldSelectorEnum>;
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly node_locale: InputMaybe<FieldSelectorEnum>;
+  readonly parent: InputMaybe<NodeFieldSelector>;
+  readonly policies: InputMaybe<ContentfulAssetFieldSelector>;
+  readonly spaceId: InputMaybe<FieldSelectorEnum>;
+  readonly sys: InputMaybe<ContentfulPolicyGroupSysFieldSelector>;
+  readonly title: InputMaybe<FieldSelectorEnum>;
+  readonly updatedAt: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulPolicyGroupFilterInput = {
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly contentful_id: InputMaybe<StringQueryOperatorInput>;
+  readonly createdAt: InputMaybe<DateQueryOperatorInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly node_locale: InputMaybe<StringQueryOperatorInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly policies: InputMaybe<ContentfulAssetFilterListInput>;
+  readonly spaceId: InputMaybe<StringQueryOperatorInput>;
+  readonly sys: InputMaybe<ContentfulPolicyGroupSysFilterInput>;
+  readonly title: InputMaybe<StringQueryOperatorInput>;
+  readonly updatedAt: InputMaybe<DateQueryOperatorInput>;
+};
+
+type ContentfulPolicyGroupGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<ContentfulPolicyGroupEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<ContentfulPolicyGroupGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<ContentfulPolicyGroup>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type ContentfulPolicyGroupGroupConnection_distinctArgs = {
+  field: ContentfulPolicyGroupFieldSelector;
+};
+
+
+type ContentfulPolicyGroupGroupConnection_groupArgs = {
+  field: ContentfulPolicyGroupFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type ContentfulPolicyGroupGroupConnection_maxArgs = {
+  field: ContentfulPolicyGroupFieldSelector;
+};
+
+
+type ContentfulPolicyGroupGroupConnection_minArgs = {
+  field: ContentfulPolicyGroupFieldSelector;
+};
+
+
+type ContentfulPolicyGroupGroupConnection_sumArgs = {
+  field: ContentfulPolicyGroupFieldSelector;
+};
+
+type ContentfulPolicyGroupSortInput = {
+  readonly children: InputMaybe<NodeSortInput>;
+  readonly contentful_id: InputMaybe<SortOrderEnum>;
+  readonly createdAt: InputMaybe<SortOrderEnum>;
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly internal: InputMaybe<InternalSortInput>;
+  readonly node_locale: InputMaybe<SortOrderEnum>;
+  readonly parent: InputMaybe<NodeSortInput>;
+  readonly policies: InputMaybe<ContentfulAssetSortInput>;
+  readonly spaceId: InputMaybe<SortOrderEnum>;
+  readonly sys: InputMaybe<ContentfulPolicyGroupSysSortInput>;
+  readonly title: InputMaybe<SortOrderEnum>;
+  readonly updatedAt: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulPolicyGroupSys = {
+  readonly contentType: Maybe<ContentfulPolicyGroupSysContentType>;
+  readonly revision: Maybe<Scalars['Int']>;
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type ContentfulPolicyGroupSysContentType = {
+  readonly sys: Maybe<ContentfulPolicyGroupSysContentTypeSys>;
+};
+
+type ContentfulPolicyGroupSysContentTypeFieldSelector = {
+  readonly sys: InputMaybe<ContentfulPolicyGroupSysContentTypeSysFieldSelector>;
+};
+
+type ContentfulPolicyGroupSysContentTypeFilterInput = {
+  readonly sys: InputMaybe<ContentfulPolicyGroupSysContentTypeSysFilterInput>;
+};
+
+type ContentfulPolicyGroupSysContentTypeSortInput = {
+  readonly sys: InputMaybe<ContentfulPolicyGroupSysContentTypeSysSortInput>;
+};
+
+type ContentfulPolicyGroupSysContentTypeSys = {
+  readonly id: Maybe<Scalars['String']>;
+  readonly linkType: Maybe<Scalars['String']>;
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type ContentfulPolicyGroupSysContentTypeSysFieldSelector = {
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly linkType: InputMaybe<FieldSelectorEnum>;
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulPolicyGroupSysContentTypeSysFilterInput = {
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly linkType: InputMaybe<StringQueryOperatorInput>;
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type ContentfulPolicyGroupSysContentTypeSysSortInput = {
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly linkType: InputMaybe<SortOrderEnum>;
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulPolicyGroupSysFieldSelector = {
+  readonly contentType: InputMaybe<ContentfulPolicyGroupSysContentTypeFieldSelector>;
+  readonly revision: InputMaybe<FieldSelectorEnum>;
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulPolicyGroupSysFilterInput = {
+  readonly contentType: InputMaybe<ContentfulPolicyGroupSysContentTypeFilterInput>;
+  readonly revision: InputMaybe<IntQueryOperatorInput>;
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type ContentfulPolicyGroupSysSortInput = {
+  readonly contentType: InputMaybe<ContentfulPolicyGroupSysContentTypeSortInput>;
   readonly revision: InputMaybe<SortOrderEnum>;
   readonly type: InputMaybe<SortOrderEnum>;
 };
@@ -3411,6 +3641,7 @@ type Query = {
   readonly allContentfulEvents: ContentfulEventsConnection;
   readonly allContentfulFooter: ContentfulFooterConnection;
   readonly allContentfulLink: ContentfulLinkConnection;
+  readonly allContentfulPolicyGroup: ContentfulPolicyGroupConnection;
   readonly allContentfulTerm: ContentfulTermConnection;
   readonly allContentfulTermDates: ContentfulTermDatesConnection;
   readonly allDirectory: DirectoryConnection;
@@ -3428,6 +3659,7 @@ type Query = {
   readonly contentfulEvents: Maybe<ContentfulEvents>;
   readonly contentfulFooter: Maybe<ContentfulFooter>;
   readonly contentfulLink: Maybe<ContentfulLink>;
+  readonly contentfulPolicyGroup: Maybe<ContentfulPolicyGroup>;
   readonly contentfulTerm: Maybe<ContentfulTerm>;
   readonly contentfulTermDates: Maybe<ContentfulTermDates>;
   readonly directory: Maybe<Directory>;
@@ -3494,6 +3726,14 @@ type Query_allContentfulLinkArgs = {
   limit: InputMaybe<Scalars['Int']>;
   skip: InputMaybe<Scalars['Int']>;
   sort: InputMaybe<ReadonlyArray<InputMaybe<ContentfulLinkSortInput>>>;
+};
+
+
+type Query_allContentfulPolicyGroupArgs = {
+  filter: InputMaybe<ContentfulPolicyGroupFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<ContentfulPolicyGroupSortInput>>>;
 };
 
 
@@ -3696,6 +3936,22 @@ type Query_contentfulLinkArgs = {
   text: InputMaybe<StringQueryOperatorInput>;
   updatedAt: InputMaybe<DateQueryOperatorInput>;
   url: InputMaybe<StringQueryOperatorInput>;
+};
+
+
+type Query_contentfulPolicyGroupArgs = {
+  children: InputMaybe<NodeFilterListInput>;
+  contentful_id: InputMaybe<StringQueryOperatorInput>;
+  createdAt: InputMaybe<DateQueryOperatorInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  node_locale: InputMaybe<StringQueryOperatorInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  policies: InputMaybe<ContentfulAssetFilterListInput>;
+  spaceId: InputMaybe<StringQueryOperatorInput>;
+  sys: InputMaybe<ContentfulPolicyGroupSysFilterInput>;
+  title: InputMaybe<StringQueryOperatorInput>;
+  updatedAt: InputMaybe<DateQueryOperatorInput>;
 };
 
 
