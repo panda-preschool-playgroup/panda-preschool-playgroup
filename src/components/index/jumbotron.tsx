@@ -25,8 +25,7 @@ const Jumbotron: FC = () => {
                     journey of learning through play
                 </p>
                 <div className="flex justify-center flex-col sm:flex-row gap-6 sm:gap-24">
-                    <LinkButton text="Watch our virtual tour" href="#" />
-                    <LinkButton text="View the Panda gallery" href="#" />
+                    <LinkButton text="Watch our virtual tour" href="/coming-soon" />
                 </div>
             </div>
         </section>

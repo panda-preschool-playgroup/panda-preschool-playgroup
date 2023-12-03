@@ -16,7 +16,7 @@ const VacanciesPage: FC = () => {
                     Committee member/Trustee
                 </h3>
                 <p>
-                    We need people to represent and express the views of parents, bake, tending stalls, write for raffle
+                    We need people to represent and express the views of parents, bake, tend stalls, write for raffle
                     prizes or grants as well as people with financial, business, education or fundraising knowledge.
                 </p>
                 <p>
