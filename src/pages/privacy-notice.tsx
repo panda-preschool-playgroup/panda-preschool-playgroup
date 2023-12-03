@@ -9,6 +9,8 @@ const heading = "Privacy Notice";
 const PrivacyNoticePage: FC = () => {
     const privacyNotices = usePrivacyNotices();
 
+    console.log(privacyNotices.length);
+
     return (
         <Layout showHomeLink pageHeading={heading}>
             <Article heading={heading}>

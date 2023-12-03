@@ -63,8 +63,9 @@ const IndexPage: FC = () => {
                     early years setting that is unique to Copmanthorpe village.
                 </p>
                 <p>
-                    Find out more about how you can <Link to="/">support our fundraising</Link>, or{" "}
-                    <Link to="/">see the list of &quot;Panda Pals&quot;</Link> who very kindly support our cause!
+                    Find out more about how you can <Link to="/coming-soon">support our fundraising</Link>, or{" "}
+                    <Link to="/coming-soon">see the list of &quot;Panda Pals&quot;</Link> who very kindly support our
+                    cause!
                 </p>
             </Section>
         </Layout>

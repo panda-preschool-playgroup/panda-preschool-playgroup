@@ -47,29 +47,28 @@ const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => 
                 <NavigationSection
                     title="Our approach"
                     menuItems={[
-                        { title: "Mission statement", href: "#" },
-                        { title: "Green Panda", href: "#" },
+                        { title: "Mission statement", href: "/coming-soon" },
+                        { title: "Green Panda", href: "/coming-soon" },
                     ]}
                     activeSection={activeSection}
                 />
                 <NavigationSection
                     title="Funding"
                     menuItems={[
-                        { title: "Charitable framework", href: "#" },
-                        { title: "Fundraising", href: "#" },
-                        { title: "Panda Pals", href: "#" },
+                        { title: "Charitable framework", href: "/coming-soon" },
+                        { title: "Fundraising", href: "/coming-soon" },
+                        { title: "Panda Pals", href: "/coming-soon" },
                     ]}
                     activeSection={activeSection}
                 />
                 <NavigationSection
                     title="Our team"
                     menuItems={[
-                        { title: "Staff", href: "#" },
-                        { title: "Committee", href: "#" },
+                        { title: "Staff", href: "/coming-soon" },
+                        { title: "Committee", href: "/coming-soon" },
                     ]}
                     activeSection={activeSection}
                 />
-                <NavigationSection title="Contact us" href="/" />
             </Navbar.Collapse>
             <div className="flex md:order-2 w-full md:w-auto justify-between">
                 <LinkButton text="Apply" href="/apply" />

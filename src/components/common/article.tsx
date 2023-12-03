@@ -13,7 +13,7 @@ const Article: FC<PropsWithChildren<ArticleProps>> = ({
     return (
         <article className="pt-[4.5rem] 2xl:px-64 lg:px-48 md:px-24 px-12">
             <div className="2xl:flex 2xl:gap-36">
-                <div className="self-center">
+                <div className="self-center w-full">
                     <h2 className="font-dk-crayon-crumble mb-12 tracking-tight leading-none text-5xl lg:text-6xl">
                         {heading}
                     </h2>
