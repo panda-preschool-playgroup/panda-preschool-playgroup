@@ -2,12 +2,12 @@ import { GatsbyImage } from "gatsby-plugin-image";
 
 interface ContentfulImageProps {
     imageTitle: string;
-    images: Queries.ContentfulAsset[];
+    images: Queries.Maybe<Queries.ContentfulAsset>[];
 }
 
 const ContentfulImage = ({ imageTitle, images }: ContentfulImageProps) => {
-    const image: Queries.ContentfulAsset | undefined = images.find(
-        (image: Queries.ContentfulAsset) => image.title === imageTitle,
+    const image: Queries.Maybe<Queries.ContentfulAsset> | undefined = images.find(
+        (image: Queries.Maybe<Queries.ContentfulAsset>) => image?.title === imageTitle,
     );
 
     return (

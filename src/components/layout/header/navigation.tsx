@@ -72,7 +72,7 @@ const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => 
                 <NavigationSection title="Contact us" href="/" />
             </Navbar.Collapse>
             <div className="flex md:order-2 w-full md:w-auto justify-between">
-                <LinkButton text="Apply" href="#" />
+                <LinkButton text="Apply" href="/apply" />
                 <Navbar.Toggle
                     theme={{
                         base: "inline-flex items-center hover:text-green-light text-sm md:hidden",
