@@ -1,0 +1,57 @@
+import { FC } from "react";
+import { Table } from "flowbite-react";
+import Layout from "@/components/layout/layout";
+import PageHead from "@/components/layout/page-head/page-head";
+import Article from "@/components/common/article";
+import ContentfulImage from "@/components/common/contentful-image";
+import { useApplyImage } from "@/queries/use-apply-image";
+import { useFooterContent } from "@/queries/layout/footer/use-footer-content";
+
+const heading = "Apply";
+
+const ApplyPage: FC = () => {
+    const image = useApplyImage();
+
+    const footerContent = useFooterContent();
+
+    return (
+        <Layout showHomeLink pageHeading={heading}>
+            <Article heading={heading} image={<ContentfulImage imageTitle="Apply" images={[image]} />}>
+                <p>Thank you for your interest in Panda Playgroup! </p>
+                <p>
+                    To enquire about a place for your child, please get in touch for a chat using your preferred contact
+                    method:
+                </p>
+
+                <div className="max-w-4xl">
+                    <Table className="mb-12">
+                        <Table.Body className="text-lg text-slate-800 divide-y">
+                            <Table.Row>
+                                <Table.Cell>Email</Table.Cell>
+                                <Table.Cell>
+                                    <strong>
+                                        <a href={`mailto:${footerContent.emailAddress}`}>
+                                            {footerContent.emailAddress}
+                                        </a>
+                                    </strong>
+                                </Table.Cell>
+                            </Table.Row>
+                            <Table.Row>
+                                <Table.Cell>Telephone</Table.Cell>
+                                <Table.Cell>
+                                    <strong>{footerContent.phoneNumber}</strong>
+                                </Table.Cell>
+                            </Table.Row>
+                        </Table.Body>
+                    </Table>
+                </div>
+
+                <p>We look forward to hearing from you!</p>
+            </Article>
+        </Layout>
+    );
+};
+
+export default ApplyPage;
+
+export const Head = () => <PageHead pageTitle={heading} />;
