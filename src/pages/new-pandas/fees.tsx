@@ -12,7 +12,13 @@ const FeesPage: FC = () => {
         <Layout showHomeLink activeSection="New Pandas" pageHeading={heading}>
             <Article heading={heading}>
                 <p>
-                    The fee for your child to attend pre-school is <strong>£5.50 per hour</strong>:
+                    We are happy to accept Private Funding, Government Funding, or a mixture of Private and Government
+                    Funding for the hours that your child attends Panda Playgroup. Please note that in addition to the
+                    hourly charge (covered by Private /Government Funding), a “Pandas Consumable Charge” is also
+                    payable.
+                </p>
+                <p>
+                    The charge for Pandas is <strong>£5.50 per hour</strong> plus a “Pandas Consumables Charge”:
                 </p>
 
                 <div className="max-w-4xl">
@@ -38,28 +44,36 @@ const FeesPage: FC = () => {
                     </Table>
                 </div>
 
-                <p>We also ask for a small amount half-termly towards milk, snacks and other consumables.</p>
-
                 <h3 className="font-dk-crayon-crumble mb-12 tracking-tight leading-none text-3xl lg:text-4xl">
                     Payment
                 </h3>
+                <p>Government Funding replaces the hourly charge. The “Pandas Consumables Charge” is still payable.</p>
                 <p>
-                    Fees are payable on a half-termly basis (including sickness/non-attendance), and we accept cash and
-                    cheques.
-                </p>
-                <p>
-                    We accept childcare vouchers from:
                     <ul className="list-disc ml-12 mt-4">
-                        <li>Computershare Voucher Services</li>
-                        <li>Edenred Childcare Vouchers</li>
-                        <li>KiddiVouchers</li>
-                        <li>Fideliti</li>
+                        <li>
+                            All 3 and 4-year-olds are entitled to 15 hours funding per week over 38 weeks of the year.
+                        </li>
+                        <li>
+                            Some 3 and 4-year-olds are entitled to an additional 15 hours funding per week (30 Hours
+                            Extended Funding Entitlement) over 38 weeks of the year.
+                        </li>
+                        <li>Some 2-year-olds are entitled to 15 hours funding per week over 38 weeks of the year.</li>
                     </ul>
                 </p>
                 <p>
-                    Nursery Education Funding is also available from the term following a child&apos;s third birthday,
-                    or second birthday in some cases. Please visit{" "}
-                    <a href="https://www.raiseyork.co.uk/childcare/childcare-2">Raise York</a> for further details.
+                    To check eligibility and how to apply for 30 hours extended funding for 3- and 4-year-olds and 15
+                    hours funding for 2-year-olds please refer to{" "}
+                    <a href="https://www.childcarechoices.gov.uk">Childcare Choices</a>.
+                </p>
+
+                <h3 className="font-dk-crayon-crumble my-12 tracking-tight leading-none text-3xl lg:text-4xl">
+                    Pandas Consumable Charge
+                </h3>
+                <p>
+                    There is an additional charge of <strong>£6.00 per day of the week per half term</strong> to cover
+                    the cost of snacks and consumables that Panda Playgroup provides. (For example, if you child attends
+                    three days a week, then an additional £6.00 x 3 = <strong>£18.00 per half term</strong> is payable
+                    directly to Panda Playgroup).
                 </p>
                 <p>
                     Please don&apos;t hesitate to <Link to="/contact">get in touch with us</Link> for any other
