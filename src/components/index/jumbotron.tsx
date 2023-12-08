@@ -1,10 +1,12 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
-import LinkButton from "@/components/common/link-button";
+import Button from "@/components/common/button";
+import TourModal from "@/components/index/tour-modal";
 import { useJumbotronImage } from "@/queries/index/use-jumbotron-image";
 
 const Jumbotron: FC = () => {
     const jumbotronImage: Queries.ContentfulAsset = useJumbotronImage();
+    const [openTourModal, setOpenTourModal] = useState(false);
 
     return (
         <section className="grid">
@@ -25,9 +27,10 @@ const Jumbotron: FC = () => {
                     journey of learning through play
                 </p>
                 <div className="flex justify-center flex-col sm:flex-row gap-6 sm:gap-24">
-                    <LinkButton text="Watch our virtual tour" href="/coming-soon" />
+                    <Button onClick={() => setOpenTourModal(true)} text="Watch our virtual tour" />
                 </div>
             </div>
+            <TourModal openTourModal={openTourModal} setOpenTourModal={setOpenTourModal} />
         </section>
     );
 };
