@@ -25,12 +25,12 @@ describe("jumbotron", () => {
         expect(content).toBeInTheDocument();
     });
 
-    it("renders the virtual tour link", () => {
+    it("renders the virtual tour button", () => {
         render(<Jumbotron />);
 
-        const link = screen.queryByRole("link", { name: "Watch our virtual tour" });
+        const button = screen.queryByRole("button", { name: "Watch our virtual tour" });
 
-        expect(link).toBeInTheDocument();
+        expect(button).toBeInTheDocument();
     });
 
     it("renders the jumbotron image", () => {
