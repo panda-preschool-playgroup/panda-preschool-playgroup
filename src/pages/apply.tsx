@@ -19,32 +19,26 @@ const ApplyPage: FC = () => {
             <Article heading={heading} image={<ContentfulImage imageTitle="Apply" images={[image]} />}>
                 <p>Thank you for your interest in Panda Playgroup! </p>
                 <p>
-                    To enquire about a place for your child, please get in touch for a chat using your preferred contact
-                    method:
+                    To enquire about a place for your child, please get in touch for a chat through your preferred
+                    contact method:
                 </p>
 
-                <div className="max-w-4xl">
-                    <Table className="mb-12">
-                        <Table.Body className="text-lg text-slate-800 divide-y">
-                            <Table.Row>
-                                <Table.Cell>Email</Table.Cell>
-                                <Table.Cell>
-                                    <strong>
-                                        <a href={`mailto:${footerContent.emailAddress}`}>
-                                            {footerContent.emailAddress}
-                                        </a>
-                                    </strong>
-                                </Table.Cell>
-                            </Table.Row>
-                            <Table.Row>
-                                <Table.Cell>Telephone</Table.Cell>
-                                <Table.Cell>
-                                    <strong>{footerContent.phoneNumber}</strong>
-                                </Table.Cell>
-                            </Table.Row>
-                        </Table.Body>
-                    </Table>
-                </div>
+                <Table className="mb-12">
+                    <Table.Body className="text-lg text-slate-800 divide-y">
+                        <Table.Row>
+                            <Table.Cell>
+                                <strong>
+                                    <a href={`mailto:${footerContent.emailAddress}`}>{footerContent.emailAddress}</a>
+                                </strong>
+                            </Table.Cell>
+                        </Table.Row>
+                        <Table.Row>
+                            <Table.Cell>
+                                <strong>{footerContent.phoneNumber}</strong>
+                            </Table.Cell>
+                        </Table.Row>
+                    </Table.Body>
+                </Table>
 
                 <p>We look forward to hearing from you!</p>
             </Article>

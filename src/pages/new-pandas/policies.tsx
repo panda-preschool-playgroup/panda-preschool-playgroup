@@ -15,7 +15,7 @@ const PoliciesPage: FC = () => {
                 <p>You can download copies of all of our policy documents.</p>
                 {policyGroups.map((policyGroup: Queries.ContentfulPolicyGroup) => (
                     <Fragment key={policyGroup.id}>
-                        <h3 className="font-dk-crayon-crumble mb-6 tracking-tight leading-none text-3xl lg:text-4xl">
+                        <h3 className="font-dk-crayon-crumble mt-12 mb-6 tracking-tight leading-none text-3xl lg:text-4xl">
                             {policyGroup.title}
                         </h3>
                         <p>

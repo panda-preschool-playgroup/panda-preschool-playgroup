@@ -44,7 +44,7 @@ const FeesPage: FC = () => {
                     </Table>
                 </div>
 
-                <h3 className="font-dk-crayon-crumble mb-12 tracking-tight leading-none text-3xl lg:text-4xl">
+                <h3 className="font-dk-crayon-crumble mt-12 mb-6 tracking-tight leading-none text-3xl lg:text-4xl">
                     Payment
                 </h3>
                 <p>Government Funding replaces the hourly charge. The “Pandas Consumables Charge” is still payable.</p>

@@ -12,7 +12,7 @@ const VacanciesPage: FC = () => {
     return (
         <Layout showHomeLink pageHeading={heading}>
             <Article heading={heading}>
-                <h3 className="font-dk-crayon-crumble mb-12 tracking-tight leading-none text-3xl lg:text-4xl">
+                <h3 className="font-dk-crayon-crumble mt-12 mb-6 tracking-tight leading-none text-3xl lg:text-4xl">
                     Committee member/Trustee
                 </h3>
                 <p>

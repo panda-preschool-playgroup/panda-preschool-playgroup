@@ -56,7 +56,7 @@ const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => 
                     title="Funding"
                     menuItems={[
                         { title: "Charitable framework", href: "/coming-soon" },
-                        { title: "Fundraising", href: "/coming-soon" },
+                        { title: "Fundraising", href: "/funding/fundraising" },
                         { title: "Panda Pals", href: "/coming-soon" },
                     ]}
                     activeSection={activeSection}
