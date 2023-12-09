@@ -33,7 +33,8 @@ const PreSchoolPage: FC = () => {
                     we do not plan on buying any more. If you&apos;d like to find out more about our environmental
                     commitments please consult the <Link to="/coming-soon">Green Panda</Link>.
                 </p>
-                <h3 className="font-dk-crayon-crumble mb-12 tracking-tight leading-none text-3xl lg:text-4xl">
+
+                <h3 className="font-dk-crayon-crumble mt-12 mb-6 tracking-tight leading-none text-3xl lg:text-4xl">
                     Getting involved
                 </h3>
                 <p>
