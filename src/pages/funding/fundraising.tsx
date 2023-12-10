@@ -17,8 +17,6 @@ const FundraisingPage: FC = () => {
         (image: Queries.ContentfulAsset) => image.title === "Fundraising - Easy Fundraising Logo",
     );
 
-    console.log(easyFundraisingLogo?.url);
-
     return (
         <Layout showHomeLink activeSection="Funding" pageHeading={heading}>
             <Article heading={heading}>

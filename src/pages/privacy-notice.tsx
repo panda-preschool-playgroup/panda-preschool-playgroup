@@ -20,7 +20,7 @@ const PrivacyNoticePage: FC = () => {
                     Sticky Mitts and Tiny Tots.
                 </p>
                 <p>
-                    <ul className="list-disc ml-12 mt-4">
+                    <ul className="list-disc leading-loose ml-12 mt-4">
                         {privacyNotices.map((privacyNotice: Queries.ContentfulAsset) => (
                             <li key={privacyNotice.id}>
                                 <a href={privacyNotice.url ?? "#"} target="_blank" rel="noreferrer">
