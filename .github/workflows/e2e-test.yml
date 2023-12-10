@@ -11,12 +11,12 @@ jobs:
   e2e-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
           cache: npm
-      - uses: cypress-io/github-action@a6333aaab4c95a31b3b020b33e00fe44d4af9f6e # v6.1.0
+      - uses: cypress-io/github-action@ebe8b24c4428922d0f793a5c4c96853a633180e3 # v6.6.0
         with:
           build: npm run build
           start: npm run serve
