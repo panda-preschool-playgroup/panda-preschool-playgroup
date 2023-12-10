@@ -9,7 +9,7 @@ const TermDates: FC = () => {
     return (
         <>
             <h2 className="font-dk-crayon-crumble mb-12 tracking-tight leading-none text-4xl">Term dates</h2>
-            <Table>
+            <Table className="text-center">
                 <Table.Body className="text-lg text-slate-800 divide-y">
                     {termDates.terms?.map((term: Queries.Maybe<Queries.ContentfulTerm>) => (
                         <Term key={term?.id} term={term} />
@@ -28,7 +28,11 @@ const Term: FC<TermProps> = ({ term }: TermProps) => {
     return (
         <>
             <Table.Row>
-                <Table.Cell rowSpan={2}>{term?.name}</Table.Cell>
+                <Table.Cell colSpan={2} theme={{ base: "px-6 py-4 bg-slate-200" }}>
+                    <strong>{term?.name}</strong>
+                </Table.Cell>
+            </Table.Row>
+            <Table.Row>
                 <Table.Cell>
                     {formatDate(term?.start)} - {formatDate(term?.lastDayBeforeHalfTerm)}
                 </Table.Cell>
