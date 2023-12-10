@@ -42,7 +42,7 @@ const PreSchoolPage: FC = () => {
                     hobbies, skills or interests to share with the children. You might, for example, be a member of the
                     Emergency Services, own chickens, have an active interests in crafts or keep exotic pets. If you
                     think you have skills, hobbies or interests that would be of interest to our children, please let us
-                    know by <Link to="/">getting in touch</Link>!
+                    know by getting in touch!
                 </p>
                 <p>
                     We are also always on the lookout for new committee members - take a look at our{" "}

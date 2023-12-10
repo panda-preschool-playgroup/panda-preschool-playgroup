@@ -19,7 +19,7 @@ const PoliciesPage: FC = () => {
                             {policyGroup.title}
                         </h3>
                         <p>
-                            <ul className="list-disc ml-12 mt-4">
+                            <ul className="list-disc leading-loose ml-12 mt-4">
                                 {policyGroup.policies?.map((policy: Queries.Maybe<Queries.ContentfulAsset>) => (
                                     <li key={policy?.id}>
                                         <a href={policy?.publicUrl} target="_blank" rel="noreferrer">
