@@ -24,16 +24,16 @@ const ApplyPage: FC = () => {
                 </p>
 
                 <Table className="mb-12">
-                    <Table.Body className="text-lg text-slate-800 divide-y">
+                    <Table.Body className="text-base sm:text-lg text-slate-800 divide-y">
                         <Table.Row>
-                            <Table.Cell>
+                            <Table.Cell className="px-3">
                                 <strong>
                                     <a href={`mailto:${footerContent.emailAddress}`}>{footerContent.emailAddress}</a>
                                 </strong>
                             </Table.Cell>
                         </Table.Row>
                         <Table.Row>
-                            <Table.Cell>
+                            <Table.Cell className="px-3">
                                 <strong>{footerContent.phoneNumber}</strong>
                             </Table.Cell>
                         </Table.Row>
