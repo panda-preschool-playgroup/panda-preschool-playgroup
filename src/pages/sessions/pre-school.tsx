@@ -16,7 +16,7 @@ const PreSchoolPage: FC = () => {
                     <strong>12:30pm to 3:00pm</strong>.{" "}
                 </p>
                 <p>
-                    We also offer an earlier <strong>8:30am</strong> start on request, and you can also opt to{" "}
+                    We also offer an earlier <strong>8:30am</strong> start on request, and you can opt to{" "}
                     <strong>pick up your child earlier as well</strong>. Because we think it&apos;s important to offer
                     this flexibility,{" "}
                     <Link to="/new-pandas/fees">
