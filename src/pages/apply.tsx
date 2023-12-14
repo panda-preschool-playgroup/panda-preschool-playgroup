@@ -19,8 +19,8 @@ const ApplyPage: FC = () => {
             <Article heading={heading} image={<ContentfulImage imageTitle="Apply" images={[image]} />}>
                 <p>Thank you for your interest in Panda Playgroup! </p>
                 <p>
-                    To enquire about a place for your child, please get in touch for a chat through your preferred
-                    contact method:
+                    To enquire about a place for your child or to arrange a visit, please get in touch for a chat
+                    through your preferred contact method:
                 </p>
 
                 <Table className="mb-12">

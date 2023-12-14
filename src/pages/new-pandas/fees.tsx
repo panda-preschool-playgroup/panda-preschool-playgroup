@@ -1,6 +1,5 @@
 import { FC } from "react";
 import { Link } from "gatsby";
-import { Table } from "flowbite-react";
 import Layout from "@/components/layout/layout";
 import PageHead from "@/components/layout/page-head/page-head";
 import Article from "@/components/common/article";
@@ -18,31 +17,15 @@ const FeesPage: FC = () => {
                     payable.
                 </p>
                 <p>
-                    The charge for Pandas is <strong>£5.50 per hour</strong> plus a “Pandas Consumables Charge”:
+                    The charge for Pandas is <strong>£5.50 per hour</strong> plus a “Pandas Consumables Charge”.
                 </p>
 
-                <div className="max-w-4xl">
-                    <Table className="mb-12">
-                        <Table.Head>
-                            <Table.HeadCell className="bg-gray-200">Session</Table.HeadCell>
-                            <Table.HeadCell className="bg-gray-200">Cost</Table.HeadCell>
-                        </Table.Head>
-                        <Table.Body className="text-lg text-slate-800 divide-y">
-                            <Table.Row>
-                                <Table.Cell>Morning (3 hours)</Table.Cell>
-                                <Table.Cell>
-                                    <strong>£16.50</strong>
-                                </Table.Cell>
-                            </Table.Row>
-                            <Table.Row>
-                                <Table.Cell>Full day (6 hours)</Table.Cell>
-                                <Table.Cell>
-                                    <strong>£33.00</strong>
-                                </Table.Cell>
-                            </Table.Row>
-                        </Table.Body>
-                    </Table>
-                </div>
+                <p>
+                    We advertise this as a flat hourly rate so that you can calculate your own fees based on the hours
+                    you choose. So if you opt for an early start, or if you choose to pick your child up a little
+                    earlier, you can calculate the fees you&apos;ll pay based on the hourly rate. Our policy is{" "}
+                    <strong>you only pay for the hours you need</strong>.
+                </p>
 
                 <h3 className="font-dk-crayon-crumble mt-12 mb-6 tracking-tight leading-none text-3xl lg:text-4xl">
                     Payment

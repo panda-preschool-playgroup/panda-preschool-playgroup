@@ -13,10 +13,18 @@ const PreSchoolPage: FC = () => {
                 <p>
                     Our morning sessions run Monday to Friday, <strong>9:00am to 12:00pm</strong>. We then have lunch
                     club from <strong>12:00pm to 12:30pm</strong>, and the afternoon session runs from{" "}
-                    <strong>12:30pm to 3:00pm</strong>. We also offer an earlier <strong>8:30am</strong> start on
-                    request. The pre-school is open for bookings from September or Easter and we&apos;d love to meet
-                    you!
+                    <strong>12:30pm to 3:00pm</strong>.{" "}
                 </p>
+                <p>
+                    We also offer an earlier <strong>8:30am</strong> start on request, and you can opt to{" "}
+                    <strong>pick up your child earlier as well</strong>. Because we think it&apos;s important to offer
+                    this flexibility,{" "}
+                    <Link to="/new-pandas/fees">
+                        fees are calculated at a flat rate based only on the hours you need
+                    </Link>
+                    .
+                </p>
+                <p>The pre-school is open for bookings from September or Easter and we&apos;d love to meet you!</p>
                 <p>
                     From the age of two, children are eligible to join Panda Playgroup. The pre-school is registered
                     with <a href="https://reports.ofsted.gov.uk/provider/16/EY501461">OFSTED</a> and is a member of the
