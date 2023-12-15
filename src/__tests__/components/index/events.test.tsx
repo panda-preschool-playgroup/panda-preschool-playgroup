@@ -72,7 +72,7 @@ describe("events", () => {
 
         render(<Events />);
 
-        const message = screen.queryByText("Check back soon!");
+        const message = screen.queryByText("...check back soon!");
 
         expect(message).toBeInTheDocument();
     });

@@ -22,7 +22,7 @@ const Events: FC = () => {
                         ),
                 )
             ) : (
-                <p>Check back soon!</p>
+                <p>...check back soon!</p>
             )}
         </>
     );
