@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
-import { formatDate } from "@/services/dates";
+import { dateIsInThePast, formatDate } from "@/services/dates";
 
 interface EventProps {
     name: string;
@@ -29,18 +29,26 @@ const Event: FC<EventProps> = ({ name, date, href, image }: EventProps) => {
         </>
     );
 
-    return href ? (
-        <a
-            href={href}
-            className={classes.concat(" no-underline cursor-pointer hover:bg-slate-200")}
-            target="_blank"
-            rel="noreferrer"
-        >
-            {content}
-        </a>
-    ) : (
-        <div className={classes}>{content}</div>
-    );
+    if (dateIsInThePast(date)) {
+        return (
+            <em>
+                <div className={classes.concat(" text-gray-500")}>{content}</div>
+            </em>
+        );
+    } else {
+        return href ? (
+            <a
+                href={href}
+                className={classes.concat(" no-underline cursor-pointer hover:bg-slate-200")}
+                target="_blank"
+                rel="noreferrer"
+            >
+                {content}
+            </a>
+        ) : (
+            <div className={classes}>{content}</div>
+        );
+    }
 };
 
 export default Event;

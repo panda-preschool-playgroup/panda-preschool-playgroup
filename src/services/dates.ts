@@ -6,4 +6,9 @@ const formatDate = (date?: string | null): string => {
         .replace(",", "");
 };
 
-export { formatDate };
+const dateIsInThePast = (date: string): boolean => {
+    const dayAfter = new Date(new Date(date).setDate(new Date(date).getDate() + 1));
+    return dayAfter.getTime() < new Date().getTime();
+};
+
+export { formatDate, dateIsInThePast };
