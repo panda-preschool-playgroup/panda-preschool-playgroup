@@ -33,18 +33,6 @@ const config: GatsbyConfig = {
             },
         },
         {
-            resolve: "gatsby-plugin-google-gtag",
-            options: {
-                trackingIds: ["G-4ZHQETGRVF"],
-                gtagConfig: {
-                    anonymize_ip: true,
-                },
-                pluginConfig: {
-                    respectDNT: true,
-                },
-            },
-        },
-        {
             resolve: "gatsby-plugin-manifest",
             options: {
                 name: "Panda Playgroup",
