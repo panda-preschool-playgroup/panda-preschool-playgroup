@@ -20,16 +20,18 @@ const PandaPalsPage: FC = () => {
                 <p>
                     So, (imagine these words shouted by children) - <strong>THANK YOU!!</strong>
                 </p>
-                <ul className="leading-loose ml-12 my-6">
-                    {pandaPals.links?.map((link: Queries.Maybe<Queries.ContentfulLink>) => (
-                        <li key={link?.id}>
-                            <span aria-hidden="true">🐼</span>{" "}
-                            <a href={link?.url ?? ""} target="_blank" rel="noreferrer">
-                                {link?.text}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
+                <p>
+                    <ul className="leading-loose ml-12 my-6">
+                        {pandaPals.links?.map((link: Queries.Maybe<Queries.ContentfulLink>) => (
+                            <li key={link?.id}>
+                                <span aria-hidden="true">🐼</span>{" "}
+                                <a href={link?.url ?? ""} target="_blank" rel="noreferrer">
+                                    {link?.text}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </p>
             </Article>
         </Layout>
     );
