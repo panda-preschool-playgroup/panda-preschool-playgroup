@@ -39,7 +39,7 @@ const PreSchoolPage: FC = () => {
                     At Panda Playgroup we are trying our hardest to improve our environmental credentials. In line with
                     the Reduce, Reuse, Recycle methodology, Panda Playgroup has now used up the last of our glitter and
                     we do not plan on buying any more. If you&apos;d like to find out more about our environmental
-                    commitments please consult the <Link to="/coming-soon">Green Panda</Link>.
+                    commitments please consult the <Link to="/our-approach/green-panda">Green Panda</Link>.
                 </p>
 
                 <h3 className="font-dk-crayon-crumble mt-12 mb-6 tracking-tight leading-none text-3xl lg:text-4xl">
