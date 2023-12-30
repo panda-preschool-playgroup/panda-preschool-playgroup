@@ -24,7 +24,7 @@ const PreSchoolPage: FC = () => {
                     </Link>
                     .
                 </p>
-                <p>The pre-school is open for bookings from September or Easter and we&apos;d love to meet you!</p>
+                <p>The preschool is open for registration and bookings and we&apos;d love to meet you!</p>
                 <p>
                     From the age of two, children are eligible to join Panda Playgroup. The pre-school is registered
                     with <a href="https://reports.ofsted.gov.uk/provider/16/EY501461">OFSTED</a> and is a member of the

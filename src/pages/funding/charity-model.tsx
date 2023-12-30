@@ -17,26 +17,22 @@ const CharityModelPage: FC = () => {
                     to see our complete Charitable Framework.
                 </p>
                 <p>Our primary sources of income are:</p>
-                <p>
-                    <ul className="list-disc leading-loose ml-12 my-6">
-                        <li>Session fees</li>
-                        <li>Government funding</li>
-                        <li>Workplace childcare voucher schemes</li>
-                        <li>Grants and charitable donations</li>
-                        <li>Fundraising</li>
-                    </ul>
-                </p>
+                <ul className="list-disc leading-loose ml-12 my-6 mb-10">
+                    <li>Session fees</li>
+                    <li>Government funding</li>
+                    <li>Workplace childcare voucher schemes</li>
+                    <li>Grants and charitable donations</li>
+                    <li>Fundraising</li>
+                </ul>
                 <p>This covers the day-to-day running costs such as:</p>
-                <p>
-                    <ul className="list-disc leading-loose ml-12 my-6">
-                        <li>Staff wages</li>
-                        <li>Staff training</li>
-                        <li>Venue hire</li>
-                        <li>Insurance</li>
-                        <li>Play and educational equipment</li>
-                        <li>Administration costs</li>
-                    </ul>
-                </p>
+                <ul className="list-disc leading-loose ml-12 my-6 mb-10">
+                    <li>Staff wages</li>
+                    <li>Staff training</li>
+                    <li>Venue hire</li>
+                    <li>Insurance</li>
+                    <li>Play and educational equipment</li>
+                    <li>Administration costs</li>
+                </ul>
                 <p>
                     We try to keep our fees as low as possible and utilise fundraising as a way of meeting expenditure
                     for new equipment and resources. Fundraising also ensures that we have enough reserves to make sure

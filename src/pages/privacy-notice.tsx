@@ -19,17 +19,15 @@ const PrivacyNoticePage: FC = () => {
                     disclosure of certain information, including your personal information, by Panda Playgroup and
                     Sticky Mitts and Tiny Tots.
                 </p>
-                <p>
-                    <ul className="list-disc leading-loose ml-12 mt-4">
-                        {privacyNotices.map((privacyNotice: Queries.ContentfulAsset) => (
-                            <li key={privacyNotice.id}>
-                                <a href={privacyNotice.url ?? "#"} target="_blank" rel="noreferrer">
-                                    {privacyNotice.title}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </p>
+                <ul className="list-disc leading-loose ml-12 mt-4 mb-10">
+                    {privacyNotices.map((privacyNotice: Queries.ContentfulAsset) => (
+                        <li key={privacyNotice.id}>
+                            <a href={privacyNotice.url ?? "#"} target="_blank" rel="noreferrer">
+                                {privacyNotice.title}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
             </Article>
         </Layout>
     );
