@@ -35,18 +35,16 @@ const GreenPandaPage: FC = () => {
                     <a href="https://www.terracycle.com/en-GB">TerraCycle</a>. St Nicks are able to raise funds through
                     their recycling scheme, which contributes towards their running costs.
                 </p>
-                <p>
-                    These are the items that can be recycled here:
-                    <ul className="list-disc leading-loose ml-12 mt-4">
-                        <li>Crisps, nuts, popcorn and pretzels packets (not &ldquo;Cheddars&rdquo;)</li>
-                        <li>Sweet biscuit, cake bar and cracker wrappers (not flapjack, cereal, or chocolate bars)</li>
-                        <li>Plastic pens, felt tips, marker pens, highlighters</li>
-                        <li>
-                            Toothpaste tubes, plastic toothbrushes and their outer packaging (not cardboard), electric
-                            toothbrush heads
-                        </li>
-                    </ul>
-                </p>
+                <p className="mb-0">These are the items that can be recycled here:</p>
+                <ul className="list-disc leading-loose ml-12 mt-4 mb-10">
+                    <li>Crisps, nuts, popcorn and pretzels packets (not &ldquo;Cheddars&rdquo;)</li>
+                    <li>Sweet biscuit, cake bar and cracker wrappers (not flapjack, cereal, or chocolate bars)</li>
+                    <li>Plastic pens, felt tips, marker pens, highlighters</li>
+                    <li>
+                        Toothpaste tubes, plastic toothbrushes and their outer packaging (not cardboard), electric
+                        toothbrush heads
+                    </li>
+                </ul>
                 <h3 className="font-dk-crayon-crumble mt-12 mb-6 tracking-tight leading-none text-3xl lg:text-4xl">
                     Our website
                 </h3>

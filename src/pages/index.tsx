@@ -38,13 +38,13 @@ const IndexPage: FC = () => {
             </Section>
             <Section
                 style="alt"
-                heading="Drop-in sessions, Sticky Mitts and Tiny Tots"
+                heading="Stay and play sessions, Sticky Mitts and Tiny Tots"
                 image={<ContentfulImage imageTitle="Homepage - Sticky Mitts and Tiny Tots" images={images} />}
             >
                 <p>
-                    As well as our pre-school we offer our extremely popular drop-in sessions for babies and toddlers,{" "}
-                    <strong>Sticky Mitts and Tiny Tots</strong>! This is a friendly, fun group for children and their
-                    grown-ups happening regularly during term time.
+                    As well as our pre-school we offer our extremely popular stay and play sessions for babies and
+                    toddlers, <strong>Sticky Mitts and Tiny Tots</strong>! This is a friendly, fun group for children
+                    and their grown-ups happening regularly during term time.
                 </p>
                 <p>
                     We aim to help parents find somewhere safe and welcoming to come and have fun with their children,
@@ -52,7 +52,7 @@ const IndexPage: FC = () => {
                 </p>
                 <p className="text-2xl">
                     <strong>
-                        <Link to="/sessions/sticky-mitts-tiny-tots">Discover our drop-in sessions</Link>
+                        <Link to="/sessions/stay-and-play">Discover our stay and play sessions</Link>
                     </strong>
                 </p>
             </Section>

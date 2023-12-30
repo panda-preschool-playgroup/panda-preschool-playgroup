@@ -17,7 +17,8 @@ const FeesPage: FC = () => {
                     payable.
                 </p>
                 <p>
-                    The charge for Pandas is <strong>£5.50 per hour</strong> plus a “Pandas Consumables Charge”.
+                    The charge for Pandas is currently <strong>£5.50 per hour</strong> plus a “Pandas Consumables
+                    Charge”.
                 </p>
 
                 <p>
@@ -31,18 +32,14 @@ const FeesPage: FC = () => {
                     Payment
                 </h3>
                 <p>Government Funding replaces the hourly charge. The “Pandas Consumables Charge” is still payable.</p>
-                <p>
-                    <ul className="list-disc leading-loose ml-12 mt-4">
-                        <li>
-                            All 3 and 4-year-olds are entitled to 15 hours funding per week over 38 weeks of the year.
-                        </li>
-                        <li>
-                            Some 3 and 4-year-olds are entitled to an additional 15 hours funding per week (30 Hours
-                            Extended Funding Entitlement) over 38 weeks of the year.
-                        </li>
-                        <li>Some 2-year-olds are entitled to 15 hours funding per week over 38 weeks of the year.</li>
-                    </ul>
-                </p>
+                <ul className="list-disc leading-loose ml-12 mt-4 mb-10">
+                    <li>All 3 and 4-year-olds are entitled to 15 hours funding per week over 38 weeks of the year.</li>
+                    <li>
+                        Some 3 and 4-year-olds are entitled to an additional 15 hours funding per week (30 Hours
+                        Extended Funding Entitlement) over 38 weeks of the year.
+                    </li>
+                    <li>Some 2-year-olds are entitled to 15 hours funding per week over 38 weeks of the year.</li>
+                </ul>
                 <p>
                     To check eligibility and how to apply for 30 hours extended funding for 3- and 4-year-olds and 15
                     hours funding for 2-year-olds please refer to{" "}
