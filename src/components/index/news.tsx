@@ -6,7 +6,9 @@ const News: FC = () => {
         <div>
             <h2 className="font-dk-crayon-crumble mb-12 tracking-tight leading-none text-4xl">News</h2>
             <div className="text-left">
-                <p className="text-base text-slate-500 mb-6">{formatDate("01-01-2024")}</p>
+                <p className="text-base mb-6">
+                    <em>{formatDate("12-30-2023")}</em>
+                </p>
                 <p>
                     <strong>STOP PRESS!</strong> We are reviewing and our services and have some exciting proposals for
                     2024. The preschool is preparing to:
