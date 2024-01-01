@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is the code that powers the website https://www.pandaplaygroup.co.uk/new, a charity-run children's playgroup situated in the village of Copmanthorpe near the city of York, UK.
+This is the code that powers the website https://www.pandaplaygroup.co.uk, a charity-run children's playgroup situated in the village of Copmanthorpe near the city of York, UK.
 
 It is a static site developed with [Gatsby](https://www.gatsbyjs.com/) and [TypeScript](https://www.typescriptlang.org/), using [Flowbite](https://flowbite.com/) as its design system and [Contentful](https://www.contentful.com/) as its CMS.
 
@@ -22,7 +22,7 @@ CONTENTFUL_ENV=
 CONTENTFUL_ACCESS_TOKEN=
 ```
 
-Values for these can be retrieved from the settings page in Contentful.
+Values for these can be retrieved from the settings page when logged into Contentful with a Panda Playgroup account.
 
 ### Common commands
 
