@@ -23,7 +23,7 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
       - run: npm ci
-      - run: npm run ci:build
+      - run: npm run build
         env:
           CONTENTFUL_SPACE_ID: ${{ vars.CONTENTFUL_SPACE_ID }}
           CONTENTFUL_ENV: ${{ vars.CONTENTFUL_ENV }}
@@ -32,7 +32,8 @@ jobs:
         uses: easingthemes/ssh-deploy@aa1c48118d8dc380d98fcec25cb4ea6da39029ba # v.4.1.10
         env:
           SOURCE: public/
-          TARGET: ~/public_html/new/
+          TARGET: ~/public_html/
+          ARGS: -rlgoDzvc -i --delete --exclude=.htaccess --exclude=404.html --exclude=tour.mp4 --exclude=fonts/ --exclude=.well-known/ --exclude=cgi-bin/
           REMOTE_HOST: ${{ vars.DEPLOY_HOST }}
           REMOTE_PORT: ${{ vars.DEPLOY_PORT }}
           REMOTE_USER: ${{ vars.DEPLOY_USER }}
