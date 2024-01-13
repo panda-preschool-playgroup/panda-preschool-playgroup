@@ -1,11 +1,11 @@
-import { StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import { FC, PropsWithChildren } from "react";
 
 interface StaffSectionProps {
     style: "standard" | "alt";
     name: string;
     title: string;
-    image?: React.ReactElement;
+    image?: Queries.Maybe<Queries.ContentfulAsset>;
 }
 
 const StaffSection: FC<PropsWithChildren<StaffSectionProps>> = ({
@@ -28,7 +28,14 @@ const StaffSection: FC<PropsWithChildren<StaffSectionProps>> = ({
             <div className="2xl:flex 2xl:gap-36">
                 <div className={`shrink-0 flex justify-center ${style === "standard" ? " 2xl:order-last" : ""}`}>
                     <div className="md:shrink-0 pb-8 2xl:pb-0">
-                        {image ?? (
+                        {image?.gatsbyImageData ? (
+                            <GatsbyImage
+                                image={image.gatsbyImageData}
+                                alt={image.title ?? ""}
+                                aria-hidden
+                                className="rounded"
+                            />
+                        ) : (
                             <StaticImage
                                 src="../../../images/logo.png"
                                 alt={`Placeholder portrait for ${name}`}

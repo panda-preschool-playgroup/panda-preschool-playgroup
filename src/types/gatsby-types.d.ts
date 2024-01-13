@@ -1884,6 +1884,7 @@ type ContentfulPerson = ContentfulEntry & ContentfulReference & Node & {
   readonly node_locale: Scalars['String'];
   readonly parent: Maybe<Node>;
   readonly person_list: Maybe<ReadonlyArray<Maybe<ContentfulPersonList>>>;
+  readonly profilePicture: Maybe<ContentfulAsset>;
   readonly spaceId: Maybe<Scalars['String']>;
   readonly sys: Maybe<ContentfulPersonSys>;
   readonly title: Maybe<Scalars['String']>;
@@ -1978,6 +1979,7 @@ type ContentfulPersonFieldSelector = {
   readonly node_locale: InputMaybe<FieldSelectorEnum>;
   readonly parent: InputMaybe<NodeFieldSelector>;
   readonly person_list: InputMaybe<ContentfulPersonListFieldSelector>;
+  readonly profilePicture: InputMaybe<ContentfulAssetFieldSelector>;
   readonly spaceId: InputMaybe<FieldSelectorEnum>;
   readonly sys: InputMaybe<ContentfulPersonSysFieldSelector>;
   readonly title: InputMaybe<FieldSelectorEnum>;
@@ -1995,6 +1997,7 @@ type ContentfulPersonFilterInput = {
   readonly node_locale: InputMaybe<StringQueryOperatorInput>;
   readonly parent: InputMaybe<NodeFilterInput>;
   readonly person_list: InputMaybe<ContentfulPersonListFilterListInput>;
+  readonly profilePicture: InputMaybe<ContentfulAssetFilterInput>;
   readonly spaceId: InputMaybe<StringQueryOperatorInput>;
   readonly sys: InputMaybe<ContentfulPersonSysFilterInput>;
   readonly title: InputMaybe<StringQueryOperatorInput>;
@@ -2287,6 +2290,7 @@ type ContentfulPersonSortInput = {
   readonly node_locale: InputMaybe<SortOrderEnum>;
   readonly parent: InputMaybe<NodeSortInput>;
   readonly person_list: InputMaybe<ContentfulPersonListSortInput>;
+  readonly profilePicture: InputMaybe<ContentfulAssetSortInput>;
   readonly spaceId: InputMaybe<SortOrderEnum>;
   readonly sys: InputMaybe<ContentfulPersonSysSortInput>;
   readonly title: InputMaybe<SortOrderEnum>;
@@ -4715,6 +4719,7 @@ type Query_contentfulPersonArgs = {
   node_locale: InputMaybe<StringQueryOperatorInput>;
   parent: InputMaybe<NodeFilterInput>;
   person_list: InputMaybe<ContentfulPersonListFilterListInput>;
+  profilePicture: InputMaybe<ContentfulAssetFilterInput>;
   spaceId: InputMaybe<StringQueryOperatorInput>;
   sys: InputMaybe<ContentfulPersonSysFilterInput>;
   title: InputMaybe<StringQueryOperatorInput>;

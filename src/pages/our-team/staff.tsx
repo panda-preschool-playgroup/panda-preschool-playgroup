@@ -33,6 +33,7 @@ const StaffPage: FC<StaffPageProps> = ({ data }: StaffPageProps) => {
                         style={index % 2 === 0 ? "alt" : "standard"}
                         name={person?.name ?? ""}
                         title={person?.title ?? ""}
+                        image={person?.profilePicture}
                     >
                         {person?.description && renderRichText(person.description)}
                     </StaffSection>
@@ -54,6 +55,10 @@ export const query = graphql`
                 title
                 description {
                     raw
+                }
+                profilePicture {
+                    title
+                    gatsbyImageData(height: 250, width: 250, placeholder: BLURRED)
                 }
             }
         }
