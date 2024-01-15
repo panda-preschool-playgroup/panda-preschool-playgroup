@@ -36,7 +36,7 @@ const GreenPandaPage: FC = () => {
                     their recycling scheme, which contributes towards their running costs.
                 </p>
                 <p className="mb-0">These are the items that can be recycled here:</p>
-                <ul className="list-disc leading-loose ml-12 mt-4 mb-10">
+                <ul>
                     <li>Crisps, nuts, popcorn and pretzels packets (not &ldquo;Cheddars&rdquo;)</li>
                     <li>Sweet biscuit, cake bar and cracker wrappers (not flapjack, cereal, or chocolate bars)</li>
                     <li>Plastic pens, felt tips, marker pens, highlighters</li>

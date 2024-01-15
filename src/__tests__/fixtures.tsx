@@ -87,10 +87,22 @@ const createMockContentfulEvent = (props?: Partial<Queries.ContentfulEvent>): Qu
     };
 };
 
+const createMockContentfulNews = (props?: Partial<Queries.ContentfulNews>): Queries.ContentfulNews => {
+    return {
+        ...createMockContentfulEntry(),
+        name: "",
+        isPublished: true,
+        lastUpdated: "",
+        text: null,
+        ...props,
+    };
+};
+
 export {
     createMockGatsbyImageData,
     MockLayout,
     createMockContentfulEntry,
     createMockContentfulAsset,
     createMockContentfulEvent,
+    createMockContentfulNews,
 };

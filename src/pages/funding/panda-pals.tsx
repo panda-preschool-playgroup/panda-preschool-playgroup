@@ -20,7 +20,7 @@ const PandaPalsPage: FC = () => {
                 <p>
                     So, (imagine these words shouted by children) - <strong>THANK YOU!!</strong>
                 </p>
-                <ul className="leading-loose ml-12 my-6 mb-10">
+                <ul className="list-none">
                     {pandaPals.links?.map((link: Queries.Maybe<Queries.ContentfulLink>) => (
                         <li key={link?.id}>
                             <span aria-hidden="true">🐼</span>{" "}
