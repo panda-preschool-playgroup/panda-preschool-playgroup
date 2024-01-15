@@ -17,7 +17,7 @@ const CharityModelPage: FC = () => {
                     to see our complete Charitable Framework.
                 </p>
                 <p>Our primary sources of income are:</p>
-                <ul className="list-disc leading-loose ml-12 my-6 mb-10">
+                <ul>
                     <li>Session fees</li>
                     <li>Government funding</li>
                     <li>Workplace childcare voucher schemes</li>
@@ -25,7 +25,7 @@ const CharityModelPage: FC = () => {
                     <li>Fundraising</li>
                 </ul>
                 <p>This covers the day-to-day running costs such as:</p>
-                <ul className="list-disc leading-loose ml-12 my-6 mb-10">
+                <ul>
                     <li>Staff wages</li>
                     <li>Staff training</li>
                     <li>Venue hire</li>

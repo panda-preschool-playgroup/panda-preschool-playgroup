@@ -1873,6 +1873,264 @@ type ContentfulLinkSysSortInput = {
   readonly type: InputMaybe<SortOrderEnum>;
 };
 
+type ContentfulNews = ContentfulEntry & ContentfulReference & Node & {
+  readonly children: ReadonlyArray<Node>;
+  readonly contentful_id: Scalars['String'];
+  readonly createdAt: Maybe<Scalars['Date']>;
+  readonly id: Scalars['ID'];
+  readonly internal: Internal;
+  readonly isPublished: Maybe<Scalars['Boolean']>;
+  readonly lastUpdated: Maybe<Scalars['Date']>;
+  readonly name: Maybe<Scalars['String']>;
+  readonly node_locale: Scalars['String'];
+  readonly parent: Maybe<Node>;
+  readonly spaceId: Maybe<Scalars['String']>;
+  readonly sys: Maybe<ContentfulNewsSys>;
+  readonly text: Maybe<ContentfulNewsText>;
+  readonly updatedAt: Maybe<Scalars['Date']>;
+};
+
+
+type ContentfulNews_createdAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type ContentfulNews_lastUpdatedArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type ContentfulNews_updatedAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+type ContentfulNewsConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<ContentfulNewsEdge>;
+  readonly group: ReadonlyArray<ContentfulNewsGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<ContentfulNews>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type ContentfulNewsConnection_distinctArgs = {
+  field: ContentfulNewsFieldSelector;
+};
+
+
+type ContentfulNewsConnection_groupArgs = {
+  field: ContentfulNewsFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type ContentfulNewsConnection_maxArgs = {
+  field: ContentfulNewsFieldSelector;
+};
+
+
+type ContentfulNewsConnection_minArgs = {
+  field: ContentfulNewsFieldSelector;
+};
+
+
+type ContentfulNewsConnection_sumArgs = {
+  field: ContentfulNewsFieldSelector;
+};
+
+type ContentfulNewsEdge = {
+  readonly next: Maybe<ContentfulNews>;
+  readonly node: ContentfulNews;
+  readonly previous: Maybe<ContentfulNews>;
+};
+
+type ContentfulNewsFieldSelector = {
+  readonly children: InputMaybe<NodeFieldSelector>;
+  readonly contentful_id: InputMaybe<FieldSelectorEnum>;
+  readonly createdAt: InputMaybe<FieldSelectorEnum>;
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly isPublished: InputMaybe<FieldSelectorEnum>;
+  readonly lastUpdated: InputMaybe<FieldSelectorEnum>;
+  readonly name: InputMaybe<FieldSelectorEnum>;
+  readonly node_locale: InputMaybe<FieldSelectorEnum>;
+  readonly parent: InputMaybe<NodeFieldSelector>;
+  readonly spaceId: InputMaybe<FieldSelectorEnum>;
+  readonly sys: InputMaybe<ContentfulNewsSysFieldSelector>;
+  readonly text: InputMaybe<ContentfulNewsTextFieldSelector>;
+  readonly updatedAt: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulNewsFilterInput = {
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly contentful_id: InputMaybe<StringQueryOperatorInput>;
+  readonly createdAt: InputMaybe<DateQueryOperatorInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly isPublished: InputMaybe<BooleanQueryOperatorInput>;
+  readonly lastUpdated: InputMaybe<DateQueryOperatorInput>;
+  readonly name: InputMaybe<StringQueryOperatorInput>;
+  readonly node_locale: InputMaybe<StringQueryOperatorInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly spaceId: InputMaybe<StringQueryOperatorInput>;
+  readonly sys: InputMaybe<ContentfulNewsSysFilterInput>;
+  readonly text: InputMaybe<ContentfulNewsTextFilterInput>;
+  readonly updatedAt: InputMaybe<DateQueryOperatorInput>;
+};
+
+type ContentfulNewsGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<ContentfulNewsEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<ContentfulNewsGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<ContentfulNews>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type ContentfulNewsGroupConnection_distinctArgs = {
+  field: ContentfulNewsFieldSelector;
+};
+
+
+type ContentfulNewsGroupConnection_groupArgs = {
+  field: ContentfulNewsFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type ContentfulNewsGroupConnection_maxArgs = {
+  field: ContentfulNewsFieldSelector;
+};
+
+
+type ContentfulNewsGroupConnection_minArgs = {
+  field: ContentfulNewsFieldSelector;
+};
+
+
+type ContentfulNewsGroupConnection_sumArgs = {
+  field: ContentfulNewsFieldSelector;
+};
+
+type ContentfulNewsSortInput = {
+  readonly children: InputMaybe<NodeSortInput>;
+  readonly contentful_id: InputMaybe<SortOrderEnum>;
+  readonly createdAt: InputMaybe<SortOrderEnum>;
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly internal: InputMaybe<InternalSortInput>;
+  readonly isPublished: InputMaybe<SortOrderEnum>;
+  readonly lastUpdated: InputMaybe<SortOrderEnum>;
+  readonly name: InputMaybe<SortOrderEnum>;
+  readonly node_locale: InputMaybe<SortOrderEnum>;
+  readonly parent: InputMaybe<NodeSortInput>;
+  readonly spaceId: InputMaybe<SortOrderEnum>;
+  readonly sys: InputMaybe<ContentfulNewsSysSortInput>;
+  readonly text: InputMaybe<ContentfulNewsTextSortInput>;
+  readonly updatedAt: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulNewsSys = {
+  readonly contentType: Maybe<ContentfulNewsSysContentType>;
+  readonly revision: Maybe<Scalars['Int']>;
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type ContentfulNewsSysContentType = {
+  readonly sys: Maybe<ContentfulNewsSysContentTypeSys>;
+};
+
+type ContentfulNewsSysContentTypeFieldSelector = {
+  readonly sys: InputMaybe<ContentfulNewsSysContentTypeSysFieldSelector>;
+};
+
+type ContentfulNewsSysContentTypeFilterInput = {
+  readonly sys: InputMaybe<ContentfulNewsSysContentTypeSysFilterInput>;
+};
+
+type ContentfulNewsSysContentTypeSortInput = {
+  readonly sys: InputMaybe<ContentfulNewsSysContentTypeSysSortInput>;
+};
+
+type ContentfulNewsSysContentTypeSys = {
+  readonly id: Maybe<Scalars['String']>;
+  readonly linkType: Maybe<Scalars['String']>;
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type ContentfulNewsSysContentTypeSysFieldSelector = {
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly linkType: InputMaybe<FieldSelectorEnum>;
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulNewsSysContentTypeSysFilterInput = {
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly linkType: InputMaybe<StringQueryOperatorInput>;
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type ContentfulNewsSysContentTypeSysSortInput = {
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly linkType: InputMaybe<SortOrderEnum>;
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulNewsSysFieldSelector = {
+  readonly contentType: InputMaybe<ContentfulNewsSysContentTypeFieldSelector>;
+  readonly revision: InputMaybe<FieldSelectorEnum>;
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulNewsSysFilterInput = {
+  readonly contentType: InputMaybe<ContentfulNewsSysContentTypeFilterInput>;
+  readonly revision: InputMaybe<IntQueryOperatorInput>;
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type ContentfulNewsSysSortInput = {
+  readonly contentType: InputMaybe<ContentfulNewsSysContentTypeSortInput>;
+  readonly revision: InputMaybe<SortOrderEnum>;
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulNewsText = {
+  readonly raw: Maybe<Scalars['String']>;
+};
+
+type ContentfulNewsTextFieldSelector = {
+  readonly raw: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulNewsTextFilterInput = {
+  readonly raw: InputMaybe<StringQueryOperatorInput>;
+};
+
+type ContentfulNewsTextSortInput = {
+  readonly raw: InputMaybe<SortOrderEnum>;
+};
+
 type ContentfulPerson = ContentfulEntry & ContentfulReference & Node & {
   readonly children: ReadonlyArray<Node>;
   readonly contentful_id: Scalars['String'];
@@ -4364,6 +4622,7 @@ type Query = {
   readonly allContentfulFooter: ContentfulFooterConnection;
   readonly allContentfulLink: ContentfulLinkConnection;
   readonly allContentfulLinkList: ContentfulLinkListConnection;
+  readonly allContentfulNews: ContentfulNewsConnection;
   readonly allContentfulPerson: ContentfulPersonConnection;
   readonly allContentfulPersonList: ContentfulPersonListConnection;
   readonly allContentfulPolicyGroup: ContentfulPolicyGroupConnection;
@@ -4385,6 +4644,7 @@ type Query = {
   readonly contentfulFooter: Maybe<ContentfulFooter>;
   readonly contentfulLink: Maybe<ContentfulLink>;
   readonly contentfulLinkList: Maybe<ContentfulLinkList>;
+  readonly contentfulNews: Maybe<ContentfulNews>;
   readonly contentfulPerson: Maybe<ContentfulPerson>;
   readonly contentfulPersonList: Maybe<ContentfulPersonList>;
   readonly contentfulPolicyGroup: Maybe<ContentfulPolicyGroup>;
@@ -4462,6 +4722,14 @@ type Query_allContentfulLinkListArgs = {
   limit: InputMaybe<Scalars['Int']>;
   skip: InputMaybe<Scalars['Int']>;
   sort: InputMaybe<ReadonlyArray<InputMaybe<ContentfulLinkListSortInput>>>;
+};
+
+
+type Query_allContentfulNewsArgs = {
+  filter: InputMaybe<ContentfulNewsFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<ContentfulNewsSortInput>>>;
 };
 
 
@@ -4704,6 +4972,24 @@ type Query_contentfulLinkListArgs = {
   spaceId: InputMaybe<StringQueryOperatorInput>;
   sys: InputMaybe<ContentfulLinkListSysFilterInput>;
   title: InputMaybe<StringQueryOperatorInput>;
+  updatedAt: InputMaybe<DateQueryOperatorInput>;
+};
+
+
+type Query_contentfulNewsArgs = {
+  children: InputMaybe<NodeFilterListInput>;
+  contentful_id: InputMaybe<StringQueryOperatorInput>;
+  createdAt: InputMaybe<DateQueryOperatorInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  isPublished: InputMaybe<BooleanQueryOperatorInput>;
+  lastUpdated: InputMaybe<DateQueryOperatorInput>;
+  name: InputMaybe<StringQueryOperatorInput>;
+  node_locale: InputMaybe<StringQueryOperatorInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  spaceId: InputMaybe<StringQueryOperatorInput>;
+  sys: InputMaybe<ContentfulNewsSysFilterInput>;
+  text: InputMaybe<ContentfulNewsTextFilterInput>;
   updatedAt: InputMaybe<DateQueryOperatorInput>;
 };
 

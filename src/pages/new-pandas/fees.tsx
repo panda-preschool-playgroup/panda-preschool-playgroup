@@ -32,7 +32,7 @@ const FeesPage: FC = () => {
                     Payment
                 </h3>
                 <p>Government Funding replaces the hourly charge. The “Pandas Consumables Charge” is still payable.</p>
-                <ul className="list-disc leading-loose ml-12 mt-4 mb-10">
+                <ul>
                     <li>All 3 and 4-year-olds are entitled to 15 hours funding per week over 38 weeks of the year.</li>
                     <li>
                         Some 3 and 4-year-olds are entitled to an additional 15 hours funding per week (30 Hours

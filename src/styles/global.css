@@ -9,6 +9,12 @@
     p {
         @apply mb-10;
     }
+    ul:not(nav *) {
+        @apply list-disc leading-loose ml-12 my-6 mb-10;
+    }
+    ul > li > p {
+        @apply mb-0;
+    }
     @font-face {
         font-family: Quicksand;
         font-weight: 400;
