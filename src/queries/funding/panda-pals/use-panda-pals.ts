@@ -1,19 +1,22 @@
 import { graphql, useStaticQuery } from "gatsby";
 
-const usePandaPals = (): Queries.ContentfulLinkList => {
+const usePandaPals = (): Queries.ContentfulLinkListConnection => {
     const data = useStaticQuery(graphql`
         {
-            contentfulLinkList(title: { eq: "Panda Pals" }) {
-                links {
-                    id
-                    text
-                    url
+            allContentfulLinkList(filter: { title: { regex: "/Panda Pals/" } }) {
+                nodes {
+                    title
+                    links {
+                        id
+                        text
+                        url
+                    }
                 }
             }
         }
     `);
 
-    return data.contentfulLinkList;
+    return data.allContentfulLinkList;
 };
 
 export { usePandaPals };
