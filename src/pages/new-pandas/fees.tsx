@@ -11,19 +11,29 @@ const FeesPage: FC = () => {
         <Layout showHomeLink activeSection="New Pandas" pageHeading={heading}>
             <Article heading={heading}>
                 <p>
-                    We are happy to accept Private Funding, Government Funding, or a mixture of Private and Government
-                    Funding for the hours that your child attends Panda Playgroup. Please note that in addition to the
-                    hourly charge (covered by Private /Government Funding), a “Pandas Consumable Charge” is also
-                    payable.
+                    <div className="p-8 mb-4 rounded-lg bg-slate-300">
+                        Have you heard about{" "}
+                        <a href="https://www.childcarechoices.gov.uk/how-to-use-tax-free-childcare/">
+                            Tax-Free Childcare
+                        </a>
+                        ? See if you qualify and how it can be used.
+                    </div>
                 </p>
+
                 <p>
                     The charge for Pandas is currently <strong>£6.00 per hour</strong> plus a “Pandas Consumables
                     Charge”.
                 </p>
 
                 <p>
-                    We advertise this as a flat hourly rate so that you can calculate your own fees based on the hours
-                    you choose. So if you opt for an early start, or if you choose to pick your child up a little
+                    We are happy to accept Private Funding, Government Funding, or a mixture of Private and Government
+                    Funding for the hours that your child attends Panda Playgroup. Please note that in addition to the
+                    hourly charge (covered by Private/Government Funding), a “Pandas Consumable Charge” is also payable.
+                </p>
+
+                <p>
+                    We advertise our fee as a flat hourly rate so that you can calculate your own fees based on the
+                    hours you choose. So if you opt for an early start, or if you choose to pick your child up a little
                     earlier, you can calculate the fees you&apos;ll pay based on the hourly rate. Our policy is{" "}
                     <strong>you only pay for the hours you need</strong>.
                 </p>
