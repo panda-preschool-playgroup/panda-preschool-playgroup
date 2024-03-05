@@ -17,18 +17,17 @@ const PreSchoolPage: FC = () => {
                 </p>
                 <p>
                     We also offer an earlier <strong>8:30am</strong> start on request, and you can opt to{" "}
-                    <strong>pick up your child earlier as well</strong>. Because we think it&apos;s important to offer
-                    this flexibility,{" "}
-                    <Link to="/new-pandas/fees">
-                        fees are calculated at a flat rate based only on the hours you need
-                    </Link>
-                    .
+                    <strong>pick up your child earlier as well</strong>. Our session times link with school and have
+                    been found to be ideal for parents working from home or just part time as we invoice only for the
+                    hours needed.
                 </p>
-                <p>The preschool is open for registration and bookings and we&apos;d love to meet you!</p>
                 <p>
-                    Children are now eligible to join Panda Playgroup from the age of 18 months. The pre-school is
-                    registered with <a href="https://reports.ofsted.gov.uk/provider/16/EY501461">OFSTED</a> and is a
-                    member of the Early Years Alliance.
+                    We have vacancies on most days of the week but advise early registration. We charge only for the
+                    hours you need. Please refer to <Link to="/new-pandas/fees">our fees</Link> for more information.
+                </p>
+                <p>
+                    Ad hoc days are also available whilst we have spaces should your usual childcare be disrupted or if
+                    you need to work an extra day.
                 </p>
                 <p>
                     Our aim is to provide your child with the best support and care as they take their first steps
@@ -36,10 +35,8 @@ const PreSchoolPage: FC = () => {
                     well as join in group activities such a snack, story and song time.
                 </p>
                 <p>
-                    At Panda Playgroup we are trying our hardest to improve our environmental credentials. In line with
-                    the Reduce, Reuse, Recycle methodology, Panda Playgroup has now used up the last of our glitter and
-                    we do not plan on buying any more. If you&apos;d like to find out more about our environmental
-                    commitments please consult the <Link to="/our-approach/green-panda">Green Panda</Link>.
+                    Please see <Link to="/our-approach/aims">our aims</Link> to find out more about how our sessions are
+                    run.
                 </p>
 
                 <h3 className="font-dk-crayon-crumble mt-12 mb-6 tracking-tight leading-none text-3xl lg:text-4xl">

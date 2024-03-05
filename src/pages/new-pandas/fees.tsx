@@ -17,7 +17,7 @@ const FeesPage: FC = () => {
                     payable.
                 </p>
                 <p>
-                    The charge for Pandas is currently <strong>£5.50 per hour</strong> plus a “Pandas Consumables
+                    The charge for Pandas is currently <strong>£6.00 per hour</strong> plus a “Pandas Consumables
                     Charge”.
                 </p>
 
@@ -26,14 +26,6 @@ const FeesPage: FC = () => {
                     you choose. So if you opt for an early start, or if you choose to pick your child up a little
                     earlier, you can calculate the fees you&apos;ll pay based on the hourly rate. Our policy is{" "}
                     <strong>you only pay for the hours you need</strong>.
-                </p>
-
-                <p>
-                    <div className="p-8 mb-4 rounded-lg bg-slate-300">
-                        Please note that in light of the 9.79% increase in the National Living Wage, the pre-school must
-                        raise its fees from April 2024 to <strong>£6.00 per hour</strong>. Thank you for your
-                        understanding.
-                    </div>
                 </p>
 
                 <h3 className="font-dk-crayon-crumble mt-12 mb-6 tracking-tight leading-none text-3xl lg:text-4xl">
