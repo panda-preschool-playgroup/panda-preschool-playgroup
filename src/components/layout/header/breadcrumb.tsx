@@ -29,9 +29,11 @@ const Breadcrumb: FC<BreadcrumbProps> = ({ activeSection, current }: BreadcrumbP
                         <FlowbiteBreadcrumb.Item>
                             <span className="text-xl text-slate-800">{activeSection}</span>
                         </FlowbiteBreadcrumb.Item>
-                        <FlowbiteBreadcrumb.Item>
-                            <span className="text-xl text-slate-800">{current}</span>
-                        </FlowbiteBreadcrumb.Item>
+                        {current != activeSection && (
+                            <FlowbiteBreadcrumb.Item>
+                                <span className="text-xl text-slate-800">{current}</span>
+                            </FlowbiteBreadcrumb.Item>
+                        )}
                     </FlowbiteBreadcrumb>
                 </div>
             </div>

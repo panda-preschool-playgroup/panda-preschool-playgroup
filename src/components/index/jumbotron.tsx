@@ -1,6 +1,7 @@
 import { FC, useState } from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import Button from "@/components/common/button";
+import LinkButton from "@/components/common/link-button";
 import TourModal from "@/components/index/tour-modal";
 import { useJumbotronImage } from "@/queries/index/use-jumbotron-image";
 
@@ -28,6 +29,7 @@ const Jumbotron: FC = () => {
                 </p>
                 <div className="flex justify-center flex-col sm:flex-row gap-6 sm:gap-24">
                     <Button onClick={() => setOpenTourModal(true)} text="Watch our virtual tour" />
+                    <LinkButton text="Browse our galleries" href="/galleries" />
                 </div>
             </div>
             <TourModal openTourModal={openTourModal} setOpenTourModal={setOpenTourModal} />

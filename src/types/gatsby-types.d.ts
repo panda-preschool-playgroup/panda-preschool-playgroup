@@ -1388,6 +1388,474 @@ type ContentfulFooterSysSortInput = {
   readonly type: InputMaybe<SortOrderEnum>;
 };
 
+type ContentfulGalleries = ContentfulEntry & ContentfulReference & Node & {
+  readonly children: ReadonlyArray<Node>;
+  readonly contentful_id: Scalars['String'];
+  readonly createdAt: Maybe<Scalars['Date']>;
+  readonly galleries: Maybe<ReadonlyArray<Maybe<ContentfulGallery>>>;
+  readonly id: Scalars['ID'];
+  readonly internal: Internal;
+  readonly name: Maybe<Scalars['String']>;
+  readonly node_locale: Scalars['String'];
+  readonly parent: Maybe<Node>;
+  readonly spaceId: Maybe<Scalars['String']>;
+  readonly sys: Maybe<ContentfulGalleriesSys>;
+  readonly updatedAt: Maybe<Scalars['Date']>;
+};
+
+
+type ContentfulGalleries_createdAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type ContentfulGalleries_updatedAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+type ContentfulGalleriesConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<ContentfulGalleriesEdge>;
+  readonly group: ReadonlyArray<ContentfulGalleriesGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<ContentfulGalleries>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type ContentfulGalleriesConnection_distinctArgs = {
+  field: ContentfulGalleriesFieldSelector;
+};
+
+
+type ContentfulGalleriesConnection_groupArgs = {
+  field: ContentfulGalleriesFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type ContentfulGalleriesConnection_maxArgs = {
+  field: ContentfulGalleriesFieldSelector;
+};
+
+
+type ContentfulGalleriesConnection_minArgs = {
+  field: ContentfulGalleriesFieldSelector;
+};
+
+
+type ContentfulGalleriesConnection_sumArgs = {
+  field: ContentfulGalleriesFieldSelector;
+};
+
+type ContentfulGalleriesEdge = {
+  readonly next: Maybe<ContentfulGalleries>;
+  readonly node: ContentfulGalleries;
+  readonly previous: Maybe<ContentfulGalleries>;
+};
+
+type ContentfulGalleriesFieldSelector = {
+  readonly children: InputMaybe<NodeFieldSelector>;
+  readonly contentful_id: InputMaybe<FieldSelectorEnum>;
+  readonly createdAt: InputMaybe<FieldSelectorEnum>;
+  readonly galleries: InputMaybe<ContentfulGalleryFieldSelector>;
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly name: InputMaybe<FieldSelectorEnum>;
+  readonly node_locale: InputMaybe<FieldSelectorEnum>;
+  readonly parent: InputMaybe<NodeFieldSelector>;
+  readonly spaceId: InputMaybe<FieldSelectorEnum>;
+  readonly sys: InputMaybe<ContentfulGalleriesSysFieldSelector>;
+  readonly updatedAt: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulGalleriesFilterInput = {
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly contentful_id: InputMaybe<StringQueryOperatorInput>;
+  readonly createdAt: InputMaybe<DateQueryOperatorInput>;
+  readonly galleries: InputMaybe<ContentfulGalleryFilterListInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly name: InputMaybe<StringQueryOperatorInput>;
+  readonly node_locale: InputMaybe<StringQueryOperatorInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly spaceId: InputMaybe<StringQueryOperatorInput>;
+  readonly sys: InputMaybe<ContentfulGalleriesSysFilterInput>;
+  readonly updatedAt: InputMaybe<DateQueryOperatorInput>;
+};
+
+type ContentfulGalleriesFilterListInput = {
+  readonly elemMatch: InputMaybe<ContentfulGalleriesFilterInput>;
+};
+
+type ContentfulGalleriesGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<ContentfulGalleriesEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<ContentfulGalleriesGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<ContentfulGalleries>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type ContentfulGalleriesGroupConnection_distinctArgs = {
+  field: ContentfulGalleriesFieldSelector;
+};
+
+
+type ContentfulGalleriesGroupConnection_groupArgs = {
+  field: ContentfulGalleriesFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type ContentfulGalleriesGroupConnection_maxArgs = {
+  field: ContentfulGalleriesFieldSelector;
+};
+
+
+type ContentfulGalleriesGroupConnection_minArgs = {
+  field: ContentfulGalleriesFieldSelector;
+};
+
+
+type ContentfulGalleriesGroupConnection_sumArgs = {
+  field: ContentfulGalleriesFieldSelector;
+};
+
+type ContentfulGalleriesSortInput = {
+  readonly children: InputMaybe<NodeSortInput>;
+  readonly contentful_id: InputMaybe<SortOrderEnum>;
+  readonly createdAt: InputMaybe<SortOrderEnum>;
+  readonly galleries: InputMaybe<ContentfulGallerySortInput>;
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly internal: InputMaybe<InternalSortInput>;
+  readonly name: InputMaybe<SortOrderEnum>;
+  readonly node_locale: InputMaybe<SortOrderEnum>;
+  readonly parent: InputMaybe<NodeSortInput>;
+  readonly spaceId: InputMaybe<SortOrderEnum>;
+  readonly sys: InputMaybe<ContentfulGalleriesSysSortInput>;
+  readonly updatedAt: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulGalleriesSys = {
+  readonly contentType: Maybe<ContentfulGalleriesSysContentType>;
+  readonly revision: Maybe<Scalars['Int']>;
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type ContentfulGalleriesSysContentType = {
+  readonly sys: Maybe<ContentfulGalleriesSysContentTypeSys>;
+};
+
+type ContentfulGalleriesSysContentTypeFieldSelector = {
+  readonly sys: InputMaybe<ContentfulGalleriesSysContentTypeSysFieldSelector>;
+};
+
+type ContentfulGalleriesSysContentTypeFilterInput = {
+  readonly sys: InputMaybe<ContentfulGalleriesSysContentTypeSysFilterInput>;
+};
+
+type ContentfulGalleriesSysContentTypeSortInput = {
+  readonly sys: InputMaybe<ContentfulGalleriesSysContentTypeSysSortInput>;
+};
+
+type ContentfulGalleriesSysContentTypeSys = {
+  readonly id: Maybe<Scalars['String']>;
+  readonly linkType: Maybe<Scalars['String']>;
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type ContentfulGalleriesSysContentTypeSysFieldSelector = {
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly linkType: InputMaybe<FieldSelectorEnum>;
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulGalleriesSysContentTypeSysFilterInput = {
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly linkType: InputMaybe<StringQueryOperatorInput>;
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type ContentfulGalleriesSysContentTypeSysSortInput = {
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly linkType: InputMaybe<SortOrderEnum>;
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulGalleriesSysFieldSelector = {
+  readonly contentType: InputMaybe<ContentfulGalleriesSysContentTypeFieldSelector>;
+  readonly revision: InputMaybe<FieldSelectorEnum>;
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulGalleriesSysFilterInput = {
+  readonly contentType: InputMaybe<ContentfulGalleriesSysContentTypeFilterInput>;
+  readonly revision: InputMaybe<IntQueryOperatorInput>;
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type ContentfulGalleriesSysSortInput = {
+  readonly contentType: InputMaybe<ContentfulGalleriesSysContentTypeSortInput>;
+  readonly revision: InputMaybe<SortOrderEnum>;
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulGallery = ContentfulEntry & ContentfulReference & Node & {
+  readonly children: ReadonlyArray<Node>;
+  readonly contentful_id: Scalars['String'];
+  readonly createdAt: Maybe<Scalars['Date']>;
+  readonly galleries: Maybe<ReadonlyArray<Maybe<ContentfulGalleries>>>;
+  readonly headerImage: Maybe<ContentfulAsset>;
+  readonly id: Scalars['ID'];
+  readonly images: Maybe<ReadonlyArray<Maybe<ContentfulAsset>>>;
+  readonly internal: Internal;
+  readonly name: Maybe<Scalars['String']>;
+  readonly node_locale: Scalars['String'];
+  readonly parent: Maybe<Node>;
+  readonly spaceId: Maybe<Scalars['String']>;
+  readonly sys: Maybe<ContentfulGallerySys>;
+  readonly updatedAt: Maybe<Scalars['Date']>;
+};
+
+
+type ContentfulGallery_createdAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type ContentfulGallery_updatedAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+type ContentfulGalleryConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<ContentfulGalleryEdge>;
+  readonly group: ReadonlyArray<ContentfulGalleryGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<ContentfulGallery>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type ContentfulGalleryConnection_distinctArgs = {
+  field: ContentfulGalleryFieldSelector;
+};
+
+
+type ContentfulGalleryConnection_groupArgs = {
+  field: ContentfulGalleryFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type ContentfulGalleryConnection_maxArgs = {
+  field: ContentfulGalleryFieldSelector;
+};
+
+
+type ContentfulGalleryConnection_minArgs = {
+  field: ContentfulGalleryFieldSelector;
+};
+
+
+type ContentfulGalleryConnection_sumArgs = {
+  field: ContentfulGalleryFieldSelector;
+};
+
+type ContentfulGalleryEdge = {
+  readonly next: Maybe<ContentfulGallery>;
+  readonly node: ContentfulGallery;
+  readonly previous: Maybe<ContentfulGallery>;
+};
+
+type ContentfulGalleryFieldSelector = {
+  readonly children: InputMaybe<NodeFieldSelector>;
+  readonly contentful_id: InputMaybe<FieldSelectorEnum>;
+  readonly createdAt: InputMaybe<FieldSelectorEnum>;
+  readonly galleries: InputMaybe<ContentfulGalleriesFieldSelector>;
+  readonly headerImage: InputMaybe<ContentfulAssetFieldSelector>;
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly images: InputMaybe<ContentfulAssetFieldSelector>;
+  readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly name: InputMaybe<FieldSelectorEnum>;
+  readonly node_locale: InputMaybe<FieldSelectorEnum>;
+  readonly parent: InputMaybe<NodeFieldSelector>;
+  readonly spaceId: InputMaybe<FieldSelectorEnum>;
+  readonly sys: InputMaybe<ContentfulGallerySysFieldSelector>;
+  readonly updatedAt: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulGalleryFilterInput = {
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly contentful_id: InputMaybe<StringQueryOperatorInput>;
+  readonly createdAt: InputMaybe<DateQueryOperatorInput>;
+  readonly galleries: InputMaybe<ContentfulGalleriesFilterListInput>;
+  readonly headerImage: InputMaybe<ContentfulAssetFilterInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly images: InputMaybe<ContentfulAssetFilterListInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly name: InputMaybe<StringQueryOperatorInput>;
+  readonly node_locale: InputMaybe<StringQueryOperatorInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly spaceId: InputMaybe<StringQueryOperatorInput>;
+  readonly sys: InputMaybe<ContentfulGallerySysFilterInput>;
+  readonly updatedAt: InputMaybe<DateQueryOperatorInput>;
+};
+
+type ContentfulGalleryFilterListInput = {
+  readonly elemMatch: InputMaybe<ContentfulGalleryFilterInput>;
+};
+
+type ContentfulGalleryGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<ContentfulGalleryEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<ContentfulGalleryGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<ContentfulGallery>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type ContentfulGalleryGroupConnection_distinctArgs = {
+  field: ContentfulGalleryFieldSelector;
+};
+
+
+type ContentfulGalleryGroupConnection_groupArgs = {
+  field: ContentfulGalleryFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type ContentfulGalleryGroupConnection_maxArgs = {
+  field: ContentfulGalleryFieldSelector;
+};
+
+
+type ContentfulGalleryGroupConnection_minArgs = {
+  field: ContentfulGalleryFieldSelector;
+};
+
+
+type ContentfulGalleryGroupConnection_sumArgs = {
+  field: ContentfulGalleryFieldSelector;
+};
+
+type ContentfulGallerySortInput = {
+  readonly children: InputMaybe<NodeSortInput>;
+  readonly contentful_id: InputMaybe<SortOrderEnum>;
+  readonly createdAt: InputMaybe<SortOrderEnum>;
+  readonly galleries: InputMaybe<ContentfulGalleriesSortInput>;
+  readonly headerImage: InputMaybe<ContentfulAssetSortInput>;
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly images: InputMaybe<ContentfulAssetSortInput>;
+  readonly internal: InputMaybe<InternalSortInput>;
+  readonly name: InputMaybe<SortOrderEnum>;
+  readonly node_locale: InputMaybe<SortOrderEnum>;
+  readonly parent: InputMaybe<NodeSortInput>;
+  readonly spaceId: InputMaybe<SortOrderEnum>;
+  readonly sys: InputMaybe<ContentfulGallerySysSortInput>;
+  readonly updatedAt: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulGallerySys = {
+  readonly contentType: Maybe<ContentfulGallerySysContentType>;
+  readonly revision: Maybe<Scalars['Int']>;
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type ContentfulGallerySysContentType = {
+  readonly sys: Maybe<ContentfulGallerySysContentTypeSys>;
+};
+
+type ContentfulGallerySysContentTypeFieldSelector = {
+  readonly sys: InputMaybe<ContentfulGallerySysContentTypeSysFieldSelector>;
+};
+
+type ContentfulGallerySysContentTypeFilterInput = {
+  readonly sys: InputMaybe<ContentfulGallerySysContentTypeSysFilterInput>;
+};
+
+type ContentfulGallerySysContentTypeSortInput = {
+  readonly sys: InputMaybe<ContentfulGallerySysContentTypeSysSortInput>;
+};
+
+type ContentfulGallerySysContentTypeSys = {
+  readonly id: Maybe<Scalars['String']>;
+  readonly linkType: Maybe<Scalars['String']>;
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type ContentfulGallerySysContentTypeSysFieldSelector = {
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly linkType: InputMaybe<FieldSelectorEnum>;
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulGallerySysContentTypeSysFilterInput = {
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly linkType: InputMaybe<StringQueryOperatorInput>;
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type ContentfulGallerySysContentTypeSysSortInput = {
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly linkType: InputMaybe<SortOrderEnum>;
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulGallerySysFieldSelector = {
+  readonly contentType: InputMaybe<ContentfulGallerySysContentTypeFieldSelector>;
+  readonly revision: InputMaybe<FieldSelectorEnum>;
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulGallerySysFilterInput = {
+  readonly contentType: InputMaybe<ContentfulGallerySysContentTypeFilterInput>;
+  readonly revision: InputMaybe<IntQueryOperatorInput>;
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type ContentfulGallerySysSortInput = {
+  readonly contentType: InputMaybe<ContentfulGallerySysContentTypeSortInput>;
+  readonly revision: InputMaybe<SortOrderEnum>;
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
 type ContentfulImageCropFocus =
   | 'bottom'
   | 'bottom_right'
@@ -4620,6 +5088,8 @@ type Query = {
   readonly allContentfulEvent: ContentfulEventConnection;
   readonly allContentfulEvents: ContentfulEventsConnection;
   readonly allContentfulFooter: ContentfulFooterConnection;
+  readonly allContentfulGalleries: ContentfulGalleriesConnection;
+  readonly allContentfulGallery: ContentfulGalleryConnection;
   readonly allContentfulLink: ContentfulLinkConnection;
   readonly allContentfulLinkList: ContentfulLinkListConnection;
   readonly allContentfulNews: ContentfulNewsConnection;
@@ -4642,6 +5112,8 @@ type Query = {
   readonly contentfulEvent: Maybe<ContentfulEvent>;
   readonly contentfulEvents: Maybe<ContentfulEvents>;
   readonly contentfulFooter: Maybe<ContentfulFooter>;
+  readonly contentfulGalleries: Maybe<ContentfulGalleries>;
+  readonly contentfulGallery: Maybe<ContentfulGallery>;
   readonly contentfulLink: Maybe<ContentfulLink>;
   readonly contentfulLinkList: Maybe<ContentfulLinkList>;
   readonly contentfulNews: Maybe<ContentfulNews>;
@@ -4706,6 +5178,22 @@ type Query_allContentfulFooterArgs = {
   limit: InputMaybe<Scalars['Int']>;
   skip: InputMaybe<Scalars['Int']>;
   sort: InputMaybe<ReadonlyArray<InputMaybe<ContentfulFooterSortInput>>>;
+};
+
+
+type Query_allContentfulGalleriesArgs = {
+  filter: InputMaybe<ContentfulGalleriesFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<ContentfulGalleriesSortInput>>>;
+};
+
+
+type Query_allContentfulGalleryArgs = {
+  filter: InputMaybe<ContentfulGalleryFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<ContentfulGallerySortInput>>>;
 };
 
 
@@ -4937,6 +5425,40 @@ type Query_contentfulFooterArgs = {
   phoneNumber: InputMaybe<StringQueryOperatorInput>;
   spaceId: InputMaybe<StringQueryOperatorInput>;
   sys: InputMaybe<ContentfulFooterSysFilterInput>;
+  updatedAt: InputMaybe<DateQueryOperatorInput>;
+};
+
+
+type Query_contentfulGalleriesArgs = {
+  children: InputMaybe<NodeFilterListInput>;
+  contentful_id: InputMaybe<StringQueryOperatorInput>;
+  createdAt: InputMaybe<DateQueryOperatorInput>;
+  galleries: InputMaybe<ContentfulGalleryFilterListInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  name: InputMaybe<StringQueryOperatorInput>;
+  node_locale: InputMaybe<StringQueryOperatorInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  spaceId: InputMaybe<StringQueryOperatorInput>;
+  sys: InputMaybe<ContentfulGalleriesSysFilterInput>;
+  updatedAt: InputMaybe<DateQueryOperatorInput>;
+};
+
+
+type Query_contentfulGalleryArgs = {
+  children: InputMaybe<NodeFilterListInput>;
+  contentful_id: InputMaybe<StringQueryOperatorInput>;
+  createdAt: InputMaybe<DateQueryOperatorInput>;
+  galleries: InputMaybe<ContentfulGalleriesFilterListInput>;
+  headerImage: InputMaybe<ContentfulAssetFilterInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  images: InputMaybe<ContentfulAssetFilterListInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  name: InputMaybe<StringQueryOperatorInput>;
+  node_locale: InputMaybe<StringQueryOperatorInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  spaceId: InputMaybe<StringQueryOperatorInput>;
+  sys: InputMaybe<ContentfulGallerySysFilterInput>;
   updatedAt: InputMaybe<DateQueryOperatorInput>;
 };
 
