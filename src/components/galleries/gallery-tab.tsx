@@ -33,7 +33,7 @@ const GalleryTab: FC<GalleryLinkProps> = ({ gallery, activeGalleryId, setActiveG
                     image={gallery?.headerImage?.gatsbyImageData}
                     alt=""
                     aria-hidden
-                    className="grid-area-1-1 rounded-lg opacity-50"
+                    className={`grid-area-1-1 rounded-lg opacity-50 border-2 ${isActive && "border-slate-900"}`}
                 />
             )}
             <div className="grid-area-1-1 relative text-center flex items-center">

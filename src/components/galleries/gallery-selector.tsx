@@ -13,11 +13,7 @@ const GallerySelector: FC<GallerySelectorProps> = ({
     setActiveGalleryId,
 }: GallerySelectorProps) => {
     return (
-        <div
-            aria-label="Gallery selector"
-            role="tablist"
-            className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4"
-        >
+        <div aria-label="Gallery selector" role="tablist" className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {galleries?.map((gallery: Queries.Maybe<Queries.ContentfulGallery>) => (
                 <GalleryTab
                     key={gallery?.id}
