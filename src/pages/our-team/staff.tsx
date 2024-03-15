@@ -58,7 +58,7 @@ export const query = graphql`
                 }
                 profilePicture {
                     title
-                    gatsbyImageData(height: 250, width: 250, placeholder: BLURRED)
+                    gatsbyImageData(placeholder: BLURRED)
                 }
             }
         }
