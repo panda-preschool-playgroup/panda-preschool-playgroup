@@ -49,7 +49,7 @@ interface PandaPalProps {
 
 const PandaPal: FC<PandaPalProps> = ({ link }: PandaPalProps) => {
     return (
-        <li key={link?.id}>
+        <li>
             <span aria-hidden="true">🐼</span>{" "}
             <a href={link?.url ?? ""} target="_blank" rel="noreferrer">
                 {link?.text}
