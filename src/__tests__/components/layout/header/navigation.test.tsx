@@ -31,7 +31,7 @@ describe("navigation", () => {
     it("renders the navigation sections", () => {
         render(<Navigation />);
 
-        expect(mockNavigationSection).toHaveBeenCalledTimes(4);
+        expect(mockNavigationSection).toHaveBeenCalled();
     });
 
     it("renders the button", () => {

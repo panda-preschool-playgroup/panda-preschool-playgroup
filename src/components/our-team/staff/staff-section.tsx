@@ -17,8 +17,8 @@ const StaffSection: FC<PropsWithChildren<StaffSectionProps>> = ({
 }: PropsWithChildren<StaffSectionProps>) => {
     return (
         <section
-            className={`py-24 2xl:px-64 lg:px-48 md:px-24 px-12 ${
-                style === "alt" ? " bg-emerald-700 text-slate-100 text-right" : ""
+            className={`py-24 2xl:px-64 lg:px-48 md:px-24 px-12  ${
+                style === "alt" ? " bg-emerald-700 text-slate-100 2xl:text-right" : ""
             }`}
         >
             <h3 className="font-dk-crayon-crumble mb-3 tracking-tight leading-none text-5xl lg:text-6xl">{name}</h3>
@@ -34,6 +34,7 @@ const StaffSection: FC<PropsWithChildren<StaffSectionProps>> = ({
                                 alt={image.title ?? ""}
                                 aria-hidden
                                 className="rounded"
+                                style={{ width: 250, height: 250 }}
                             />
                         ) : (
                             <StaticImage

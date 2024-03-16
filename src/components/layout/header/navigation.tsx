@@ -65,14 +65,14 @@ const Navigation: FC<NavigationProps> = ({ activeSection }: NavigationProps) => 
                     ]}
                     activeSection={activeSection}
                 />
-                {/* <NavigationSection
+                <NavigationSection
                     title="Our team"
                     menuItems={[
                         { title: "Staff", href: "/our-team/staff" },
-                        { title: "Committee", href: "/coming-soon" },
+                        { title: "Committee", href: "/our-team/committee" },
                     ]}
                     activeSection={activeSection}
-                /> */}
+                />
             </Navbar.Collapse>
             <div className="flex md:order-2 w-full md:w-auto justify-between">
                 <LinkButton text="Apply" href="/apply" />
