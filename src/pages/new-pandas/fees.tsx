@@ -4,22 +4,12 @@ import Layout from "@/components/layout/layout";
 import PageHead from "@/components/layout/page-head/page-head";
 import Article from "@/components/common/article";
 
-const heading = "Fees";
+const heading = "Our fees";
 
 const FeesPage: FC = () => {
     return (
         <Layout showHomeLink activeSection="New Pandas" pageHeading={heading}>
             <Article heading={heading}>
-                <p>
-                    <div className="p-8 mb-4 rounded-lg bg-slate-300">
-                        Have you heard about{" "}
-                        <a href="https://www.childcarechoices.gov.uk/how-to-use-tax-free-childcare/">
-                            Tax-Free Childcare
-                        </a>
-                        ? See if you qualify and how it can be used.
-                    </div>
-                </p>
-
                 <p>
                     The charge for Pandas is currently <strong>£6.00 per hour</strong> plus a “Pandas Consumables
                     Charge”.
@@ -38,24 +28,6 @@ const FeesPage: FC = () => {
                     <strong>you only pay for the hours you need</strong>.
                 </p>
 
-                <h3 className="font-dk-crayon-crumble mt-12 mb-6 tracking-tight leading-none text-3xl lg:text-4xl">
-                    Payment
-                </h3>
-                <p>Government Funding replaces the hourly charge. The “Pandas Consumables Charge” is still payable.</p>
-                <ul>
-                    <li>All 3 and 4-year-olds are entitled to 15 hours funding per week over 38 weeks of the year.</li>
-                    <li>
-                        Some 3 and 4-year-olds are entitled to an additional 15 hours funding per week (30 Hours
-                        Extended Funding Entitlement) over 38 weeks of the year.
-                    </li>
-                    <li>Some 2-year-olds are entitled to 15 hours funding per week over 38 weeks of the year.</li>
-                </ul>
-                <p>
-                    To check eligibility and how to apply for 30 hours extended funding for 3- and 4-year-olds and 15
-                    hours funding for 2-year-olds please refer to{" "}
-                    <a href="https://www.childcarechoices.gov.uk">Childcare Choices</a>.
-                </p>
-
                 <h3 className="font-dk-crayon-crumble my-12 tracking-tight leading-none text-3xl lg:text-4xl">
                     Pandas Consumable Charge
                 </h3>
@@ -69,6 +41,28 @@ const FeesPage: FC = () => {
                     Please don&apos;t hesitate to <Link to="/contact">get in touch with us</Link> for any other
                     questions you have about fees and funding.
                 </p>
+
+                <h3 className="font-dk-crayon-crumble mt-12 mb-6 tracking-tight leading-none text-3xl lg:text-4xl">
+                    Help towards childcare costs
+                </h3>
+                <p>
+                    Many families are eligible for help towards their childcare costs. For more information, visit
+                    <a href="https://www.childcarechoices.gov.uk">Childcare Choices</a>. Please also see the summary
+                    below.
+                </p>
+                <ul>
+                    <li>Tax-free childcare.</li>
+                    <li>All 3 and 4-year-olds are entitled to 15 hours funding per week over 38 weeks of the year.</li>
+                    <li>
+                        Some 3 and 4-year-olds are entitled to an additional 15 hours funding per week (30 Hours
+                        Extended Funding Entitlement) over 38 weeks of the year.
+                    </li>
+                    <li>Some 2-year-olds are entitled to 15 hours funding per week over 38 weeks of the year.</li>
+                    <li>
+                        Some 9 to 23-month-olds will be eligible for up to 15 hours funding per week from September
+                        2024.
+                    </li>
+                </ul>
             </Article>
         </Layout>
     );
