@@ -46,7 +46,7 @@ const FeesPage: FC = () => {
                     Help towards childcare costs
                 </h3>
                 <p>
-                    Many families are eligible for help towards their childcare costs. For more information, visit
+                    Many families are eligible for help towards their childcare costs. For more information, visit{" "}
                     <a href="https://www.childcarechoices.gov.uk">Childcare Choices</a>. Please also see the summary
                     below.
                 </p>

@@ -34,13 +34,20 @@ const GalleriesPage: FC<PageProps> = ({ data }: PageProps) => {
                 </div>
                 <hr className="h-px my-16 bg-gray-200 border-0 dark:bg-gray-700"></hr>
                 <div
-                    className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-10"
+                    className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 mb-10"
                     role="tabpanel"
                     aria-labelledby={`tab-${activeGalleryId}`}
                 >
                     {activeGallery?.images?.map((image: Queries.Maybe<Queries.ContentfulAsset>) => (
                         <div key={image?.id} className="flex justify-center content-center">
-                            <ContentfulImage imageTitle={image?.title ?? ""} images={[image]} />
+                            <a
+                                href={image?.url ?? ""}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="flex justify-center content-center"
+                            >
+                                <ContentfulImage imageTitle={image?.title ?? ""} images={[image]} />
+                            </a>
                         </div>
                     ))}
                 </div>
@@ -66,6 +73,7 @@ export const query = graphql`
                 images {
                     id
                     title
+                    url
                     gatsbyImageData(placeholder: BLURRED)
                 }
             }
