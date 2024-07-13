@@ -4,9 +4,11 @@ import Button from "@/components/common/button";
 import LinkButton from "@/components/common/link-button";
 import TourModal from "@/components/index/tour-modal";
 import { useJumbotronImage } from "@/queries/index/use-jumbotron-image";
+import { useVirtualTour } from "@/queries/index/use-virtual-tour";
 
 const Jumbotron: FC = () => {
     const jumbotronImage: Queries.ContentfulAsset = useJumbotronImage();
+    const tour: Queries.Maybe<Queries.ContentfulVirtualTour> = useVirtualTour();
     const [openTourModal, setOpenTourModal] = useState(false);
 
     return (
@@ -28,11 +30,13 @@ const Jumbotron: FC = () => {
                     journey of learning through play
                 </p>
                 <div className="flex justify-center flex-col sm:flex-row gap-6 sm:gap-24">
-                    <Button onClick={() => setOpenTourModal(true)} text="Watch our virtual tour" />
+                    {tour?.isPublished && (
+                        <Button onClick={() => setOpenTourModal(true)} text="Watch our virtual tour" />
+                    )}
                     <LinkButton text="Browse our galleries" href="/galleries" />
                 </div>
             </div>
-            <TourModal openTourModal={openTourModal} setOpenTourModal={setOpenTourModal} />
+            {tour?.isPublished && <TourModal openTourModal={openTourModal} setOpenTourModal={setOpenTourModal} />}
         </section>
     );
 };
