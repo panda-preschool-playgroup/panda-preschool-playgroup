@@ -31,7 +31,7 @@
         "gatsby-plugin-manifest": "^5.12.3",
         "gatsby-plugin-remove-serviceworker": "^1.0.0",
         "gatsby-plugin-sharp": "^5.12.3",
-        "gatsby-source-contentful": "^8.12.5",
+        "gatsby-source-contentful": "^8.13.2",
         "gatsby-transformer-sharp": "^5.12.3",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
