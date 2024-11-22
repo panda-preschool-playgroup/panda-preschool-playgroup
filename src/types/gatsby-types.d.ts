@@ -3826,6 +3826,232 @@ type ContentfulTermSysSortInput = {
   readonly type: InputMaybe<SortOrderEnum>;
 };
 
+type ContentfulVirtualTour = ContentfulEntry & ContentfulReference & Node & {
+  readonly children: ReadonlyArray<Node>;
+  readonly contentful_id: Scalars['String'];
+  readonly createdAt: Maybe<Scalars['Date']>;
+  readonly id: Scalars['ID'];
+  readonly internal: Internal;
+  readonly isPublished: Maybe<Scalars['Boolean']>;
+  readonly name: Maybe<Scalars['String']>;
+  readonly node_locale: Scalars['String'];
+  readonly parent: Maybe<Node>;
+  readonly spaceId: Maybe<Scalars['String']>;
+  readonly sys: Maybe<ContentfulVirtualTourSys>;
+  readonly updatedAt: Maybe<Scalars['Date']>;
+};
+
+
+type ContentfulVirtualTour_createdAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
+type ContentfulVirtualTour_updatedAtArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+type ContentfulVirtualTourConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<ContentfulVirtualTourEdge>;
+  readonly group: ReadonlyArray<ContentfulVirtualTourGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<ContentfulVirtualTour>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type ContentfulVirtualTourConnection_distinctArgs = {
+  field: ContentfulVirtualTourFieldSelector;
+};
+
+
+type ContentfulVirtualTourConnection_groupArgs = {
+  field: ContentfulVirtualTourFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type ContentfulVirtualTourConnection_maxArgs = {
+  field: ContentfulVirtualTourFieldSelector;
+};
+
+
+type ContentfulVirtualTourConnection_minArgs = {
+  field: ContentfulVirtualTourFieldSelector;
+};
+
+
+type ContentfulVirtualTourConnection_sumArgs = {
+  field: ContentfulVirtualTourFieldSelector;
+};
+
+type ContentfulVirtualTourEdge = {
+  readonly next: Maybe<ContentfulVirtualTour>;
+  readonly node: ContentfulVirtualTour;
+  readonly previous: Maybe<ContentfulVirtualTour>;
+};
+
+type ContentfulVirtualTourFieldSelector = {
+  readonly children: InputMaybe<NodeFieldSelector>;
+  readonly contentful_id: InputMaybe<FieldSelectorEnum>;
+  readonly createdAt: InputMaybe<FieldSelectorEnum>;
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly internal: InputMaybe<InternalFieldSelector>;
+  readonly isPublished: InputMaybe<FieldSelectorEnum>;
+  readonly name: InputMaybe<FieldSelectorEnum>;
+  readonly node_locale: InputMaybe<FieldSelectorEnum>;
+  readonly parent: InputMaybe<NodeFieldSelector>;
+  readonly spaceId: InputMaybe<FieldSelectorEnum>;
+  readonly sys: InputMaybe<ContentfulVirtualTourSysFieldSelector>;
+  readonly updatedAt: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulVirtualTourFilterInput = {
+  readonly children: InputMaybe<NodeFilterListInput>;
+  readonly contentful_id: InputMaybe<StringQueryOperatorInput>;
+  readonly createdAt: InputMaybe<DateQueryOperatorInput>;
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly internal: InputMaybe<InternalFilterInput>;
+  readonly isPublished: InputMaybe<BooleanQueryOperatorInput>;
+  readonly name: InputMaybe<StringQueryOperatorInput>;
+  readonly node_locale: InputMaybe<StringQueryOperatorInput>;
+  readonly parent: InputMaybe<NodeFilterInput>;
+  readonly spaceId: InputMaybe<StringQueryOperatorInput>;
+  readonly sys: InputMaybe<ContentfulVirtualTourSysFilterInput>;
+  readonly updatedAt: InputMaybe<DateQueryOperatorInput>;
+};
+
+type ContentfulVirtualTourGroupConnection = {
+  readonly distinct: ReadonlyArray<Scalars['String']>;
+  readonly edges: ReadonlyArray<ContentfulVirtualTourEdge>;
+  readonly field: Scalars['String'];
+  readonly fieldValue: Maybe<Scalars['String']>;
+  readonly group: ReadonlyArray<ContentfulVirtualTourGroupConnection>;
+  readonly max: Maybe<Scalars['Float']>;
+  readonly min: Maybe<Scalars['Float']>;
+  readonly nodes: ReadonlyArray<ContentfulVirtualTour>;
+  readonly pageInfo: PageInfo;
+  readonly sum: Maybe<Scalars['Float']>;
+  readonly totalCount: Scalars['Int'];
+};
+
+
+type ContentfulVirtualTourGroupConnection_distinctArgs = {
+  field: ContentfulVirtualTourFieldSelector;
+};
+
+
+type ContentfulVirtualTourGroupConnection_groupArgs = {
+  field: ContentfulVirtualTourFieldSelector;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+};
+
+
+type ContentfulVirtualTourGroupConnection_maxArgs = {
+  field: ContentfulVirtualTourFieldSelector;
+};
+
+
+type ContentfulVirtualTourGroupConnection_minArgs = {
+  field: ContentfulVirtualTourFieldSelector;
+};
+
+
+type ContentfulVirtualTourGroupConnection_sumArgs = {
+  field: ContentfulVirtualTourFieldSelector;
+};
+
+type ContentfulVirtualTourSortInput = {
+  readonly children: InputMaybe<NodeSortInput>;
+  readonly contentful_id: InputMaybe<SortOrderEnum>;
+  readonly createdAt: InputMaybe<SortOrderEnum>;
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly internal: InputMaybe<InternalSortInput>;
+  readonly isPublished: InputMaybe<SortOrderEnum>;
+  readonly name: InputMaybe<SortOrderEnum>;
+  readonly node_locale: InputMaybe<SortOrderEnum>;
+  readonly parent: InputMaybe<NodeSortInput>;
+  readonly spaceId: InputMaybe<SortOrderEnum>;
+  readonly sys: InputMaybe<ContentfulVirtualTourSysSortInput>;
+  readonly updatedAt: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulVirtualTourSys = {
+  readonly contentType: Maybe<ContentfulVirtualTourSysContentType>;
+  readonly revision: Maybe<Scalars['Int']>;
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type ContentfulVirtualTourSysContentType = {
+  readonly sys: Maybe<ContentfulVirtualTourSysContentTypeSys>;
+};
+
+type ContentfulVirtualTourSysContentTypeFieldSelector = {
+  readonly sys: InputMaybe<ContentfulVirtualTourSysContentTypeSysFieldSelector>;
+};
+
+type ContentfulVirtualTourSysContentTypeFilterInput = {
+  readonly sys: InputMaybe<ContentfulVirtualTourSysContentTypeSysFilterInput>;
+};
+
+type ContentfulVirtualTourSysContentTypeSortInput = {
+  readonly sys: InputMaybe<ContentfulVirtualTourSysContentTypeSysSortInput>;
+};
+
+type ContentfulVirtualTourSysContentTypeSys = {
+  readonly id: Maybe<Scalars['String']>;
+  readonly linkType: Maybe<Scalars['String']>;
+  readonly type: Maybe<Scalars['String']>;
+};
+
+type ContentfulVirtualTourSysContentTypeSysFieldSelector = {
+  readonly id: InputMaybe<FieldSelectorEnum>;
+  readonly linkType: InputMaybe<FieldSelectorEnum>;
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulVirtualTourSysContentTypeSysFilterInput = {
+  readonly id: InputMaybe<StringQueryOperatorInput>;
+  readonly linkType: InputMaybe<StringQueryOperatorInput>;
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type ContentfulVirtualTourSysContentTypeSysSortInput = {
+  readonly id: InputMaybe<SortOrderEnum>;
+  readonly linkType: InputMaybe<SortOrderEnum>;
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
+type ContentfulVirtualTourSysFieldSelector = {
+  readonly contentType: InputMaybe<ContentfulVirtualTourSysContentTypeFieldSelector>;
+  readonly revision: InputMaybe<FieldSelectorEnum>;
+  readonly type: InputMaybe<FieldSelectorEnum>;
+};
+
+type ContentfulVirtualTourSysFilterInput = {
+  readonly contentType: InputMaybe<ContentfulVirtualTourSysContentTypeFilterInput>;
+  readonly revision: InputMaybe<IntQueryOperatorInput>;
+  readonly type: InputMaybe<StringQueryOperatorInput>;
+};
+
+type ContentfulVirtualTourSysSortInput = {
+  readonly contentType: InputMaybe<ContentfulVirtualTourSysContentTypeSortInput>;
+  readonly revision: InputMaybe<SortOrderEnum>;
+  readonly type: InputMaybe<SortOrderEnum>;
+};
+
 type DateQueryOperatorInput = {
   readonly eq: InputMaybe<Scalars['Date']>;
   readonly gt: InputMaybe<Scalars['Date']>;
@@ -5098,6 +5324,7 @@ type Query = {
   readonly allContentfulPolicyGroup: ContentfulPolicyGroupConnection;
   readonly allContentfulTerm: ContentfulTermConnection;
   readonly allContentfulTermDates: ContentfulTermDatesConnection;
+  readonly allContentfulVirtualTour: ContentfulVirtualTourConnection;
   readonly allDirectory: DirectoryConnection;
   readonly allFile: FileConnection;
   readonly allImageSharp: ImageSharpConnection;
@@ -5122,6 +5349,7 @@ type Query = {
   readonly contentfulPolicyGroup: Maybe<ContentfulPolicyGroup>;
   readonly contentfulTerm: Maybe<ContentfulTerm>;
   readonly contentfulTermDates: Maybe<ContentfulTermDates>;
+  readonly contentfulVirtualTour: Maybe<ContentfulVirtualTour>;
   readonly directory: Maybe<Directory>;
   readonly file: Maybe<File>;
   readonly imageSharp: Maybe<ImageSharp>;
@@ -5258,6 +5486,14 @@ type Query_allContentfulTermDatesArgs = {
   limit: InputMaybe<Scalars['Int']>;
   skip: InputMaybe<Scalars['Int']>;
   sort: InputMaybe<ReadonlyArray<InputMaybe<ContentfulTermDatesSortInput>>>;
+};
+
+
+type Query_allContentfulVirtualTourArgs = {
+  filter: InputMaybe<ContentfulVirtualTourFilterInput>;
+  limit: InputMaybe<Scalars['Int']>;
+  skip: InputMaybe<Scalars['Int']>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<ContentfulVirtualTourSortInput>>>;
 };
 
 
@@ -5599,6 +5835,22 @@ type Query_contentfulTermDatesArgs = {
   spaceId: InputMaybe<StringQueryOperatorInput>;
   sys: InputMaybe<ContentfulTermDatesSysFilterInput>;
   terms: InputMaybe<ContentfulTermFilterListInput>;
+  updatedAt: InputMaybe<DateQueryOperatorInput>;
+};
+
+
+type Query_contentfulVirtualTourArgs = {
+  children: InputMaybe<NodeFilterListInput>;
+  contentful_id: InputMaybe<StringQueryOperatorInput>;
+  createdAt: InputMaybe<DateQueryOperatorInput>;
+  id: InputMaybe<StringQueryOperatorInput>;
+  internal: InputMaybe<InternalFilterInput>;
+  isPublished: InputMaybe<BooleanQueryOperatorInput>;
+  name: InputMaybe<StringQueryOperatorInput>;
+  node_locale: InputMaybe<StringQueryOperatorInput>;
+  parent: InputMaybe<NodeFilterInput>;
+  spaceId: InputMaybe<StringQueryOperatorInput>;
+  sys: InputMaybe<ContentfulVirtualTourSysFilterInput>;
   updatedAt: InputMaybe<DateQueryOperatorInput>;
 };
 

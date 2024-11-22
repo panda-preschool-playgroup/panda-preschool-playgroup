@@ -98,6 +98,17 @@ const createMockContentfulNews = (props?: Partial<Queries.ContentfulNews>): Quer
     };
 };
 
+const createMockContentfulVirtualTour = (
+    props?: Partial<Queries.ContentfulVirtualTour>,
+): Queries.ContentfulVirtualTour => {
+    return {
+        ...createMockContentfulEntry(),
+        name: "",
+        isPublished: true,
+        ...props,
+    };
+};
+
 export {
     createMockGatsbyImageData,
     MockLayout,
@@ -105,4 +116,5 @@ export {
     createMockContentfulAsset,
     createMockContentfulEvent,
     createMockContentfulNews,
+    createMockContentfulVirtualTour,
 };
