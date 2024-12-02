@@ -17,8 +17,9 @@ const FeesPage: FC = () => {
 
                 <p>
                     We are happy to accept Private Funding, Government Funding, or a mixture of Private and Government
-                    Funding for the hours that your child attends Panda Playgroup. Please note that in addition to the
-                    hourly charge (covered by Private/Government Funding), a “Pandas Consumable Charge” is also payable.
+                    Funding for the hours that your child attends Panda Preschool Playgroup. Please note that in
+                    addition to the hourly charge (covered by Private/Government Funding), a “Pandas Consumable Charge”
+                    is also payable.
                 </p>
 
                 <p>
@@ -33,9 +34,9 @@ const FeesPage: FC = () => {
                 </h3>
                 <p>
                     There is an additional charge of <strong>£6.00 per day of the week per half term</strong> to cover
-                    the cost of snacks and consumables that Panda Playgroup provides. (For example, if you child attends
-                    three days a week, then an additional £6.00 x 3 = <strong>£18.00 per half term</strong> is payable
-                    directly to Panda Playgroup).
+                    the cost of snacks and consumables that Panda Preschool Playgroup provides. (For example, if you
+                    child attends three days a week, then an additional £6.00 x 3 ={" "}
+                    <strong>£18.00 per half term</strong> is payable directly to Panda Preschool Playgroup).
                 </p>
                 <p>
                     Please don&apos;t hesitate to <Link to="/contact">get in touch with us</Link> for any other

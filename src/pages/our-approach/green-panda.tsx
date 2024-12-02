@@ -10,10 +10,10 @@ const GreenPandaPage: FC = () => {
         <Layout showHomeLink activeSection="Our approach" pageHeading={heading}>
             <Article heading={heading}>
                 <p>
-                    At Panda Playgroup we believe we have a responsibility to protect this planet for our children. We
-                    have excellent recycling facilities on our doorstep (see below), and we encourage our children to
-                    learn about recycling. We are also doing our best to reduce our plastic use, and are a glitter-free
-                    setting.
+                    At Panda Preschool Playgroup we believe we have a responsibility to protect this planet for our
+                    children. We have excellent recycling facilities on our doorstep (see below), and we encourage our
+                    children to learn about recycling. We are also doing our best to reduce our plastic use, and are a
+                    glitter-free setting.
                 </p>
                 <h3 className="font-dk-crayon-crumble mt-12 mb-6 tracking-tight leading-none text-3xl lg:text-4xl">
                     Sprouts

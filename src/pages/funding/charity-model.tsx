@@ -10,8 +10,8 @@ const CharityModelPage: FC = () => {
         <Layout showHomeLink activeSection="Funding" pageHeading={heading}>
             <Article heading={heading}>
                 <p>
-                    Panda Playgroup is a nonprofit organisation and a registered charity. You can view our{" "}
-                    <a href="https://register-of-charities.charitycommission.gov.uk/charity-search/-/charity-details/1035584/full-print">
+                    Panda Preschool Playgroup is a nonprofit organisation and a registered charity. You can view our{" "}
+                    <a href="https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/5244482">
                         Charity Commission record
                     </a>{" "}
                     to see our complete Charitable Framework.

@@ -21,8 +21,8 @@ const IndexPage: FC = () => {
                 image={<ContentfulImage imageTitle="Homepage - Pre-school" images={images} />}
             >
                 <p>
-                    Panda Playgroup is a safe and welcoming pre-school setting for 2-4+ years. We also welcome a small
-                    number of children from 18 months.
+                    Panda Preschool Playgroup is a safe and welcoming pre-school setting for 2-4+ years. We also welcome
+                    a small number of children from 18 months.
                 </p>
                 <p>
                     Our aim is to provide your child with the best support and care as they take their first steps
@@ -51,7 +51,7 @@ const IndexPage: FC = () => {
                 </p>
                 <p>
                     We aim to help parents find somewhere safe and welcoming to come and have fun with their children,
-                    meet other parents and get a taste of what Panda Playgroup has to offer.
+                    meet other parents and get a taste of what Panda Preschool Playgroup has to offer.
                 </p>
                 <p className="text-2xl">
                     <strong>
