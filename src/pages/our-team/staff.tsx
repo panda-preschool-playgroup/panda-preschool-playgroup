@@ -19,11 +19,11 @@ const StaffPage: FC<StaffPageProps> = ({ data }: StaffPageProps) => {
         <Layout showHomeLink activeSection="Our team" pageHeading={heading}>
             <Article heading={heading}>
                 <p className="pb-12">
-                    Panda Playgroup has an exemplary team of qualified, dedicated staff, all of whom have received
-                    training in First Aid, Food Hygiene and Safeguarding Children, which they update every three years.
-                    In addition, they carry out annual training to meet statutory requirements for delivering the Early
-                    Years Foundation Stage to a high standard. Our caring and dedicated staff are always approachable if
-                    you need a chat!
+                    Panda Preschool Playgroup has an exemplary team of qualified, dedicated staff, all of whom have
+                    received training in First Aid, Food Hygiene and Safeguarding Children, which they update every
+                    three years. In addition, they carry out annual training to meet statutory requirements for
+                    delivering the Early Years Foundation Stage to a high standard. Our caring and dedicated staff are
+                    always approachable if you need a chat!
                 </p>
             </Article>
             {personList?.people?.length &&

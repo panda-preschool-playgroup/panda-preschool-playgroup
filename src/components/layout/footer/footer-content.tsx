@@ -25,8 +25,8 @@ const FooterContent: FC = () => {
                     <Separator />
                 </div>
                 <div className="mb-8 md:mb-0 text-base">
-                    <p className="mb-4">Ofsted registration: RP905909</p>
-                    <p className="mb-4">Registered charity no: 1035584</p>
+                    <p className="mb-4">Ofsted registration: 2810800</p>
+                    <p className="mb-4">Registered charity no: 1209013</p>
                     <p className="mb-4">Member of the Early Years Alliance</p>
                     <p className="mb-4">
                         <Link to="/vacancies">Vacancies</Link>

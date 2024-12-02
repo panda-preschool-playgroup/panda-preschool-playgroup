@@ -11,7 +11,7 @@ const AimsPage: FC = () => {
             <Article heading={heading}>
                 <p>
                     We provide termtime-only, committee-run{" "}
-                    <a href="https://reports.ofsted.gov.uk/provider/16/EY501461">Ofsted</a> registered provision for
+                    <a href="https://reports.ofsted.gov.uk/provider/16/2810800">Ofsted</a> registered provision for
                     children from 18 months. The manager is an Early Years teacher with more than 20 years&apos;
                     experience in childcare. She is supported by a caring team of well qualified Early Years
                     Practitioners and together they ensure all children thrive and learn in a safe stimulating and

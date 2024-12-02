@@ -17,9 +17,9 @@ const CommitteePage: FC<CommitteePageProps> = ({ data }: CommitteePageProps) => 
         <Layout showHomeLink activeSection="Our team" pageHeading={heading}>
             <Article heading={heading}>
                 <p>
-                    Panda Playgroup is run by a management committee of parents, carers and other volunteers who take
-                    care of all the bits you don&apos;t see, such as paying rent and wages, funding, press, marketing,
-                    and fundraising activities.
+                    Panda Preschool Playgroup is run by a management committee of parents, carers and other volunteers
+                    who take care of all the bits you don&apos;t see, such as paying rent and wages, funding, press,
+                    marketing, and fundraising activities.
                 </p>
                 <p>
                     Volunteering as a Trustee member of the committee is a challenging task, but one that is rewarding

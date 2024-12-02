@@ -1,4 +1,4 @@
-# Panda Playgroup
+# Panda Preschool Playgroup
 
 ## Introduction
 
@@ -22,7 +22,7 @@ CONTENTFUL_ENV=
 CONTENTFUL_ACCESS_TOKEN=
 ```
 
-Values for these can be retrieved from the settings page when logged into Contentful with a Panda Playgroup account.
+Values for these can be retrieved from the settings page when logged into Contentful with a Panda Preschool Playgroup account.
 
 ### Common commands
 

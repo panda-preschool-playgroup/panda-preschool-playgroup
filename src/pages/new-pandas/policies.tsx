@@ -17,7 +17,7 @@ const PoliciesPage: FC = () => {
                 <p>You can download copies of all of our policy documents.</p>
                 <p>
                     <a href={safeguardingPolicy?.publicUrl} target="_blank" rel="noreferrer">
-                        Panda Playgroup Safeguarding Statement
+                        Panda Preschool Playgroup Safeguarding Statement
                     </a>
                 </p>
                 {policyGroups.map((policyGroup: Queries.ContentfulPolicyGroup) => (

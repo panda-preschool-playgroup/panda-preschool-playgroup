@@ -15,7 +15,7 @@ describe("navigation", () => {
     it("renders the heading", () => {
         render(<Navigation />);
 
-        const heading = screen.queryByRole("heading", { name: "Panda Playgroup" });
+        const heading = screen.queryByRole("heading", { name: "Panda Preschool Playgroup" });
 
         expect(heading).toBeInTheDocument();
     });
@@ -23,7 +23,7 @@ describe("navigation", () => {
     it("renders the home page link", () => {
         render(<Navigation />);
 
-        const homepageLink = screen.queryByRole("link", { name: "Panda Playgroup" });
+        const homepageLink = screen.queryByRole("link", { name: "Panda Preschool Playgroup" });
 
         expect(homepageLink).toBeInTheDocument();
     });

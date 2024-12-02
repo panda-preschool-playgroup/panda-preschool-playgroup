@@ -16,8 +16,8 @@ const PrivacyNoticePage: FC = () => {
             <Article heading={heading}>
                 <p>
                     Our Privacy Notices explain our practices, including your choices, regarding the collection, use and
-                    disclosure of certain information, including your personal information, by Panda Playgroup and
-                    Sticky Mitts and Tiny Tots.
+                    disclosure of certain information, including your personal information, by Panda Preschool Playgroup
+                    and Sticky Mitts and Tiny Tots.
                 </p>
                 <ul>
                     {privacyNotices.map((privacyNotice: Queries.ContentfulAsset) => (

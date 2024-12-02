@@ -48,11 +48,11 @@ const FundraisingPage: FC = () => {
                 </p>
                 <p>
                     {" "}
-                    Panda Playgroup gets a percentage of the retail price for whatever you buy, so instead of going
-                    directly to a retailer&#39;s website, check if they are on Easy Fundraising first. It&#39;s free to
-                    use and your shopping won&#39;t cost you a penny more.
+                    Panda Preschool Playgroup gets a percentage of the retail price for whatever you buy, so instead of
+                    going directly to a retailer&#39;s website, check if they are on Easy Fundraising first. It&#39;s
+                    free to use and your shopping won&#39;t cost you a penny more.
                 </p>
-                <p>Easy Fundraising has raised over £1500 for Panda Playgroup to date!</p>
+                <p>Easy Fundraising has raised over £1500 for Panda Preschool Playgroup to date!</p>
                 <p>
                     <a href="https://www.easyfundraising.org.uk/support-a-good-cause/step-1/?char=121929">
                         Just click here to sign up and support our cause!
